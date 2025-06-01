@@ -1,0 +1,167 @@
+ <section class="news-container" style="--blog-column-amount:{{ section.settings.column_amount }}; animation: fadeIn {{ section.settings.fade_duration }}s forwards;">
+        {% assign blog_handle = blog.handle %}
+        {% assign blog = blogs[blog_handle] %}
+
+    {% paginate blog.articles by 600 %}
+        {% for article in blog.articles %}
+          <a href="{{ article.url }}" class="news-link">
+        <article style="
+          {% if section.settings.column_amount == "1" %}
+          --article-size:580px;
+          --article-img-size:510px;
+          {% elsif section.settings.column_amount == "2" %}
+          --article-size:360px;
+          --article-img-size:280px;
+          {% else %}
+          --article-size:305px;
+          --article-img-size:200px;
+          {% endif %}
+          background-color: {{ section.settings.card_color }}; 
+          border-radius: {{ section.settings.card_radius }}px" 
+          class="news-item">
+            <img src="{{ article.image | img_url: 'master' }}" alt="News Image">
+            <h5 style="
+              text-align:{{ section.settings.header_alignment }}; 
+              color:{{ section.settings.header_color }};
+              {% if section.settings.header_alignment == "left" %}
+              margin-left: 5px; 
+              {% endif %}
+              ">
+              {{ article.title }}
+            </h5>
+            {% if section.settings.show_article_date %}
+            <p style="
+              color: {{ section.settings.date_color }};
+              text-align: {{ section.settings.create_date_alignment }}
+              ">
+              {{ article.created_at | date: format: 'abbreviated_date' }}
+              </p>
+            {% endif %}
+          </article>
+          </a>
+        {% endfor %}
+    {% endpaginate %}
+    </section>
+
+{% schema %}
+    {
+  "name": "Blog Articles",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Columns"
+    },
+    {
+      "type": "radio",
+      "id": "column_amount",
+      "label": "Column Amount (Desktop)",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 Column"
+        },
+        {
+          "value": "2",
+          "label": "2 Coulmns"
+        },
+        {
+          "value": "3",
+          "label": "3 Columns"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "header",
+      "content": "Alignment"
+    },
+    {
+      "type": "radio",
+      "id": "header_alignment",
+      "label": "Article Title Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Centered"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "card_color",
+      "label": "Article Card Color",
+      "default": "#FFF"
+    },
+    {
+      "type": "color",
+      "id": "header_color",
+      "label": "Article Header Color",
+      "default": "#000"
+    }, 
+    {
+      "type": "color",
+      "id": "date_color",
+      "label": "Article Date Color",
+      "default": "#000"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_article_date",
+      "label": "Display Article Created Date",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Article Card Corners"
+    },
+     {
+      "type": "paragraph",
+      "content": "This settings affects the curve of the article cards corners."
+    },
+    {
+    "type": "range",
+    "id": "card_radius",
+    "min": 0,
+    "max": 10,
+    "step": 1,
+    "unit": "px",
+    "label": "Card Curve",
+    "default": 0
+    }, 
+    {
+      "type": "header",
+      "content": "Fade Animation"
+    },
+      {
+      "type": "paragraph",
+      "content": "This settings affects how long it takes the articles to fade-in to the page."
+    },
+    
+     {
+    "type": "range",
+    "id": "fade_duration",
+    "min": 0,
+    "max": 8,
+    "step": 1,
+    "unit": "sec",
+    "label": "Fade-In Duration",
+    "default": 2
+      }
+
+  ]
+}
+{% endschema %}

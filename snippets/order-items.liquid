@@ -1,0 +1,19 @@
+<script type="application/json">
+ [{%- for item in order.line_items -%}
+    {
+     "total": {{ item.final_line_price | money | json }},
+     "image": {{ item.image | img_url: 'master' | json }},
+     "quantity": {{ item.quantity | json }},
+     "price": {{ item.line_price | money | json }},
+     {% if item.selling_plan %}
+     "selling_plan": {{ item.selling_plan.name }},
+     {% endif %}
+     "title": {{item.product.title | json }},
+     "url": {{ item.product.url | json }},
+     "options": {{item.options_with_values | json }}
+    }
+    {% unless forloop.last %}
+    ,
+    {% endunless %}
+    {%- endfor -%}
+]</script>

@@ -1,0 +1,7 @@
+{%- assign optionLine = "option" | append: optionPosition -%}
+{%- for variant in variants -%}
+{%- if variant[optionLine] == optionValue -%}
+{{- variant.metafields[namespace][key] -}}
+{%- break -%}
+{%- endif -%}
+{%- endfor -%}

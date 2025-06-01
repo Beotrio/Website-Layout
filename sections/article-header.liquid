@@ -1,0 +1,164 @@
+<h1
+  class="article-title"
+  style="color:{{ section.settings.article_title_txt_color }}; text-align:{{ section.settings.article_title_alignment }}"
+>
+  {{ article.title }}
+</h1>
+{% if section.settings.show_divider %}
+  <div class="article-divider" style="background-color:{{ section.settings.article_divider_color }}"></div>
+{% endif %}
+<div class="article-metadata-container" style="flex-direction:{{ section.settings.article_metadata_alignment }}">
+  {% if section.settings.show_author %}
+    <p style="color:{{ section.settings.article_author_txt_color }};">By: {{ article.author }}</p>
+  {% endif %}
+  {% if section.settings.show_create_date %}
+    <P style="color:{{ section.settings.article_date_txt_color }};">
+      {{- article.created_at | date: format: 'abbreviated_date' -}}
+    </P>
+  {% endif %}
+
+  {% if section.settings.show_next_btn %}
+    {% if blog.previous_article.url == null %}
+      {% assign firstArticleArray = blog.articles | limit: 1 %}
+      {% assign url = firstArticleArray[0].url %}
+    {% else %}
+      {% assign url = blog.previous_article.url %}
+    {% endif %}
+    <a style="text-decoration:none; color:black;" href="{{ url }}">
+      <p
+        class="article-next-button"
+        style="{% if settings.disable_highlight_animation %} animation-duration: 0s; {% endif %} --article-next-btn-hover-txt-color: {{ section.settings.article_next_highlight_txt_color }}; --article-next-btn-hover-bg-color:{{ section.settings.article_next_highlight_color }}; --article-next-txt-color:{{ section.settings.article_next_txt_color }};"
+      >
+        next article >
+      </p>
+    </a>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Header",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Alignment"
+    },
+   {
+      "type": "radio",
+      "id": "article_title_alignment",
+      "label": "Article Title Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Centered"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    
+    {
+      "type": "color",
+      "id": "article_title_txt_color",
+      "label": "Article Title Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "article_divider_color",
+      "label": "Article Divider Text Color",
+      "default": "#000000"
+    },
+
+    {
+      "type": "color",
+      "id": "article_author_txt_color",
+      "label": "Article Author Color",
+      "default": "#000000"
+    },
+    
+    {
+      "type": "color",
+      "id": "article_date_txt_color",
+      "label": "Article Date Color",
+      "default": "#000000"
+    },
+    
+     {
+      "type": "color",
+      "id": "article_next_txt_color",
+      "label": "Next Article Color",
+      "default": "#000000"
+    },
+        {
+      "type": "color",
+      "id": "article_next_highlight_color",
+      "label": "Next Article Hover Color",
+      "default": "#FE0000"
+    },
+    {
+      "type": "color",
+      "id": "article_next_highlight_txt_color",
+      "label": "Next Article Hover Text Color",
+      "default": "#FFF"
+    },
+        {
+      "type": "checkbox",
+      "id": "show_divider",
+      "label": "Show Article Divider",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_next_btn",
+      "label": "Show \"Next Article\" Link",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_create_date",
+      "label": "Show Article Date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "label": "Show Article Author",
+      "default": true
+    },
+    
+    {
+      "type": "header",
+      "content": "Metadata"
+    },
+    {
+      "type": "paragraph",
+      "content": "Note: On mobile, metadata alignment is vertical only"
+    },
+    {
+      "type": "radio",
+      "id": "article_metadata_alignment",
+      "label": "Article Metadata Alignment",
+      "options": [
+        {
+          "value": "row",
+          "label": "Horizontal"
+        },
+        {
+          "value": "column",
+          "label": "Vertical"
+        }
+      ],
+      "default": "row"
+    }
+  ]
+}
+{% endschema %}

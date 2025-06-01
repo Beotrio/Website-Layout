@@ -1,0 +1,21 @@
+{%- if settings.show_footer -%}
+  <div
+    class="footer footer-mobile"
+    style="height: {{ settings.footer_height_mobile }}px; justify-content: {{ settings.footer_link_alignment_mobile }}; background-color: {{ settings.footer_background_color_mobile | color_modify: 'alpha', settings.footer_opacity_mobile}}; "
+  >
+    {%- for link in linklists['footer-menu'].links -%}
+      <a href="{{ link.url }}">
+        <p
+          class="footer-links"
+          style="color: {{ settings.footer_text_color_mobile }}; margin-left: {{ settings.footer_link_margin_mobile }}px; margin-right: {{ settings.footer_link_margin_mobile }}px;"
+        >
+          {{ link.title }}
+        </p>
+      </a>
+    {%- endfor -%}
+  </div>
+{%- endif -%}
+
+<script>
+  var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","credits");
+</script>

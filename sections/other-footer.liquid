@@ -1,0 +1,100 @@
+<div class="other-footer" style="background-color: {{ settings.footer_background_color }}">
+  <div class="footer-container-1" style="justify-content: center;">
+    <div style=" margin-left: 80px; margin-right: 50px;" class="footer-section footer-grid footer-link-section-mobile">
+      <h3 style="--footer-header-font-size-mobile: {{ settings.footer_header_text_size_mobile }}px; font-size: {{ settings.footer_header_text_size_desktop }}px; color:{{ settings.footer_links_title_color }};">
+        {{ settings.footer_links_title }}
+      </h3>
+      {%- for link in linklists['footer'].links -%}
+        <a class="footer-grid-item" href="{{ link.url }}">
+          <p
+            class="footer-links"
+            style="
+              {% if settings.disable_highlight_animation %} animation-duration: 0s; {% endif %}
+              font-size: {{ settings.footer_text_size }}px;
+              --footer-mobile-font-size: {{ settings.footer_text_size_mobile }}px;
+              --footer-txt-color: {{ settings.footer_text_color }};
+              --footer-highlight-txt-color: {{ settings.footer_text_color_highlighed }};
+              --footer-highlight-txt-bg-color: {{ settings.footer_text_color_highlighed_bg }};
+            "
+          >
+            {{ link.title }}
+          </p>
+        </a>
+      {%- endfor -%}
+    </div>
+    {% if settings.show_email_footer_signup %}
+      <div style=" text-align:left;" class="footer-section footer-contact-form footer-section-mobile">
+        {% form 'customer' %}
+          <a
+            style="width: auto; text-align: center; display: flex; align-items: center;  margin: 20px 0 0 0;"
+            href="{{ routes.root_url }}"
+            class="footer-logo logo-link w-inline-block"
+          >
+            {% if settings.show_footer_logo %}
+              {% if settings.footer_logo %}
+                <img
+                  src="{{ settings.footer_logo | image_url }}"
+                  style="width: {{ settings.footer_logo_size }}px; margin: 0"
+                  loading="lazy"
+                  alt=""
+                  class="logo"
+                >
+              {% else %}
+                <img
+                  src="{{ 'Supreme-dummy.png' | asset_url }}"
+                  loading="lazy"
+                  alt=""
+                  class="logo"
+                  style="margin: 0; width:80px;"
+                >
+              {% endif %}
+            {% endif %}
+          </a>
+          <h3 class="footer-email-header" style="margin-top: 0px; color: {{ settings.footer_email_txt_msg_color }}">
+            {{ settings.footer_email_header }}
+          </h3>
+          <div class="footer-email">
+            <input
+              style="color:{{ settings.footer_input_txt_color }}; border:none; width:174px; height:26px; padding-left:5px; background-color: {{ settings.footer_input_color }}; --footer-placeholder-color: {{ settings.footer_input_placeholder_color }};"
+              placeholder="Enter Email"
+              type="email"
+              name="contact[email]"
+            >
+          </div>
+          <div class="footer-email-submit">
+            <input
+              style="color: {{ settings.footer_email_btn_txt_color }}; height:23px; padding: 0 8px; cursor: pointer; background-color: {{ settings.footer_email_btn_color }}; border: none;"
+              type="submit"
+              value="{{ settings.footer_email_button_txt }}"
+            >
+          </div>
+        {% endform %}
+      </div>
+    {% endif %}
+  </div>
+
+  {% if settings.show_copyright %}
+    <div class="footer-container-2">
+      <div class="social-media-container"></div>
+      <p
+        class="copyright-text"
+        style="color:{{ settings.footer_copyright_color }}; font-size:{{ settings.footer_copyright_size }}px;"
+      >
+        {{ settings.footer_copyright_text }}
+      </p>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": []
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

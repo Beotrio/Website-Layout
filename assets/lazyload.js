@@ -1,0 +1,1 @@
+var observer=new IntersectionObserver((e,t)=>{e.forEach(e=>{e.intersectionRatio>0&&(img=e.target,img.hasAttribute("src")||img.setAttribute("src",img.dataset.src))})},{});for(let img of document.getElementsByTagName("img"))observer.observe(img);

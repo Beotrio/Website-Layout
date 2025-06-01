@@ -1,0 +1,58 @@
+{% if section.settings.show_article_tags %}
+  <div class="article-tags" style="justify-content: {{ section.settings.article_tags_alignment }};">
+    {% for tag in article.tags %}
+      <div class="article-tag" style="background-color: {{ section.settings.article_title_txt_color }};">
+        <p style="color: {{ section.settings.article_tag_txt_color }}">{{ tag }}</p>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Tags",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "color",
+      "id": "article_title_txt_color",
+      "label": "Tag Background Color",
+      "default": "#FE0000"
+    }, 
+    {
+      "type": "color",
+      "id": "article_tag_txt_color",
+      "label": "Tag Text Color",
+      "default": "#FFF"
+    },
+    {
+      "type": "radio",
+      "id": "article_tags_alignment",
+      "label": "Tags Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Centered"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    
+    {
+      "type": "checkbox",
+      "id": "show_article_tags",
+      "label": "Display Article Tags",
+      "default": true
+    }
+    
+  ]
+}
+{% endschema %}

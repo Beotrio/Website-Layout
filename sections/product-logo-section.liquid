@@ -1,0 +1,188 @@
+<div class="logo-container">
+      <a href="{{ routes.root_url }}" class="logo-link w-inline-block">
+              {% if settings.product_screen_logo %}
+              <img src="{{ settings.product_screen_logo | image_url }}" style="width: {{ settings.product_screen_logo_size }}px" alt="" class="logo">
+              {% else %}
+              <img src="{{ 'Supreme-dummy.png' | asset_url }}"  alt="" class="logo">
+              {% endif %}
+            </a> 
+      {% if section.settings.show_date_time %}
+      <div class="date-time-container">
+        <div class="date" style="color: {{ section.settings.index_date_color }}">{{ 'tn7d8e379f' | t }}</div>
+        <div class="time" style="color: {{ section.settings.index_time_color }}">{{ 't589b2285' | t }}</div>
+      </div>
+      {% endif %}
+      <div class="cart-wrapper">
+      <div
+        data-node-type="commerce-cart-wrapper"
+        data-open-product=""
+        data-wf-cart-type="rightSidebar"
+        data-wf-cart-query=""
+        data-wf-page-link-href-prefix=""
+        data-wf-cart-duration="1000"
+        class="w-commerce-commercecartwrapper"
+      >
+        <a
+          href="#"
+          data-node-type="commerce-cart-open-link"
+          aria-haspopup="dialog"
+          aria-label="Open cart"
+          style="padding-top: 0px; padding-bottom: 0px;"
+          role="button"
+          class="w-commerce-commercecartopenlink cart-button-2 w-inline-block"
+        >
+          <svg class="w-commerce-commercecartopenlinkicon icon-3" width="17px" height="17px" viewBox="0 0 17 17">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path d="M2.60592789,2 L0,2 L0,0 L4.39407211,0 L4.84288393,4 L16,4 L16,9.93844589 L3.76940945,12.3694378 L2.60592789,2 Z M15.5,17 C14.6715729,17 14,16.3284271 14,15.5 C14,14.6715729 14.6715729,14 15.5,14 C16.3284271,14 17,14.6715729 17,15.5 C17,16.3284271 16.3284271,17 15.5,17 Z M5.5,17 C4.67157288,17 4,16.3284271 4,15.5 C4,14.6715729 4.67157288,14 5.5,14 C6.32842712,14 7,14.6715729 7,15.5 C7,16.3284271 6.32842712,17 5.5,17 Z" fill="currentColor" fill-rule="nonzero"></path>
+            </g>
+          </svg>
+                <div class="center-cart">
+                    <div style="color: {{ section.settings.cart_text_color }}" class="text-block-16 w-inline-block">
+                      {{ 't1fef40' | t }}
+                    </div>
+                    <div
+                      style="line-height: 20px; background-color: {{ section.settings.cart_number_bg_color }}; color: {{ section.settings.cart_number_color }}"
+                      class="w-commerce-commercecartopenlinkcount cart-quantity-2"
+                    >
+                      {{ cart.item_count }}
+                    </div>
+                  </div>
+        </a>
+        <div
+          data-node-type="commerce-cart-container-wrapper"
+          style="display:none"
+          class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-rightSidebar"
+        >
+          <div role="dialog" data-node-type="commerce-cart-container" class="w-commerce-commercecartcontainer">
+            <div class="w-commerce-commercecartheader" style="border-bottom-color: {{ settings.cart_divider_color }}; background-color: {{ settings.upper_cart_bg_color }};">
+              <h4 class="w-commerce-commercecartheading heading-5" style="color: {{ settings.upper_cart_txt_color }};">Your Cart</h4>
+              <a
+                href="#"
+                data-node-type="commerce-cart-close-link"
+                role="button"
+                aria-label="Close cart"
+                class="w-commerce-commercecartcloselink w-inline-block"
+              >
+                <svg width="16px" height="16px" viewBox="0 0 16 16">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g fill-rule="nonzero" fill="{{ settings.cart_close_btn_color }}">
+                      <polygon points="6.23223305 8 0.616116524 13.6161165 2.38388348 15.3838835 8 9.76776695 13.6161165 15.3838835 15.3838835 13.6161165 9.76776695 8 15.3838835 2.38388348 13.6161165 0.616116524 8 6.23223305 2.38388348 0.616116524 0.616116524 2.38388348 6.23223305 8"></polygon>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <div class="w-commerce-commercecartformwrapper">
+              <form data-node-type="commerce-cart-form" style="display:none" class="w-commerce-commercecartform">
+                <script type="text/x-wf-template" id="wf-template-b46ce580-dd6b-e4df-f0e5-7b65957d929d">
+                  <div data-node-type="cart-item" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d929e" class="w-commerce-commercecartitem"><img data-node-type="cart-item-image" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d929f" class="w-commerce-commercecartitemimage" src="<%= it.image %>"><div data-node-type="cart-item-info" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d92a0" class="w-commerce-commercecartiteminfo">
+                  <div data-node-type="cart-product-name" style="color: {{ settings.center_cart_txt_color }};" class="text-block-10 w-commerce-commercecartproductname" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d92a1"><%= it.title %></div>
+                  <div style="color: {{ settings.center_cart_txt_color }};" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d92a2"><%= it.price %></div><ul template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d92a3" class="w-commerce-commercecartoptionlist"><% Object.entries(it.properties).forEach( data =>  { %>
+                  <li style="color: {{ settings.center_cart_txt_color }};" data-node-type="cart-option-list-item"><span data-node-type="cart-option-list-item-label" class="text-block-11" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d92a5"><%= data[0] %></span><span>: </span><span data-node-type="cart-option-list-item-value" class="text-block-12" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d92a8"><%= data[1] %></span></li><% }) %></ul>
+                  <a style="color: {{ settings.center_cart_txt_color }};" data-node-type="cart-remove-link" class="remove-button" href="#" role="button" aria-label="Remove item from cart" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d92a9" data-product-id="<%= it.id %>"><div class="text-block-13">Remove</div></a></div><input class="w-commerce-commercecartquantity cart-quantity" name="<%= it.id %>" type="number" min="0" min="1" value="<%= it.quantity %>" data-node-type="cart-quantity"></div>
+                </script>
+                <div
+                  class="w-commerce-commercecartlist"
+                  style="background-color: {{ settings.center_cart_bg_color }}; {% if settings.center_cart_bg_img %}background-repeat: no-repeat; background-position: center; background-size: cover; object-fit: cover; background-image: url('{{ settings.center_cart_bg_img | image_url }}'); {% endif %}"
+                  data-wf-collection="database.commerceOrder.userItems"
+                  data-wf-template-id="wf-template-b46ce580-dd6b-e4df-f0e5-7b65957d929d"
+                ></div>
+                <div class="w-commerce-commercecartfooter" style="border-top-color: {{ settings.cart_divider_color }}; background-color:{{ settings.lower_cart_bg_color }};">
+                  <div aria-atomic="true" aria-live="polite" class="w-commerce-commercecartlineitem">
+                    <div style="color:{{ settings.lower_cart_txt_color }};" class="text-block-14">{{ 'tn76f396dc' | t }}</div>
+                    <div style="color:{{ settings.lower_cart_txt_color }};" class="w-commerce-commercecartordervalue text-block-15">
+                      {{ cart.items_subtotal_price | money }}
+                    </div>
+                  </div>
+                  <div>
+                    <div data-node-type="commerce-cart-quick-checkout-actions">
+                      {{ content_for_additional_checkout_buttons }}
+                    </div>
+                    <a
+                      style="background-color: {{ settings.checkout_btn_bg_color }}; color: {{ settings.checkout_btn_txt_color }};"
+                      href="/checkout"
+                      value="Continue to Checkout"
+                      data-node-type="cart-checkout-button"
+                      class="w-commerce-commercecartcheckoutbutton checkout-button-2"
+                      data-loading-text="Hang Tight..."
+                    >
+                      {{- 'tn7941186e' | t -}}
+                    </a>
+                  </div>
+                </div>
+              </form>
+              <div class="w-commerce-commercecartemptystate" style="color: {{ settings.center_cart_txt_color }}; background-color: {{ settings.center_cart_bg_color }}; {% if settings.center_cart_bg_img %}background-repeat: no-repeat; background-position: center; background-size: cover; object-fit: cover; background-image: url('{{ settings.center_cart_bg_img | image_url }}'); {% endif %}">
+                <div aria-live="polite" aria-label="This cart is empty">{{ 't3d503d2b' | t }}</div>
+              </div>
+              <div
+                aria-live="assertive"
+                style="display:none"
+                data-node-type="commerce-cart-error"
+                class="w-commerce-commercecarterrorstate"
+              >
+                <div
+                  class="w-cart-error-msg"
+                  data-w-cart-quantity-error="Product is not available in this quantity."
+                  data-w-cart-general-error="Something went wrong when adding this item to the cart."
+                  data-w-cart-checkout-error="Checkout is disabled on this site."
+                  data-w-cart-cart_order_min-error="The order minimum was not met. Add more items to your cart to continue."
+                  data-w-cart-subscription_error-error="Before you purchase, please use your email invite to verify your address so we can send order updates."
+                >
+                  {{ 'tn1c765d0d' | t }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+       {
+      "type": "color",
+      "id": "cart_text_color",
+      "label": "Cart Text Color",
+      "default": "#000000"
+    },
+     {
+      "type": "color",
+      "id": "cart_number_color",
+      "label": "Cart Quantiy Color",
+      "default": "#FFF"
+    },
+    {
+      "type": "color",
+      "id": "cart_number_bg_color",
+      "label": "Cart Quantity Background Color",
+      "default": "#000"
+    },
+      {
+      "type": "checkbox",
+      "id": "show_date_time",
+      "label": "Show Date/Time",
+      "default": true
+      },
+      {
+      "type": "color",
+      "id": "index_date_color",
+      "label": "Date Color",
+      "default": "#000"
+    },
+     {
+      "type": "color",
+      "id": "index_time_color",
+      "label": "Time Color",
+      "default": "#000"
+    }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

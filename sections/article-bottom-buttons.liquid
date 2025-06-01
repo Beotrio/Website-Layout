@@ -1,0 +1,29 @@
+<div class="article-button-container">
+      <a style="text-decoration: none;" href="{{ routes.root_url }}">
+        <div style="color:{{ section.settings.article_btn_txt_color }}; background-color:{{ section.settings.article_btn_bg_color }};" class="article-button">Back Home</div>
+      </a>
+      <a style="text-decoration: none;" href="{{ blog.url }}">
+        <div style="color:{{ section.settings.article_btn_txt_color }}; background-color:{{ section.settings.article_btn_bg_color }};" class="article-button">All Articles</div>
+      </a>
+</div>
+
+{% schema %}
+{
+  "name": "Article Buttons",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "color",
+      "id": "article_btn_bg_color",
+      "label": "Buttons Background Color",
+      "default": "#FE0000"
+    },
+    {
+      "type": "color",
+      "id": "article_btn_txt_color",
+      "label": "Buttons Text Color",
+      "default": "#FFF"
+    }    
+  ]
+}
+{% endschema %}

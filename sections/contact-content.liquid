@@ -1,0 +1,22 @@
+<p class="contact-content" style="color: {{ section.settings.contact_text_color}}">{{ section.settings.contact-message }}</p>
+
+{% schema %}
+{
+  "name": "Contact Message",
+  "tag": "div",
+  "settings": [
+   {
+    "type": "textarea",
+    "id": "contact-message",
+    "label": "Message",
+    "default": "Allow 3-5 business days for a response to your inquiry."
+    }, 
+    {
+      "type": "color",
+      "id": "contact_text_color",
+      "label": "Contact Content Text Color",
+      "default": "#000"
+    }
+  ]
+}
+{% endschema %}

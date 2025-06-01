@@ -1,0 +1,4 @@
+{%- capture tag_link -%}{{- tag | link_to_tag: tag -}}{%- endcapture -%}
+{%- assign tag_link_parts = tag_link | remove_first: '<a href="' | split: '" title="' -%}
+{%- assign tag_link = tag_link_parts[0] | strip -%}
+{{- tag_link -}}

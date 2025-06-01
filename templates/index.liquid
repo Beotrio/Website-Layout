@@ -1,0 +1,97 @@
+
+{%- assign headerSnippetPath = "header-index" -%}{%- assign wfPage = "640ec1b9bae1c5607003feec" -%}{%- assign bodyClasses = "" -%}
+
+
+{% if settings.enter_page_style == "interactive_environments" %}
+  {% section 'interactive-environments' %}
+{% elsif settings.enter_page_style == "classic_enter" %}
+
+{%- if settings.hide_announcemenet_bar_on_home -%}
+  {%- section 'announcement-bar' -%}
+{%- endif -%}
+    {%- section 'homepage-background' -%}
+    <div class="main-menu" style="height: auto; width: auto; top: {{ settings.home_page_menu_positioning }}%;" flight="{{ request.page_type }}">
+        <div style="width: 300px; left: auto; right: auto; justify-content: center; display: flex;">
+      {% if settings.show_home_logo %}
+    <a href="{{ routes.root_url }}" aria-current="page" class="logo-link w-inline-block w--current">
+        {% if settings.enter_screen_logo %}
+        <img src="{{ settings.enter_screen_logo | image_url }}"
+          height="auto"
+          style="width: {{ settings.enter_screen_logo_size }}px;"
+          alt="Logo"
+          class="logo"  
+        >
+        {% else %}
+        
+        <img src="{{ 'Supreme-dummy.png' | asset_url }}" alt="" class="logo">
+  
+        {% endif %}
+      </a>
+        {% endif %}
+  </div>
+      {% if settings.show_home_time %}
+      {%- section 'index-timezone' -%}
+        {% endif %}
+      <div class="main-menu-inner">
+        {%- section 'nav-link' -%}
+        {%- section 'social-media-links' -%}
+      </div>
+    </div>
+  {% endif %}
+    
+    {%- section 'music-player' -%}
+  
+<!--     {% if settings.show_footer %}
+  {% if settings.hide_footer_on_home == false %}
+      {%- section 'other-footer' -%}
+  {% endif %}
+    {% endif %}   -->
+
+
+
+{% if settings.disable_email_modal == false %}
+ <div class="modal-background fade-in-modal" id="modal-background" style="z-index:20; background-color: {{ settings.email_modal_outside_color }}">
+  <div class="email-modal fade-in-modal" id="email-modal" style="background-color: {{ settings.email_modal_background_color }};  background-image: url({{ settings.email_modal_background_img | image_url }});">
+    {% if settings.show_email_modal_logo %}
+    {% if settings.email_modal_logo %}
+      <img src="{{ settings.email_modal_logo | image_url }}" style="height:{{ settings.email_modal_logo_size }}px;" alt="" class="email-modal-logo">
+    {% else %}
+      <img src="{{ 'Supreme-dummy.png' | asset_url }}"  alt="" class="email-modal-logo">
+    {% endif %}
+    {% endif %}
+    <div class="email-modal-container" style="background-color: {{ settings.email_modal_content_background_color | color_modify: 'alpha', settings.email_modal_content_opacity }}; border-color: {{ settings.email_modal_content_border_color }};">
+      <div class="email-modal-close-btn" style="--cancel-btn-color: {{ settings.email_modal_cancel_btn }}; color: {{ settings.email_modal_cancel_btn }}"></div>
+      <div class="email-modal-content">
+        <h2 class="email-modal-header" style="color: {{ settings.email_modal_header_color }}">{{ settings.email_modal_header }}</h2>
+        <h4 class="email-modal-success-message"
+          style="color: {{ settings.email_modal_success_msg_color }}; text-align: center;"
+          >{{ settings.email_modal_success_msg }}</h4>
+        <p class="email-modal-description" style="color: {{ settings.email_modal_description_color }};" }}>
+          {{ settings.email_modal_description }}
+        </p>
+         {% form 'customer', class: "email-modal-form" %}
+          <input placeholder="Email Address" style="--input-placeholder-color: {{ settings.email_modal_placeholder_txt_color }}; background-color: {{ settings.email_modal_input_color }}; color: {{ settings.email_modal_txt_color }}" class="email-modal-email-input" type="email" name="contact[email]">
+          <input class="email-modal-submit-btn" type="submit" style="color: {{ settings.email_modal_btn_txt_color }}; background-color: {{ settings.email_modal_btn_color }};" value="{{ settings.email_modal_submit_btn }}">
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+    
+
+  <!-- <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=63f81962926b3cf73bfbfcee" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+   -->
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script src="{{ 'plain-jane.js' | asset_url }}" type="text/javascript"></script>
+  <script src="{{ 'form-signup.js' | asset_url }}" type="text/javascript"></script>
+
+
+
+
+
+
+
+  
+

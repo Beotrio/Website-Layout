@@ -1,0 +1,407 @@
+{%- if collection -%}
+{% capture listItems %}
+{% paginate collection.products by 999 %}
+{% for item in collection.products %}
+  <div style="width: {{ settings.product-size }}%; height: auto;
+    min-width: 1px;
+    min-height: 150px;
+    " role="listitem" class="collection-item w-dyn-item">
+    <a style="width:100%; height:100%;"href="{{ item.url | within: collection }}" class="link-block-2 w-inline-block collection-product-container">
+          <img
+            data-src="{{ item.featured_media.preview_image | img_url: 'master' }}" alt="{{ item.featured_media.preview_image.alt }}" 
+            style="width: 100%; height: 100%; --product-border-color: {{ section.settings.product_border_color }}; --product-border-thickness: {{ section.settings.product_border_thickness | append: "px"}};" 
+            class="product-image" data-commerce-type="variation-image"> 
+        {% if settings.enable_product_hover %}
+          {% if item.media[1].preview_image != null and item.media[1].media_type != 'video' and item.media[1].media_type != 'external_video' %}
+          <img 
+            data-src="{{ item.media[1].preview_image | img_url: 'master' }}" alt="{{ item.media[1].preview_image.alt }}"
+            style="position: absolute; top: 0; width: 100%; height: auto; visibility: hidden; --product-border-color: {{ section.settings.product_border_color }}; --product-border-thickness: {{ section.settings.product_border_thickness | append: "px"}};" 
+            class="product-image" data-commerce-type="variation-image" >
+          {% endif %}
+        {% endif %}
+    </a>
+    {%- if section.settings.show-title -%}
+    <div style="color: {{ section.settings.product_title_color }}; font-size:{{ section.settings.product_title_size }}px" class="prouduct-title">{{ item.title }}</div>
+    {%- endif -%}
+
+  {%- if section.settings.show_price -%}    
+    <div style="color: {{ section.settings.product_price_color }}; font-size:{{ section.settings.product_price_size }}px" class="prouduct-title">
+    {% if section.settings.currency_format == "with_currency" %}  
+      {{ item.price | money_with_currency }}
+    {% endif %}
+    {% if section.settings.currency_format == "without_currency" %}
+      {{ item.price | money }}
+      {% endif %} 
+    </div>
+    {%- endif -%}
+
+  {% if item.available %}
+  {%- if  section.settings.show_on_sale -%} 
+  {%- if item.compare_at_price and item.compare_at_price > 0 -%}
+    {% assign labelHeight = section.settings.on_sale_size | minus: 40 %}
+              {% assign labelHeightMobile = section.settings.on_sale_size_mobile | minus: 35 %}
+              <div class="on-sale" style=
+                "--on-sale-label-width-desk: {{ section.settings.on_sale_size | append: "px" }}; 
+                 --on-sale-label-height-desk: {{ labelHeight | append: "px" }};
+                 --on-sale-label-width-mobile: {{ section.settings.on_sale_size_mobile | append: "px" }};
+                 --on-sale-label-height-mobile: {{ labelHeightMobile | append: "px" }};
+                    background-color: {{ section.settings.on_sale_bg_color }};">
+                <div class="text-block-22" style="padding: 0 3px; --on-sale-label-txt-size-desktop: {{ section.settings.on_sale_text_size | append: "px" }}; color: {{ section.settings.on_sale_text_color }}">On Sale</div>
+              </div>
+  {%- endif -%}
+  {%- endif -%}
+  {% endif %}
+
+  {% if section.settings.show_oos %}
+  {%- if item.available == false -%}
+    {% assign labelHeight = section.settings.on_sale_size | minus: 40 %}
+              {% assign labelHeightMobile = section.settings.on_sale_size_mobile | minus: 35 %}
+              <div class="out-of-stock-label" style=
+                "--oos-label-width-desk: {{ section.settings.on_sale_size | append: "px" }}; 
+                 --oos-label-height-desk: {{ labelHeight | append: "px" }};
+                 --oos-label-width-mobile: {{ section.settings.on_sale_size_mobile | append: "px" }};
+                 --oos-label-height-mobile: {{ labelHeightMobile | append: "px" }};
+                    background-color: {{ section.settings.oos_bg_color }};">
+                <div class="text-block-22" style="padding: 0 3px; --on-sale-label-txt-size-desktop: {{ section.settings.on_sale_text_size | append: "px" }}; color: {{ section.settings.oos_text_color }}">Sold Out</div>
+              </div>
+  {%- endif -%}
+  {% endif %}
+
+</div>
+{%- endfor -%}
+{% endpaginate %}
+{% endcapture %}
+  {% assign items_length = listItems | strip | size %}
+
+  <div
+    style="margin-bottom: 30px; {% if settings.enable_endless_scroll %} height: auto; {% else %} overflow-y:scroll; {% endif %} {% if settings.make_product_box_responsive %} max-width: 100%; {% else %} max-width:{{ settings.product-box-width }}px; {% endif %} text-align: center; {% if settings.make_product_box_responsive or settings.enable_endless_scroll  %} padding-right: 0; left: 0; {% else %} padding-right:{{ settings.scrollbar-distance | append:"px" }}; left:{{ settings.scrollbar-distance | append:"px" }} {% endif %};"   
+    class="collection-list-wrapper "
+  >
+    {%- unless items_length == 0 -%}
+<!--       <div
+        style=" grid-template-columns:{{settings.mobile-layout }}; grid-row-gap:{{ settings.row-gap-mobile }}px; grid-column-gap:{{ settings.column-gap-mobile }}px;"
+        role="list"
+        class="collection-list w-dyn-items mobile"
+      >
+        {{ listItems }}
+      </div> -->
+
+      <div
+        style=" 
+      --mobile-grid-template-columns:{{settings.mobile-layout }}; --mobile-grid-row-gap:{{ settings.row-gap-mobile }}px; --mobile-grid-column-gap:{{ settings.column-gap-mobile }}px;  
+      --desktop-grid-template-columns:{{settings.desktop-layout }}; --desktop-grid-row-gap:{{ settings.row-gap-desktop }}px; --desktop-grid-column-gap:{{ settings.column-gap-desktop }}px;"
+        role="list"
+        class="collection-list w-dyn-items desktop"
+      >
+        {{ listItems }}
+      </div>
+    {%- endunless -%}
+    {%- if items_length == 0 -%}
+      <div class="empty-state-4 w-dyn-empty">
+        <div class="text-block-16">Nothing here. Come back later.</div>
+      </div>
+    {%- endif -%}
+  </div>
+{%- else -%}
+  {% capture listItems %}
+{% paginate collections.all.products by 999 %}
+  
+{%- for item in collections.all.products -%}
+  <div style="width: {{ settings.product-size }}%" role="listitem" class="collection-item w-dyn-item">
+    <a href="{{ item.url | within: collection }}" class="link-block-2 w-inline-block">
+      <img style="--product-border-color: {{ section.settings.product_border_color }}; --product-border-thickness: {{ section.settings.product_border_thickness | append: "px"}};" src="{{ item.featured_image | img_url: 'master' }}"  alt="{{ item.featured_image.alt }}" class="product-image" data-commerce-type="variation-image" srcset="{{ item.featured_image | img_url: '1920x' }} 1920w,{{ item.featured_image | img_url: '1600x' }} 1600w,{{ item.featured_image | img_url: '1366x' }} 1366w,{{ item.featured_image | img_url: '1024x' }} 1024w,{{ item.featured_image | img_url: '768x' }} 768w,{{ item.featured_image | img_url: '640x' }} 640w">
+    </a>
+  {%- if section.settings.show-title -%}
+    <div style="color: {{ section.settings.product_title_color }}; font-size:{{ section.settings.product_title_size }}px;" class="prouduct-title">{{ item.title }}</div>
+    {%- endif -%}
+    
+  {%- if  section.settings.show_on_sale -%}
+  {%- if item.compare_at_price and item.compare_at_price > 0 -%}
+              {% assign labelHeight = section.settings.on_sale_size | minus: 40 %}
+              {% assign labelHeightMobile = section.settings.on_sale_size_mobile | minus: 35 %}
+              <div class="on-sale" style=
+                "--on-sale-label-width-desk: {{ section.settings.on_sale_size | append: "px" }}; 
+                 --on-sale-label-height-desk: {{ labelHeight | append: "px" }};
+                 --on-sale-label-width-mobile: {{ section.settings.on_sale_size_mobile | append: "px" }};
+                 --on-sale-label-height-mobile: {{ labelHeightMobile | append: "px" }};
+                    background-color: {{ section.settings.on_sale_bg_color }};">
+                <div class="text-block-22" style="padding: 0 3px; --on-sale-label-txt-size-desktop: {{ section.settings.on_sale_text_size | append: "px" }}; color: {{ section.settings.on_sale_text_color }}">On Sale</div>
+              </div>
+            {%- endif -%}
+    {%- endif -%}
+          </div>
+{%- endfor -%}
+{% endpaginate %}
+{% endcapture %}
+  {% assign items_length = listItems | strip | size %}
+
+  <div
+    style="{% if settings.enable_endless_scroll %} height: auto; {% else %} overflow-y:scroll; {% endif %} {% if settings.make_product_box_responsive %} max-width: 100%; {% else %} max-width:{{ settings.product-box-width }}px; {% endif %} text-align: center; padding-right:{{ settings.scrollbar-distance | append:"px" }}; left:{{ settings.scrollbar-distance | append:"px" }};"
+    class="collection-list-wrapper w-dyn-list"
+    udy-collection="product"
+  >
+    {%- unless items_length == 0 -%}
+      <div
+        style=" grid-template-columns:{{settings.desktop-layout }}; grid-row-gap:{{ settings.row-gap-desktop }}px; grid-column-gap:{{ settings.column-gap-desktop }}px;"
+        role="list"
+        class="collection-list w-dyn-items desktop"
+      >
+        {{ listItems }}
+      </div>
+
+      <div
+        style=" grid-template-columns:{{settings.mobile-layout }}; grid-row-gap:{{ settings.row-gap-mobile }}px; grid-column-gap:{{ settings.column-gap-mobile }}px;"
+        role="list"
+        class="collection-list w-dyn-items mobile"
+      >
+        {{ listItems }}
+      </div>
+    {%- endunless -%}
+    {%- if items_length == 0 -%}
+      <div class="empty-state-3 w-dyn-empty">
+        <div>
+          No items yet.<br>
+          <br>
+          Follow us for the latest release dates
+        </div>
+        <div class="social-container shop">
+          <a href="#" class="social-link w-inline-block"
+            ><img src="{{ 'instagram-black-outline.png' | asset_url }}" loading="lazy" alt="" class="social-logo"
+          ></a>
+          <a href="#" class="social-link twitter w-inline-block"
+            ><img
+              src="{{ 'icons8-twitter-500.png' | asset_url }}"
+              loading="lazy"
+              sizes="100vw"
+              srcset="{{ 'icons8-twitter-500-p-500.png' | asset_url }} 500w, {{ 'icons8-twitter-500.png' | asset_url }} 500w"
+              alt=""
+              class="social-logo"
+          ></a>
+          <a href="#" class="social-link facebook w-inline-block"
+            ><img
+              src="{{ 'icons8-facebook-500.png' | asset_url }}"
+              loading="lazy"
+              sizes="100vw"
+              srcset="{{ 'icons8-facebook-500-p-500.png' | asset_url }} 500w, {{ 'icons8-facebook-500.png' | asset_url }} 500w"
+              alt=""
+              class="social-logo"
+          ></a>
+          <a href="#" class="social-link youtube w-inline-block"
+            ><img src="{{ 'youtube-black.png' | asset_url }}" loading="lazy" alt="" class="social-logo"
+          ></a>
+          <a href="#" class="social-link tik-tok w-inline-block"
+            ><img
+              src="{{ 'icons8-tiktok-500.png' | asset_url }}"
+              loading="lazy"
+              sizes="100vw"
+              srcset="{{ 'icons8-tiktok-500-p-500.png' | asset_url }} 500w, {{ 'icons8-tiktok-500.png' | asset_url }} 500w"
+              alt=""
+              class="social-logo"
+          ></a>
+          <a href="#" class="social-link tumblr w-inline-block"
+            ><img
+              src="{{ 'icons8-tumblr-500.png' | asset_url }}"
+              loading="lazy"
+              sizes="100vw"
+              srcset="{{ 'icons8-tumblr-500-p-500.png' | asset_url }} 500w, {{ 'icons8-tumblr-500.png' | asset_url }} 500w"
+              alt=""
+              class="social-logo"
+          ></a>
+          <a href="#" class="social-link discord w-inline-block"
+            ><img
+              src="{{ 'icons8-discord-500.png' | asset_url }}"
+              loading="lazy"
+              sizes="100vw"
+              srcset="{{ 'icons8-discord-500-p-500.png' | asset_url }} 500w, {{ 'icons8-discord-500.png' | asset_url }} 500w"
+              alt=""
+              class="social-logo"
+          ></a>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+
+
+<script defer src="{{ 'collection-product-hover.js' | asset_url }}" type="text/javascript"></script>
+<script async src="{{ 'product-settings.js' | asset_url }}" type="text/javascript"></script>
+
+
+ 
+
+{% schema %}
+{
+  "name": "Product Settings",
+  "tag": "div",
+  "settings": [
+     {
+      "type": "header",
+      "content": "Product Titles"
+    },
+    {
+      "type": "color",
+      "id": "product_title_color",
+      "label": "Product Titles",
+      "default": "#000000"
+    },
+     {
+        "type": "range",
+        "id": "product_title_size",
+        "label": "Product Title Size",
+        "min": 10,
+        "max": 21,
+        "unit": "px",
+        "step": 1,
+        "default": 12
+    },
+   {
+      "type": "checkbox",
+      "id": "show-title",
+      "label": "Show Product Titles",
+      "default": false
+    },
+   {
+      "type": "header",
+      "content": "Product Prices"
+    },
+    {
+      "type": "color",
+      "id": "product_price_color",
+      "label": "Product Price Color",
+      "default": "#000000"
+    },
+     {
+        "type": "range",
+        "id": "product_price_size",
+        "label": "Product Price Size",
+        "min": 10,
+        "max": 21,
+        "unit": "px",
+        "step": 1,
+        "default": 12
+    },
+   {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "Show Product Prices",
+      "default": false
+    },
+    {
+      "type": "radio",
+      "id": "currency_format",
+      "label": "Currency Format",
+      "options": [
+        {
+          "value": "with_currency",
+          "label": "With Currency"
+        },
+        {
+          "value": "without_currency",
+          "label": "Without Currency"
+        }
+      ],
+      "default": "without_currency"
+    },
+    {
+      "type": "header",
+      "content": "Labels"
+    },
+    {
+      "type": "color",
+      "id": "on_sale_bg_color",
+      "label": "On Sale BG",
+      "default": "#000000"
+    },
+     {
+      "type": "color",
+      "id": "on_sale_text_color",
+      "label": "On Sale Text Color",
+      "default": "#FFF"
+    },
+    {
+      "type": "color",
+      "id": "oos_bg_color",
+      "label": "Out Of Stock Label BG",
+      "default": "#FF0100"
+    },
+     {
+      "type": "color",
+      "id": "oos_text_color",
+      "label": "Out Of Stock Text Color",
+      "default": "#FFF"
+    },
+    {
+      "type": "range",
+      "id": "on_sale_text_size",
+      "label": "Label Font Size",
+      "min": 6,
+      "max": 20,
+      "unit": "px",
+      "step": 1,
+      "default": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_sale",
+      "label": "Show On Sale Labels",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_oos",
+      "label": "Show Out Of Stock Labels",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Label Sizes"
+    },
+    {
+      "type": "range",
+      "id": "on_sale_size",
+      "label": "Desktop Size",
+      "min": 55,
+      "max": 85,
+      "unit": "px",
+      "step": 1,
+      "default": 62
+    },
+    {
+      "type": "range",
+      "id": "on_sale_size_mobile",
+      "label": "Mobile Size",
+      "min": 35,
+      "max": 75,
+      "unit": "px",
+      "step": 1,
+      "default": 55
+    },
+    {
+      "type": "header",
+      "content": "Product Frames"
+    },
+    {
+      "type": "paragraph",
+      "content": "This affects the frame around your product images when a customer hovers over them. To hide the frame set the border thickness to 0px."
+    },
+    {
+      "type": "color",
+      "id": "product_border_color",
+      "label": "Product Frame Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+        "id": "product_border_thickness",
+        "label": "Product Border Thickness",
+        "min": 0,
+        "max": 8,
+        "step": 0.5,
+        "default": 1,
+        "unit": "px"
+    }
+  ]
+}
+{% endschema %}
+
+ 

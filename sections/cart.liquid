@@ -1,0 +1,38 @@
+<div class="center-cart">
+  <div style="color: {{ section.settings.cart_text_color }}" class="text-block-16 w-inline-block">
+    {{ 't1fef40' | t }}
+  </div>
+  <div
+    style="line-height: 20px; background-color: {{ section.settings.cart_number_bg_color }}; color: {{ section.settings.cart_number_color }}"
+    class="w-commerce-commercecartopenlinkcount cart-quantity-2"
+  >
+    {{ cart.item_count }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cart",
+  "tag": "div",
+  "settings": [
+   {
+      "type": "color",
+      "id": "cart_text_color",
+      "label": "Cart Text Color",
+      "default": "#000000"
+    },
+     {
+      "type": "color",
+      "id": "cart_number_color",
+      "label": "Cart Quantiy Color",
+      "default": "#FFF"
+    },
+    {
+      "type": "color",
+      "id": "cart_number_bg_color",
+      "label": "Cart Quantity Background Color",
+      "default": "#000"
+    }
+  ]
+}
+{% endschema %}

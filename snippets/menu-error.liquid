@@ -1,0 +1,6 @@
+{% if linklists[menu].links.size == 0 %}
+<script>
+    window.UdeslyConfigurationErrors = window.UdeslyConfigurationErrors || [];
+    window.UdeslyConfigurationErrors.push("Inside the theme there is a menu with handle: '{{ menu }}' that is empty. Please populate it!");
+</script>
+{% endif %}

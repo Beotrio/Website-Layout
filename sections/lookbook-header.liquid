@@ -1,0 +1,156 @@
+<div class="column-7 w-col w-col-3 w-col-stack" style="justify-content: flex-end;">
+        <div class="logo-container lookbook-page">
+            <a style="margin-top: 0;" href="{{ routes.root_url }}" class="logo-link w-inline-block">
+              {% if section.settings.lookbook_logo %}
+              <img src="{{ section.settings.lookbook_logo | image_url }}" style="margin-top: 0; width:{{ section.settings.lookbook_logo_size }}px;" alt="" class="logo">
+              {% else %}
+              <img style="margin-top: 0;" src="{{ 'Supreme-dummy.png' | asset_url }}" loading="lazy" alt="" class="logo">
+              {% endif %}
+            </a>   
+          {% if section.settings.show_date_time %}
+            <div class="date-time-container">
+            <div class="date" style="color: {{ section.settings.date_color }}">{{ 'tn7d8e379f' | t }}</div>
+            <div class="time" style="color: {{ section.settings.time_color }}">{{ 't589b2285' | t }}</div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+<div class="column-6 w-col w-col-7 w-col-stack" style="display: flex; flex-direction: column; justify-content: flex-end;">
+        <h1 style="margin-top: 0; color: {{ section.settings.title_color }}" class="heading-4">{{ section.settings.lookbook_title }}</h1>
+        <div style="color: {{ section.settings.description_color }}" class="text-block-18">{{ section.settings.lookbook_description | newline_to_br }}</div>
+      </div>
+<div class="column-5 w-col w-col-2 w-col-stack" style="align-items: flex-end;">
+        <div class="div-block-7">
+          {% if section.settings.shop_now_link %}
+          <a href="{{ section.settings.shop_now_link }}" class="btn small shop-now w-button" style="margin-top: 0; height: 40px; text-transform: none; color:{{ section.settings.shop_now_text_color }}; background-color: {{ section.settings.shop_now_button_color }};">{{ section.settings.shop_now_link_text }}</a>
+          {% else %}
+          <a href="{{ routes.all_products_collection_url}}" class="btn small shop-now w-button" style="margin-top: 0; height: 40px; text-transform: none; color:{{ section.settings.shop_now_text_color }}; background-color: {{ section.settings.shop_now_button_color }};">{{ section.settings.shop_now_link_text }}</a>
+          {% endif %}
+          <a href="{{ routes.root_url }}" class="btn small w-button" style="margin-top: 0; height: 40px; text-transform: none; color:{{ section.settings.back_home_text_color }}; background-color: {{ section.settings.back_home_button_color }};">{{ 'tnc0d2788' | t }}</a>
+        </div>
+      </div>
+
+<div class="lookbook-details-container mobile w-row">
+      <div class="w-col w-col-6 w-col-stack">
+        <h1 class="heading-4">{{ 'tn437bd530' | t }}</h1>
+        <div class="text-block-9">{{ 't502cc34d' | t }}</div>
+      </div>
+      <div class="w-col w-col-6 w-col-stack">
+        <div class="btn-container mobile">
+          <a style="text-transform: none; background-color: {{ section.settings.shop_now_button_color }}; color:{{ section.settings.shop_now_text_color }} href="{{ section.settings.shop_now_link }}" class="btn small shop-now w-button">{{ 'tn10d26d54' | t }}</a>
+          <a style="text-transform: none; background-color: {{ section.settings.back_home_button_color }}; color:{{ section.settings.back_home_text_color }}" href="{{ routes.root_url }}" class="btn small w-button">{{ 'tnc0d2788' | t }}</a>
+        </div>
+      </div>
+    </div>
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","lookbook-details-container desktop w-row");</script>
+        
+{% schema %}
+{
+  "name": "Lookbook Header",
+  "tag": "div",
+  "class": "lookbook-details-container desktop w-row",
+  "settings": [
+    {
+        "type": "image_picker",
+        "id": "lookbook_logo",
+        "label": "Lookbook Logo"
+    },
+    {
+        "type": "range",
+        "id": "lookbook_logo_size",
+        "label": "Lookbook Logo Size",
+        "min": 50,
+        "max": 172,
+        "unit": "px",
+        "step": 2,
+        "default": 120
+      },
+    {
+      "type": "text",
+      "id": "lookbook_title",
+      "label": "Lookbook Title",
+      "default": "Lookbook Title"
+    },
+     {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#000000"
+    },
+    {
+      "type": "textarea",
+      "id": "lookbook_description",
+      "label": "Lookbook Description",
+      "default": "Write a description of your collection here"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "paragraph",
+      "content": "By default, the Shop Now button will take customers to all items. Set a specific collection here if needed."
+    },
+    {
+      "type": "url",
+      "id": "shop_now_link",
+      "label": "Shop Now Link"
+    },
+    {
+      "type": "text",
+      "id": "shop_now_link_text",
+      "label": "Shop Now Link Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "color",
+      "id": "shop_now_button_color",
+      "label": "Shop Now BG Color",
+      "default": "#F71500"
+    },
+    {
+      "type": "color",
+      "id": "shop_now_text_color",
+      "label": "Shop Now Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "back_home_button_color",
+      "label": "Back Home BG Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "back_home_text_color",
+      "label": "Back Home Text Color",
+      "default": "#ffffff"
+    },
+      {
+      "type": "checkbox",
+      "id": "show_date_time",
+      "label": "Show Date/Time",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "date_color",
+      "label": "Date Color",
+      "default": "#000000"
+    },
+     {
+      "type": "color",
+      "id": "time_color",
+      "label": "Time Color",
+      "default": "#000000"
+    }
+  ]
+}
+{% endschema %}

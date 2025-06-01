@@ -1,0 +1,32 @@
+<div class="main-menu">
+  <a href="{{ routes.root_url }}" aria-current="page" class="logo-link w-inline-block w--current">
+    {% if settings.enter_screen_logo %}
+      <img
+        src="{{ settings.enter_screen_logo | image_url: width: settings.enter_screen_logo_size | image_tag: height:'auto'}}"
+        loading="lazy"
+        alt=""
+        class="logo"
+      >
+    {% else %}
+      <img src="{{ 'Supreme-dummy.png' | asset_url }}" loading="lazy" alt="" class="logo">
+    {% endif %}
+  </a>
+  {%- section 'index-timezone' -%}
+  <div class="main-menu-inner">
+    {%- section 'nav-link' -%}
+    {%- section 'social-media-links' -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Section name",
+  "settings": []
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

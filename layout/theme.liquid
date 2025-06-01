@@ -1,0 +1,201 @@
+<!doctype html>
+<html
+  data-wf-page="{{ wfPage }}"
+  data-wf-site="63f81962926b3cf73bfbfcee"
+  lang="{{ request.locale.iso_code }}"
+  data-money-format="{{ shop.money_format | escape }}"
+  store="{{ shop.email }}"
+>
+  <head>
+    {% if template contains 'space' or template contains 'index' %}
+      {{ 'interactive-environments.css' | asset_url | stylesheet_tag }}
+    {% endif %}
+
+    <style>
+      /* BODY FONTS */
+      {% if settings.enable_custom_body_font %}
+        @font-face{
+          font-family: "{{ settings.custom_body_font_name }}";
+          src: url("{{ settings.custom_body_font }}") format("woff2"),
+          url("{{ settings.custom_body_font }}") format("woff");
+        }
+      {% else %}
+      {{ settings.body_font | font_face }}
+      {% endif %}
+
+
+
+      /* HEADER FONTS */
+      {% if settings.enable_custom_font_header %}
+        @font-face{
+          font-family: "{{ settings.custom_font_header_name }}";
+          src: url("{{ settings.custom_font_header }}") format("woff2"),
+          url("{{ settings.custom_font_header }}") format("woff");
+        }
+      {% else %}
+      {{ settings.font_header | font_face }}
+      {% endif %}
+
+
+
+      /* BUTTON FONTS */
+      {% if settings.enable_custom_btn_font %}
+        @font-face{
+          font-family: "{{ settings.custom_btn_font_name }}";
+          src: url("{{ settings.custom_btn_font }}") format("woff2"),
+          url("{{ settings.custom_btn_font }}") format("woff");
+        }
+      {% else %}
+      {{ settings.btn_font | font_face }}
+      {% endif %}
+
+
+
+       /* ENTER NAVIGATION FONTS */
+      {% if settings.enable_custom_nav_font %}
+        @font-face{
+          font-family: "{{ settings.custom_nav_font_name }}";
+          src: url("{{ settings.custom_nav_font }}") format("woff2"),
+          url("{{ settings.custom_nav_font }}") format("woff");
+        }
+      {% else %}
+      {{ settings.nav_font | font_face }}
+      {% endif %}
+
+      /* COUNTDOWN TIMER FONT */
+      {% if settings.enable_custom_countdown_font %}
+        @font-face{
+          font-family: "{{ settings.custom_countdown_font_name }}";
+          src: url("{{ settings.custom_countdown_font }}") format("woff2"),
+          url("{{ settings.custom_countdown_font }}") format("woff");
+        }
+      {% else %}
+      {{ settings.countdown_font | font_face }}
+      {% endif %}
+
+      /* DIALOG FONT */
+      {% if settings.enable_custom_dialog_font %}
+        @font-face{
+          font-family: "{{ settings.custom_dialog_font_name }}";
+          src: url("{{ settings.custom_dialog_font }}") format("woff2"),
+          url("{{ settings.custom_dialog_font }}") format("woff");
+        }
+      {% else %}
+      {{ settings.countdown_dialog | font_face }}
+      {% endif %}
+
+       :root {
+      --font_body: {% if settings.enable_custom_body_font %}{{ settings.custom_body_font_name }}{% else %}{{settings.body_font.family}}{% endif %};
+      --font_header: {% if settings.enable_custom_font_header %}{{ settings.custom_font_header_name }}{% else %}{{settings.font_header.family}}{% endif %};
+      --btn_font: {% if settings.enable_custom_btn_font %}{{ settings.custom_btn_font_name }}{% else %}{{settings.btn_font.family}}{% endif %};
+      --nav_font: {% if settings.enable_custom_nav_font %}{{ settings.custom_nav_font_name }}{% else %}{{settings.nav_font.family}}{% endif %};
+      --countdown_font: {% if settings.enable_custom_countdown_font %}{{ settings.custom_countdown_font_name }}{% else %}{{settings.countdown_font.family}}{% endif %};
+      --dialog_font: {% if settings.enable_custom_dialog_font %}{{ settings.custom_dialog_font_name }}{% else %}{{settings.dialog_font.family}}{% endif %};
+       }
+    </style>
+
+    {%- liquid
+      if headerSnippetPath
+        include headerSnippetPath
+      else
+        render '__default-head'
+      endif
+    -%}
+    {% if settings.hide_homepage and template == 'index' %}
+      <script>
+        window.location.href = "{{ collections['all'].url }}";
+      </script>
+    {% endif %}
+  </head>
+
+  {{ content_for_header }}
+  {% if template contains 'customers' %}
+    {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+  {% endif %}
+
+  <body
+    style="
+      {% if page.template_suffix contains "space" %}
+      {% elsif template.name contains "index" and settings.enter_page_style == "interactive_environments" %}
+      {% else %}
+      min-height: 100vh;
+      {% endif %}
+      display: flex; flex-direction: column; --scrollbar-thumb-radius:{{ settings.thumb_radius }}px; --scrollbar-track-color:{{ settings.track_color }}; --scrollbar-thumb-color:{{ settings.thumb_color }};   --custom-cursor: {{ settings.custom_cursor_img | img_url}};
+    "
+    class="{{ bodyClasses }} {{ "template-" | append: request.page_type | handle }}"
+    d3503khivhk343="{{ settings.3593809343bfibhiddsfh_relfe3252_fdfg }}"
+  >
+    <main style="{% if request.page_type == 'password' %}  height: 100%; width: 100%; {% endif %}">
+      {% if headerSnippetPath or template == 'product' %}
+        {{ content_for_layout }}
+      {% else %}
+        {% if page.template_suffix contains 'space' %}
+          {{ content_for_layout }}
+        {% else %}
+          {% include 'backup-layout' %}
+        {% endif %}
+      {% endif %}
+    </main>
+
+    <!-- FOOTER LOGIC -->
+    {% if settings.hide_footer_on_all_pages == false %}
+      {% case template.name %}
+        {% when 'index' %}
+          {% if template contains 'index' and settings.enter_page_style == 'interactive_environments' %}
+          {% elsif settings.show_footer_on_home %}
+            {% section 'other-footer' %}
+          {% endif %}
+
+        {% when 'collection' %}
+          {% if settings.show_footer_on_collection %}
+            {% section 'other-footer' %}
+          {% endif %}
+
+        {% when 'password' %}
+
+        {% when 'page' %}
+          {% if page.template_suffix contains 'space' %}
+          {% else %}
+            {% section 'other-footer' %}
+          {% endif %}
+
+        {% else %}
+          {% section 'other-footer' %}
+      {% endcase %}
+    {% endif %}
+
+    <script src="{{ 'music-player.js' | asset_url }}" type="text/javascript"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const timezone = "{{settings.timezone}}";
+        function updateClock() {
+          // Fetch the current time from an NTP API
+          fetch("https://worldtimeapi.org/api/timezone/" + timezone)
+            .then(response => response.json())
+            .then(data => {
+              const currentTime = new Date(data.utc_datetime);
+              const currentDate = currentTime.toLocaleString("en-US", { timeZone: timezone });
+              const date = new Date(currentDate).toLocaleDateString();
+              const time = new Date(currentDate).toLocaleTimeString("en-US", { hour: "numeric", minute: "numeric", hour12: true });
+              const timezoneAbbreviation = data.abbreviation;
+              const timeWithAbbreviation = time + " " + timezoneAbbreviation;
+              const dateElements = document.getElementsByClassName("date");
+              for (let i = 0; i < dateElements.length; i++) {
+                dateElements[i].innerHTML = date;
+              }
+              const timeElements = document.getElementsByClassName("time");
+              for (let i = 0; i < timeElements.length; i++) {
+                timeElements[i].innerHTML = timeWithAbbreviation;
+              }
+            })
+            .catch(error => {
+              console.log("Error fetching current time:", error);
+            });
+        }
+        updateClock();
+        setInterval(updateClock, 60000);
+      });
+    </script>
+  </body>
+</html>

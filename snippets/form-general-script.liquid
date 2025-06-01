@@ -1,0 +1,40 @@
+<script>
+    (function(){
+        window.Webflow = window.Webflow || [];
+        var success = "{{ form_success }}" == "true";
+
+        var errors = "{{ form_errors }}" == "ErrorsDrop";
+
+        var form = document.currentScript.closest('.w-form');
+
+        if (success) {
+            form.classList.add('form-posted-successfully');
+        }
+
+        if (errors) {
+            form.classList.add('form-failed');
+        }
+        if (success || errors) {
+            if (form.closest('[data-w-tab]')) {
+
+
+                window.Webflow.push(function() {
+                    var tabId =  form.closest('[data-w-tab]').id;
+                    var tabLink = document.querySelector('a[href="#' + tabId +'"]');
+                    if (tabLink) {
+                        tabLink.click();
+                    }
+                });
+
+            }
+            window.Webflow.push(function() {
+                var count = form.offsetTop - window.pageYOffset - 30; // xx = any extra distance from top ex. 60
+                window.scrollBy({top: count, left: 0, behavior: 'smooth'})
+            });
+            setTimeout(function() {
+                var count = form.offsetTop - window.pageYOffset - 30; // xx = any extra distance from top ex. 60
+                window.scrollBy({top: count, left: 0, behavior: 'smooth'})
+            }, 300)
+        }
+    })();
+</script>

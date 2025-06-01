@@ -1,0 +1,339 @@
+{% assign invert_value = 1 %}
+{% if section.settings.invert_social_media_links %}
+  {% assign invert_value = 0 %}
+{% endif %}
+
+  <div  class="social-container {% if section.settings['link-alignment'] == 'center' %}center{% endif %}" style="--social-media-size:{{ section.settings.social_media_size }}px"}}>
+    {%- if section.settings.show_instagram -%}
+      <a
+        href="{{ section.settings.instagram_link }}"
+        style="{% if section.settings.link-alignment == 'center' %}margin-left: 5px;{% endif %}filter: invert({{ invert_value }});"
+        class="social-link instagram w-inline-block"
+        ><img src="{{ 'instagram-black-outline.png' | asset_url }}" loading="lazy" alt="" class="social-logo invert"
+      ></a>
+    {%- endif -%}
+    {%- if section.settings.show_twitter -%}
+      <a
+        href="{{ section.settings.twitter_link }}"
+        style="{% if section.settings.link-alignment == 'center' %}margin-left: 5px;{% endif %}filter: invert({{ invert_value }});"
+        class="social-link twitter w-inline-block"
+        ><img
+          src="{{'icons8-twitter-500.png' | asset_url }}"
+          loading="lazy"
+          sizes="(max-width: 991px) 12.859375px, 1vw"
+          srcset="{{ 'icons8-twitter-500-p-500.png' | asset_url }} 500w, {{ 'icons8-twitter-500.png' | asset_url }} 500w"
+          alt=""
+          class="social-logo invert"
+      ></a>
+    {%- endif -%}
+    {%- if section.settings.show_facebook -%}
+      <a
+        href="{{ section.settings.facebook_link }}"
+        style="{% if section.settings.link-alignment == 'center' %}margin-left: 5px;{% endif %}filter: invert({{ invert_value }});"
+        class="social-link facebook w-inline-block"
+        ><img
+          src="{{ 'icons8-facebook-500.png' | asset_url }}"
+          loading="lazy"
+          sizes="(max-width: 991px) 12.859375px, 1vw"
+          srcset="{{ 'icons8-facebook-500-p-500.png' | asset_url }} 500w, {{ 'icons8-facebook-500.png' | asset_url }} 500w"
+          alt=""
+          class="social-logo invert"
+      ></a>
+    {%- endif -%}
+    {%- if section.settings.show_youtube -%}
+      <a
+        href="{{ section.settings.youtube_channel_link }}"
+        style="{% if section.settings.link-alignment == 'center' %}margin-left: 5px;{% endif %}filter: invert({{ invert_value }});"
+        class="social-link youtube w-inline-block"
+        ><img src="{{ 'youtube-black.png' | asset_url }}" loading="lazy" alt="" class="social-logo invert"
+      ></a>
+    {%- endif -%}
+    {%- if section.settings.show_tik_tok -%}
+      <a
+        href="{{ section.settings.tik_tok_link }}"
+        style="{% if section.settings.link-alignment == 'center' %}margin-left: 5px;{% endif %}filter: invert({{ invert_value }});"
+        class="social-link tik-tok w-inline-block"
+        ><img
+          src="{{ 'icons8-tiktok-500.png' | asset_url }}"
+          loading="lazy"
+          sizes="(max-width: 991px) 12.859375px, 1vw"
+          srcset="{{ 'icons8-tiktok-500-p-500.png' | asset_url }} 500w, {{ 'icons8-tiktok-500.png' | asset_url }} 500w"
+          alt=""
+          class="social-logo invert"
+      ></a>
+    {%- endif -%}
+    {%- if section.settings.show_tumblr -%}
+      <a
+        href="{{ section.settings.tumblr_link }}"
+        style="{% if section.settings.link-alignment == 'center' %}margin-left: 5px;{% endif %}filter: invert({{ invert_value }});"
+        class="social-link tumblr w-inline-block"
+        ><img
+          src="{{ 'icons8-tumblr-500.png' | asset_url }}"
+          loading="lazy"
+          sizes="(max-width: 991px) 12.859375px, 1vw"
+          srcset="{{ 'icons8-tumblr-500-p-500.png' | asset_url }} 500w, {{ 'icons8-tumblr-500.png' | asset_url }} 500w"
+          alt=""
+          class="social-logo invert"
+      ></a>
+    {%- endif -%}
+    {%- if section.settings.show_discord -%}
+      <a
+        href="{{ section.settings.discord_link }}"
+        style="{% if section.settings.link-alignment == 'center' %}margin-left: 5px;{% endif %}filter: invert({{ invert_value }});"
+        class="social-link discord w-inline-block"
+        ><img
+          src="{{ 'icons8-discord-500.png' | asset_url }}"
+          loading="lazy"
+          sizes="(max-width: 991px) 12.859375px, 1vw"
+          srcset="{{ 'icons8-discord-500-p-500.png' | asset_url }} 500w, {{ 'icons8-discord-500.png' | asset_url }} 500w"
+          alt=""
+          class="social-logo invert"
+      ></a>
+    {%- endif -%}
+    {%- if section.settings.show_applemusic -%}
+      <a
+        href="{{ section.settings.applemusic_link }}"
+        style="{% if section.settings.link-alignment == 'center' %}margin-left: 5px;{% endif %}filter: invert({{ invert_value }});"
+        class="social-link applemusic w-inline-block"
+        ><img
+          src="{{ 'icons8-apple-logo-500.png' | asset_url }}"
+          loading="lazy"
+          sizes="(max-width: 991px) 12.859375px, 1vw"
+          srcset="{{ 'icons8-apple-logo-500.png' | asset_url }} 500w, {{ 'icons8-apple-logo-500.png' | asset_url }} 500w"
+          alt=""
+          class="social-logo invert"
+      ></a>
+    {%- endif -%}
+    {%- if section.settings.show_spotify -%}
+      <a
+        href="{{ section.settings.spotify_link }}"
+        style="{% if section.settings.link-alignment == 'center' %}margin-left: 5px;{% endif %}filter: invert({{ invert_value }});"
+        class="social-link spotify w-inline-block"
+        ><img
+          src="{{ 'icons8-spotify-500.png' | asset_url }}"
+          loading="lazy"
+          sizes="(max-width: 991px) 12.859375px, 1vw"
+          srcset="{{ 'icons8-spotify-500.png' | asset_url }} 500w, {{ 'icons8-spotify-500.png' | asset_url }} 500w"
+          alt=""
+          class="social-logo invert"
+      ></a>
+    {%- endif -%}
+    {%- if section.settings.show_tidal -%}
+      <a
+        href="{{ section.settings.tidal_link }}"
+        style="{% if section.settings.link-alignment == 'center' %}margin-left: 5px;{% endif %}filter: invert({{ invert_value }});"
+        class="social-link tidal w-inline-block"
+        ><img
+          src="{{ 'icons8-tidal-500.png' | asset_url }}"
+          loading="lazy"
+          sizes="(max-width: 991px) 12.859375px, 1vw"
+          srcset="{{ 'icons8-tidal-500.png' | asset_url }} 500w, {{ 'icons8-tidal-500.png' | asset_url }} 500w"
+          alt=""
+          class="social-logo invert"
+      ></a>
+    {%- endif -%}
+    {%- if section.settings.show_soundcloud -%}
+      <a
+        href="{{ section.settings.soundcloud_link }}"
+        style="{% if section.settings.link-alignment == 'center' %}margin-left: 5px;{% endif %}filter: invert({{ invert_value }});"
+        class="social-link soundcloud w-inline-block"
+        ><img
+          src="{{ 'icons8-soundcloud-500.png' | asset_url }}"
+          loading="lazy"
+          sizes="(max-width: 991px) 12.859375px, 1vw"
+          srcset="{{ 'icons8-soundcloud-500.png' | asset_url }} 500w, {{ 'icons8-soundcloud-500.png' | asset_url }} 500w"
+          alt=""
+          class="social-logo invert"
+      ></a>
+    {%- endif -%}
+  </div>
+{% schema %}
+{
+  "name": "Social Media",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "header",
+      "content":"Sizing"
+    },
+      {
+      "type": "range",
+      "id": "social_media_size",
+      "min": 15,
+      "max": 25,
+      "step": 1,
+      "unit": "px",
+      "label": "Icon Size",
+      "default": 15
+    },
+     {
+      "type": "header",
+      "content":"Alignment"
+    },
+    {
+      "type": "select",
+      "id": "link-alignment",
+      "label": "Nav Link Alignment",
+      "options": [
+      {
+        "value": "left",
+        "label": "Left (Supreme-style)"
+      },
+      {
+        "value": "center",
+        "label": "Center"
+      }
+    ],
+  "default": "left"
+    },
+    {
+      "type": "header",
+      "content":"Invert"
+    },
+    {
+      "type": "checkbox",
+      "id": "invert_social_media_links",
+      "label": "Invert Social Media Links",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content":"URL"
+    },
+    {
+      "type": "paragraph",
+      "content":"Copy and paste your social media links below"
+    },
+    {
+      "type": "url",
+      "id": "instagram_link",
+      "label": "Instagram Link"    
+    },
+    {
+      "type": "url",
+      "id": "twitter_link",
+      "label": "Twitter Link"
+    },
+    {
+      "type": "url",
+      "id": "facebook_link",
+      "label": "Facebook Link"
+    },
+    {
+      "type": "url",
+      "id": "youtube_channel_link",
+      "label": "Youtube Channel Link"
+    },
+    {
+      "type": "url",
+      "id": "tik_tok_link",
+      "label": "Tik Tok Link"
+    },
+    {
+      "type": "url",
+      "id": "applemusic_link",
+      "label": "Apple Music Link"
+    },
+    {
+      "type": "url",
+      "id": "spotify_link",
+      "label": "Spotify Link"
+    },
+    {
+      "type": "url",
+      "id": "tidal_link",
+      "label": "Tidal Link"
+    },
+    {
+      "type": "url",
+      "id": "soundcloud_link",
+      "label": "Soundcloud Link"
+    },
+    {
+      "type": "url",
+      "id": "tumblr_link",
+      "label": "Tumblr Link"
+    },
+    {
+      "type": "url",
+      "id": "discord_link",
+      "label": "Discord Link"
+    },
+    {
+      "type": "header",
+      "content":"Visibility"
+
+    },
+    {
+      "type": "paragraph",
+      "content":"Check the social media or music streaming services you want shown on the homepage."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_instagram",
+      "label": "Show Instagram",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_twitter",
+      "label": "Show Twitter",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_facebook",
+      "label": "Show Facebook",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_youtube",
+      "label": "Show Youtube",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tik_tok",
+      "label": "Show Tik Tok",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tumblr",
+      "label": "Show Tumblr",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_discord",
+      "label": "Show Discord",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_applemusic",
+      "label": "Show Apple Music",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_spotify",
+      "label": "Show Spotify",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tidal",
+      "label": "Show Tidal",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_soundcloud",
+      "label": "Show Soundcloud",
+      "default": false
+    }
+  ]
+}
+{% endschema %}

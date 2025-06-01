@@ -1,0 +1,57 @@
+{%- if settings.show_announcement_bar -%}
+  <div
+    class="text-block"
+    style="
+    {% if settings.enable_announcement_shadow %}
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    {% endif %}
+    {% if settings.enable_large_announcement_bar %}
+    height: 52px;
+    {% endif %}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    {% if settings.enable_announcement_floater %}
+    {% if template == 'index' %}
+    position: absolute !important; 
+    left: 50%;
+    transform: translateX(-50%);
+    {% endif %}
+    {% if settings.enable_announcement_floater_radius %}
+    {% if template != 'collection' or settings.collection_style != "sidebar_collection" %}
+    border-radius: 4px;
+    {% endif %}
+    {% endif %}
+    {% if template != 'collection' or settings.collection_style != "sidebar_collection" %}
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    {% endif %}
+    {% endif %}
+    position: relative; 
+    {% if settings.enable_moving_announcement == false %}
+    text-align: center;
+    {% endif %}
+    font-size: {{ settings.announcement_text_size }}px;  
+    {% if template == 'index' %}
+    background-color: {{ settings.announcement_background_color_home_page }};
+    color: {{ settings.announement-text-color-home-page }};
+    {% elsif template == 'collection' %}
+    background-color: {{ settings.announcement_background_color_collection_page }};
+    color: {{ settings.announement-text-color-collection-page }};
+    {% elsif template == 'product' %}
+    background-color: {{ settings.announcement_background_color_product_page }};
+    color: {{ settings.announement-text-color-product-page }}
+    {% else %}
+    background-color: {{ settings.announcement_background_color }};
+    color: {{ settings.announement-text-color }};
+    {% endif %}
+    "
+  >
+    <p {% if settings.enable_moving_announcement %} class="marquee" {% endif %} style="margin-bottom: 0; --moving-scroll-speed: {{ settings.moving_txt_speed }}s;">
+       <span>{{ settings.announcement_text }}</span>
+    </p>   
+  </div>
+{%- endif -%}

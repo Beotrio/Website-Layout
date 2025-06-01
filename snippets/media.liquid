@@ -1,0 +1,37 @@
+{% case media.media_type %}
+   
+  {% when 'model' %}
+    <div mediaType="model" class="product-img-grid-item" style="" data-media-id="{{ media.id }}">
+      {{ media.preview_image | image_url: width: auto, height: auto | image_tag }}
+      {{ media | model_viewer_tag: style: 'display: none; height: 590px; width: 100%; position:relative;' }}
+<!--   	<button
+        style="width: 150px; height: 150px;"
+        data-shopify-xr
+        data-shopify-model3d-id="{{ media.id }}"
+        data-shopify-title="{{ product.title | escape }}"
+        data-shopify-xr-hidden
+      /> -->
+    </div>
+  {% when 'image' %}
+    <div mediaType="image" class="product-img-grid-item" style="display: flex; justify-content: center;"  data-media-id="{{ media.id }}">
+      {{ media | image_url: width: auto, height: auto | image_tag: style: 'margin-right: auto; margin-left: auto; width: 800px; height: auto;' }}
+    </div>
+  {% when 'video' %}
+    <div mediaType="video" class="product-img-grid-item" data-media-id="{{ media.id }}">
+      {{ media.preview_image | image_url: width: auto, height: auto | image_tag }}
+      {{ media | video_tag: controls: true, style: 'display: none; width: 100%; position:relative;'}}
+    </div>
+    {% when 'external_video' %}
+    <div mediaType="external_video" class="product-img-grid-item" style="" data-media-id="{{ media.id }}">
+      {{ media.preview_image | image_url: width: auto, height: auto | image_tag }}
+      {{ media | video_tag: controls: true, style: 'margin-right: auto; margin-left: auto; display: none; height: 400px; width: 100%; position:relative;'}}
+    </div>
+  {% else %}
+    <div class="product-single__media" style="padding-top: 100%;" data-media-id="{{ media.id }}">
+      {{ media | media_tag }}
+    </div>
+{% endcase %}
+
+
+
+<!--       {{ media | image_url: width: 450, height: 450 | image_tag }} -->

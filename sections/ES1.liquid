@@ -1,0 +1,45 @@
+<div class="section-wrapper" style="position: relative;">
+  <div
+    class="item-box"
+    style="
+      position: absolute;
+      left: {{ section.settings.item_box_position_x }}%;
+      top: {{ section.settings.item_box_position_y }}%;
+      transform: translate(-50%, -50%);
+      background: red;
+      padding: 20px;
+      color: white;
+      z-index: 1000;
+    "
+  >
+    This is the item box
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Section name",
+  "settings": [
+    {
+      "type": "range",
+      "id": "item_box_position_x",
+      "label": "Item Box X Position",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "item_box_position_y",
+      "label": "Item Box Y Position",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 50
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,541 @@
+<div class="collection-list-container">
+  {%- for block in section.blocks -%}
+    <a
+      {% if block.settings.show_tilt %}
+        data-tilt
+        data-tilt-max="10"
+        data-tilt-speed="1000"
+        data-tilt-perspective="800"
+        data-tilt-scale="1.05"
+        {% if block.settings.show_tilt_glare %}
+          data-tilt-glare
+        {% endif %}
+        data-tilt-reverse="false"
+        data-tilt-easing="cubic-bezier(.03,.98,.52,.99)"
+        gyroscope
+      {% endif %}
+      href="{{ block.settings.collection.url }}"
+      class="collection-card"
+      style="
+          text-decoration: none;
+          --border-card-radius: {{ block.settings.card_radius }}px;
+          object-fit: cover;
+        
+          background-size: cover;
+        
+      
+        {% if block.settings.show_collection_image %}
+          {% if block.settings.collection.image %}
+          --category-image: url('{{ block.settings.collection.image | img_url:'master' }}');
+            {% else %}
+            --category-image: url('{{ block.settings.collection.products[0].featured_image | img_url:'master' }}');
+          {% endif %}
+        {% endif %}
+          {% if block.settings.show_collection_hover_image %}
+          --hover-category-image-url: linear-gradient(180deg, {{ block.settings.overlay_top_color | color_modify: 'alpha', block.settings.overlay_top_opacity }}, {{ block.settings.overlay_bottom_color | color_modify: 'alpha', block.settings.overlay_bottom_opacity }}), url('{{ block.settings.hover_category_image | img_url: 'master' }}');
+          {% else %}
+          --hover-category-image-url: none;
+          {% endif %}
+          --category-header-color: {{ block.settings.header_color }};
+          --category-header-hover-color: {{ block.settings.header_hover_color }};
+          --category-description-color: {{ block.settings.description_color }};
+          --category-description-hover-color: {{ block.settings.description_hover_color }};
+          --category-bg-color: {{ block.settings.collection_bg_color }};
+          --category-bg-hover-color: {{ block.settings.collection_bg_hover_color }};
+          {% if block.settings.mobile_bg_image != null %}
+          --mobile-collection-img-url: url('{{ block.settings.mobile_bg_image | img_url: 'master' }}');
+          {% else %}
+            --mobile-collection-img-url: none; 
+          {% endif %}
+      "
+    >
+      {% if block.settings.show_collection_header %}
+        <h1
+          style="text-align: {{ block.settings.collection_header_align }}; top:{{ block.settings.header_down }}px; left: {{ block.settings.header_right }}px;"
+          class="regular-collection-text"
+        >
+          {{ block.settings.collection.title }}
+        </h1>
+      {% endif %}
+
+      <h1
+        class="mobile-collection-text"
+      >
+        {{ block.settings.collection.title }}
+      </h1>
+
+      {% if block.settings.show_collection_description %}
+        <p
+          class="regular-collection-text"
+          style="text-align: {{ block.settings.collection_description_align }}; top:{{ block.settings.description_down }}px; left: {{ block.settings.description_right }}px;"
+        >
+          {{ block.settings.collection.description }}
+        </p>
+      {% endif %}
+
+      <h1
+        style="text-align: {{ block.settings.collection_header_hover_align }}; top:{{ block.settings.hover_header_down }}px; left: {{ block.settings.hover_header_right }}px;"
+        class="hover-text"
+      >
+        {% if block.settings.show_collection_hover_header %}
+          {{ block.settings.hover_header_text }}
+        {% endif %}
+      </h1>
+      <p
+        style="text-align: {{ block.settings.collection_description_hover_align }}; top:{{ block.settings.hover_description_down }}px; left: {{ block.settings.hover_description_right }}px;"
+        class="hover-text"
+      >
+        {% if block.settings.show_collection_hover_description %}
+          {{ block.settings.hover_description_text }}
+        {% endif %}
+      </p>
+    </a>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Collection Card",
+  "blocks": [
+     {
+      "type": "featured_collection",
+      "name": "Select A Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "header",
+          "content": "Desktop Featured Image"
+        },
+        
+        {
+          "type": "paragraph",
+          "content": "IMPORTANT: To set the image for your Collection Card please go to the Shopify Panel > Collections. Pick the collection you've selected above, and add a featured image. Then come back here to continue editing. The dimensions of the card are 740px x 350px "
+        },
+        {
+          "type": "header",
+          "content": "Mobile Featured Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_bg_image",
+          "label": "Upload Image. Mobile card dimensions are 315px x 350px"
+        },
+        
+        {
+        "type": "header",
+        "content": "Visibility"
+      },
+        
+      {
+        "type": "checkbox",
+        "id": "show_collection_image",
+        "label": "Show Collection Image",
+        "default": true
+      },  
+        {
+        "type": "checkbox",
+        "id": "show_collection_header",
+        "label": "Show Header",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_collection_description",
+        "label": "Show Description",
+        "default": false
+      },
+        {
+        "type": "checkbox",
+        "id": "show_collection_hover_image",
+        "label": "Show Image (On Hover)",
+        "default": false
+      },
+        {
+        "type": "checkbox",
+        "id": "show_collection_hover_header",
+        "label": "Show Header (On Hover)",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_collection_hover_description",
+        "label": "Show Description (On Hover)",
+        "default": true
+      },
+              
+         
+        {
+          "type": "header",
+          "content": "Card Curve"
+        },
+        {
+          "type": "range",
+          "id": "card_radius",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "px",
+          "label": "Pixels",
+          "default":0
+        },
+        {
+        "type": "header",
+        "content": "Card Effects"
+      },
+        {
+        "type": "paragraph",
+        "content": "IMPORTANT: Card effect settings only work on Desktop. To see effects please save your work and visit this page on your live site."
+        
+        },
+        
+        {
+        "type": "checkbox",
+        "id": "show_tilt",
+        "label": "Enable Tilt",
+        "default": true
+      },
+        {
+        "type": "checkbox",
+        "id": "show_tilt_glare",
+        "label": "Enable Tilt Glare",
+        "default": true
+      },
+        
+         {
+          "type": "header",
+          "content": "Colors"
+        },
+        
+        
+        {
+        "type": "color",
+        "id": "collection_bg_color",
+        "label": "Background Color",
+        "default": "#FFFFFF"
+      },
+        {
+        "type": "color",
+        "id": "collection_bg_hover_color",
+        "label": "Background Color (On Hover)",
+        "default": "#000"
+      },
+        {
+        "type": "color",
+        "id": "header_color",
+        "label": " Header Color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "header_hover_color",
+        "label": "On Hover Header Color",
+        "default": "#FFF"
+      },
+      {
+        "type": "color",
+        "id": "description_color",
+        "label": "Description Color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "description_hover_color",
+        "label": "On Hover Description Color",
+        "default": "#FFF"
+      },
+        
+        {
+        "type": "header",
+        "content": "Collection Title"
+      },
+        {
+          "type": "paragraph",
+          "content": "IMPORTANT: To change the text of the card title, go to the Shopify Panel > Collections. Change the name of your collection, then come back here to continue editing"
+        },
+        {
+          "type": "radio",
+          "id": "collection_header_align",
+          "label": "Alignment",
+          "options": [
+            {
+              "value": "right",
+              "label": "Right"
+            },
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Centered"
+            }
+          ],
+          "default": "center"
+        },
+         {
+          "type": "paragraph",
+          "content": "Position"
+        },
+        {
+          "type": "paragraph",
+          "content": "This affects the default position of the title of the collection card"
+        },
+        {
+        "type": "range",
+        "id": "header_down",
+        "label": "Up/Down",
+        "min": 0,
+        "max": 287.5,
+        "unit": "px",
+        "step": 12.5,
+        "default": 150
+      },
+        {
+        "type": "range",
+        "id": "header_right",
+        "label": "Left/Right",
+        "min": 0,
+        "max": 736,
+        "unit": "px",
+        "step": 11.5,
+        "default": 23
+      },
+        {
+        "type": "header",
+        "content": "Description"
+      },{
+          "type": "paragraph",
+          "content": "IMPORTANT: To change the text of the card description, go to the Shopify Panel > Collections. Select a collection, edit the content there, then come back here to continue editing"
+        },
+        {
+          "type": "radio",
+          "id": "collection_description_align",
+          "label": "Alignment",
+          "options": [
+            {
+              "value": "right",
+              "label": "Right"
+            },
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Centered"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "paragraph",
+          "content": "Position"
+        },
+        {
+          "type": "paragraph",
+          "content": "This affects the default position of the description of the collection card"
+        },
+        {
+        "type": "range",
+        "id": "description_down",
+        "label": "Up/Down",
+        "min": 0,
+        "max": 287.5,
+        "unit": "px",
+        "step": 12.5,
+        "default": 150
+      },
+        {
+        "type": "range",
+        "id": "description_right",
+        "label": "Left/Right",
+        "min": 0,
+        "max": 736,
+        "unit": "px",
+        "step": 11.5,
+        "default": 23
+      },
+        {
+          "type": "header",
+          "content": "On Mouse Hover"
+        },
+        {
+          "type": "paragraph",
+          "content": "IMPORTANT: From this point all settings affect the card when hovered over by a mouse. These settings will only affect Desktop, not Mobile "
+        },
+       
+        {
+          "type": "radio",
+          "id": "collection_header_hover_align",
+          "label": "Title Alignment (On Hover)",
+          "options": [
+            {
+              "value": "right",
+              "label": "Right"
+            },
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Centered"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "paragraph",
+          "content": "Title Position (On Hover)"
+        },
+        {
+          "type": "paragraph",
+          "content": "This affects position of the title when your mouse is hovered over the collection card"
+        },
+      {
+        "type": "range",
+        "id": "hover_header_down",
+        "label": "Up/Down",
+        "min": 0,
+        "max": 287.5,
+        "unit": "px",
+        "step": 12.5,
+        "default": 187.5
+      },
+        {
+        "type": "range",
+        "id": "hover_header_right",
+        "label": "Left/Right",
+        "min": 0,
+        "max": 736,
+        "unit": "px",
+        "step": 11.5,
+        "default": 23
+      },
+         
+        {
+          "type": "radio",
+          "id": "collection_description_hover_align",
+          "label": "Description Alignment (On Hover)",
+          "options": [
+            {
+              "value": "right",
+              "label": "Right"
+            },
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Centered"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "paragraph",
+          "content": "Description Position (On Hover)"
+        },
+        {
+          "type": "paragraph",
+          "content": "This affects the position of the description when your mouse is hovered over the collection card"
+        },
+        {
+        "type": "range",
+        "id": "hover_description_down",
+        "label": "Up/Down",
+        "min": 0,
+        "max": 287.5,
+        "unit": "px",
+        "step": 12.5,
+        "default": 150
+      },
+        {
+        "type": "range",
+        "id": "hover_description_right",
+        "label": "Left/Right",
+        "min": 0,
+        "max": 736,
+        "unit": "px",
+        "step": 11.5,
+        "default": 23
+      },
+        {
+          "type": "header",
+          "content": "Card Content (On Hover)"
+        },
+        {
+        "type": "text",
+        "id": "hover_header_text",
+        "label": "Title (On Hover)",
+        "default": " Enter Title"
+      },
+          {
+        "type": "textarea",
+        "id": "hover_description_text",
+        "label": "Description (On Hover)",
+        "default": "Enter Description or hide using the Visibility options above"
+        },
+        {
+        "type": "header",
+        "content": "Card Background(On Hover)"
+      },
+        {
+          "type": "image_picker",
+          "id": "hover_category_image",
+          "label": "Desktop"
+        },
+           
+       {
+        "type": "header",
+        "content": "Gradient Overlays (On Hover)"
+      },
+        {
+      "type": "color",
+      "id": "overlay_top_color",
+      "label": "Overlay Desktop Color (Top)",
+      "default": "#000000"
+    },
+    {
+    "type": "range",
+    "id": "overlay_top_opacity",
+    "min": 0,
+    "max": 1,
+    "step": 0.1,
+    "unit": "px",
+    "label": "Overlay Desktop Opacity (Top)",
+    "default": 0
+    },
+    {
+      "type": "color",
+      "id": "overlay_bottom_color",
+      "label": "Overlay Desktop Color (Bottom)",
+      "default": "#000000"
+    },
+    {
+  "type": "range",
+  "id": "overlay_bottom_opacity",
+  "min": 0,
+  "max": 1,
+  "step": 0.1,
+  "unit": "px",
+  "label": "Overlay Desktop Opacity (Bottom)",
+  "default":0
+}
+          
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,189 @@
+<div
+  class="product-recommendations"
+  data-lazyload="{% if settings.enable_lazy_loading %} true {% else %} false {% endif %}"
+  data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related"
+  style="padding: 0 0 0 20px; margin-bottom: 10px; margin: 0 auto; margin-bottom: 30px; max-width: 1500px;"
+>
+  {%- if recommendations.performed? and recommendations.products_count > 0 -%}
+    {% if recommendations.intent == 'related' and section.settings.show-related-title %}
+      <h4 class="related-products-header" style="font-size: {{ section.settings.related_title_size }}px; color: {{ section.settings.related_title_color }}; margin-bottom: 28px;">Related Products</h4>
+    {% elsif recommendations.intent == 'complementary' and section.settings.show-related-title %}
+      <h4 style="font-size: {{ section.settings.related_title_size }}px; color: {{ section.settings.related_title_color }}; margin-bottom: 28px;">Pair It With</h4>
+    {% endif %}
+
+    <ul class="related-products-scroll-container"  style="
+        {% if recommendations.products_count >= 4 %}
+          justify-content: space-between; 
+        {% endif %}
+      ">
+      {%- for product in recommendations.products -%}
+        <li class="product-recommendations-card" style="">
+          <a href="{{ product.url }}" style="    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none; 
+            color: black;
+            ">
+            <img
+              class="product__img lazyload"
+              src="{{ product.featured_media.preview_image | image_url: width: 300, height: auto }}"
+              alt="{{ product.featured_image.alt }}"
+              width="300px"
+              height="300px"
+              data-sizes="auto"
+              data-srcset="
+              {{ product.featured_media.preview_image | img_url: '325x' }} 325w,
+        	  {{ product.featured_media.preview_image | img_url: '400x' }} 400w,
+              {{ product.featured_media.preview_image | img_url: '500x' }} 500w,
+              {{ product.featured_media.preview_image | img_url: '600x' }} 600w,
+              {{ product.featured_media.preview_image | img_url: '700x' }} 700w,
+      		  {{ product.featured_media.preview_image | img_url: '1024x' }} 1524w"
+              loading="lazy"
+              style="width: 300px; height: auto; max-width: 300px;"
+            />
+            {%  if section.settings.show-related-product-title %}
+            <p class="related__product__title" style="font-size: {{ section.settings.related_product_title_size }}px; --related-title-color: {{ section.settings.related_product_title_color }};
+              {% if settings.disable_highlight_animation %}
+              animation-duration: 0s;
+              {% endif %}
+                --related-title-highlight-color: {{ section.settings.related_product_title_highlight_color }};
+              --related-title-hover-color: {{ section.settings.related_product_title_hover_color }};
+                
+              margin-top: 20px;">{{ product.title }}</p>
+            {% endif %}
+            {% if section.settings.show_related_price %}
+            <p class="product__price" style="font-size: {{ section.settings.related_product_price_size }}px; color: {{ section.settings.related_product_price_color }};
+              {% if section.settings.show-related-product-title == false %}
+                margin-top: 20px; 
+              {% endif %}
+              ">
+              {% if section.settings.currency_format == "with_currency" %}  
+              {{ product.price | money_with_currency }}
+              {% else %}
+              {{ product.price | money }}
+              {% endif %} 
+            </p>
+            {% endif %}
+            </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
+<script async src="{{ 'product-recommendation.js' | asset_url }}" type="text/javascript"></script> 
+<script src="{{ 'lazyloadz.js' | asset_url }}" type="text/javascript"></script>
+
+{% schema %}
+  {
+    "name": "Product recommendations",
+    "settings": [
+      {
+      "type": "header",
+      "content": "Related Titles"
+    },
+    {
+      "type": "color",
+      "id": "related_title_color",
+      "label": "Product Titles",
+      "default": "#000000"
+    },
+     {
+        "type": "range",
+        "id": "related_title_size",
+        "label": "Product Title Size",
+        "min": 10,
+        "max": 28,
+        "unit": "px",
+        "step": 1,
+        "default": 18
+    },
+   {
+      "type": "checkbox",
+      "id": "show-related-title",
+      "label": "Show Related Product Header",
+      "default": true
+    },
+       {
+      "type": "header",
+      "content": "Product Titles"
+    },
+    {
+      "type": "color",
+      "id": "related_product_title_color",
+      "label": "Product Titles",
+      "default": "#000000"
+    },
+      {
+      "type": "color",
+      "id": "related_product_title_hover_color",
+      "label": "Title Hover Text Color",
+      "default": "#fff"
+    },
+      {
+      "type": "color",
+      "id": "related_product_title_highlight_color",
+      "label": "Title Highlight Color",
+      "default": "#fe0100"
+    },
+     {
+        "type": "range",
+        "id": "related_product_title_size",
+        "label": "Product Title Size",
+        "min": 10,
+        "max": 28,
+        "unit": "px",
+        "step": 1,
+        "default": 18
+    },
+   {
+      "type": "checkbox",
+      "id": "show-related-product-title",
+      "label": "Show Product Titles",
+      "default": true
+    },
+   {
+      "type": "header",
+      "content": "Product Prices"
+    },
+    {
+      "type": "color",
+      "id": "related_product_price_color",
+      "label": "Product Price Color",
+      "default": "#000000"
+    },
+     {
+        "type": "range",
+        "id": "related_product_price_size",
+        "label": "Product Price Size",
+        "min": 10,
+        "max": 21,
+        "unit": "px",
+        "step": 1,
+        "default": 12
+    },
+   {
+      "type": "checkbox",
+      "id": "show_related_price",
+      "label": "Show Product Prices",
+      "default": true
+    },
+    {
+      "type": "radio",
+      "id": "related_currency_format",
+      "label": "Currency Format",
+      "options": [
+        {
+          "value": "with_currency",
+          "label": "With Currency"
+        },
+        {
+          "value": "without_currency",
+          "label": "Without Currency"
+        }
+      ],
+      "default": "without_currency"
+    }
+    ]
+  }
+{% endschema %}

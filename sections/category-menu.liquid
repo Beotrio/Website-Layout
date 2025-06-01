@@ -1,0 +1,175 @@
+<div class="category-container" style="background-color:{{ section.settings.bg_color }};">
+  <div class="logo-container categories">
+    <a href="{{ routes.root_url }}" aria-current="page" class="logo-link w-inline-block w--current">
+      {% if settings.shop_screen_logo %}
+        <img
+          src="{{ settings.shop_screen_logo | image_url }}"
+          height="auto"
+          style="width: {{ settings.shop_screen_logo_size }};"
+          alt=""
+          class="logo"
+          loading="lazy"
+        >
+
+      {% else %}
+        <img src="{{ 'Supreme-dummy.png' | asset_url }}" loading="lazy" alt="" class="logo">
+      {% endif %}
+    </a>
+  </div>
+  {% capture listItems %}
+          
+          {%- assign allItems = collections -%}
+          {%- assign allItems = allItems | sort: 'title' -%}
+          {%- for link in linklists["shop-menu"].links -%}
+            <div role="listitem" class="collection-item-5 w-dyn-item" style="text-align:{{ section.settings.text-alignment }};">
+              <a href="{{ link.url }}" class="link-block shop _1 w-inline-block" style=" margin-top: {{ section.settings.menu-spacing }}px">
+                  <div style="font-size:{{ section.settings.font-size }}px; text-align:{{ section.settings.text-alignment }} ;  --navlink-color:{{ section.settings.menu-link-color }}; --navlink-hover-color: {{ section.settings.navlink_hover_color }}; --navlink-background-color: {{ section.settings.navlink_background_color }};" class="nav-link shop">{{ link.title }}</div>
+              </a>
+            </div>
+          {%- endfor -%}
+          
+          {% endcapture %}
+  {% assign items_length = listItems | strip | size %}
+
+  <div class="collection-list-wrapper-5 w-dyn-list" udy-collection="collection">
+    {%- unless items_length == 0 -%}
+      <div role="list" class="w-dyn-items">
+        {{ listItems }}
+        <a
+          style="text-align:{{ section.settings.text-alignment }}; margin-top:{{ section.settings.menu-spacing }}px; "
+          href="{{ routes.root_url }}"
+          class="link-block shop _1 w-inline-block"
+        >
+          <div
+            style="text-align:{{ section.settings.text-alignment }}; font-size:{{ section.settings.font-size }}px; --navlink-color:{{ section.settings.menu-link-color }}; --navlink-hover-color: {{ section.settings.navlink_hover_color }}; --navlink-background-color: {{ section.settings.navlink_background_color }};"
+            class="nav-link shop"
+          >
+            Back Home
+          </div>
+        </a>
+        <div class="mobile-spacer"></div>
+      </div>
+    {%- endunless -%}
+    {%- if items_length == 0 -%}
+      <div class="w-dyn-empty">
+        <a
+          style="text-align:{{ section.settings.text-alignment }}; margin-top:{{ section.settings.menu-spacing }}px; "
+          href="{{ routes.root_url }}"
+          class="link-block shop _1 w-inline-block"
+        >
+          <div
+            style="text-align:{{ section.settings.text-alignment }}; font-size:{{ section.settings.font-size }}px; --navlink-color:{{ section.settings.menu-link-color }}; --navlink-hover-color: {{ section.settings.navlink_hover_color }}; --navlink-background-color: {{ section.settings.navlink_background_color }};"
+            class="nav-link shop"
+          >
+            Back Home
+          </div>
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+
+  <a
+    data-w-id="7c65dd6c-0bfc-7992-033e-27bb1d7510b4"
+    href="#"
+    class="close-filter-btn w-button"
+    style="color: {{ section.settings.close_button_color }};"
+  >
+    {{- 't58' | t -}}
+  </a>
+</div>
+
+<script>
+  var currentSection = document.currentScript.closest('.shopify-section');
+</script>
+
+{% schema %}
+{
+  "name": "Mobile Menu",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Switch to mobile view and click the menu icon to see the changes for this setting"
+    },
+     {
+      "type": "paragraph",
+      "content": "To change the order of collection links, go to the Shopify admin panel and follow these steps:"
+    },
+    {
+      "type": "paragraph",
+      "content": "Go to Online Store > Navigation > Add Menu > name it \"Shop Menu\" and customize"
+    },
+     {
+      "type": "color",
+      "id": "menu-link-color",
+      "label": "Link Colors",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Menu Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "navlink_background_color",
+      "label": "Link Hover Colors",
+      "default": "#FE0000"
+    },
+    {
+      "type": "color",
+      "id": "navlink_hover_color",
+      "label": "Menu Link Hover Text Colors",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "close_button_color",
+      "label": "Close Button Color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "text-alignment",
+      "label": "Text Alignment",
+      "options": [
+      {
+        "value": "left",
+        "label": "Left"
+      },
+      {
+        "value": "center",
+        "label": "Center"
+      },
+      {
+        "value": "right",
+        "label": "Right"
+      }
+    ],
+  "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "font-size",
+      "min": 10,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "menu-spacing",
+      "min": 0,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "label": "Vertical Spacing",
+      "default": 0
+    }
+
+  ]
+}
+{% endschema %}

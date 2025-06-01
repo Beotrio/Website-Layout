@@ -1,0 +1,1033 @@
+
+  <div class="logo-container collection">
+    {%- if collection -%}
+        <a data-w-id="b46ce580-dd6b-e4df-f0e5-7b65957d9288" href="#" class="filter-btn">
+      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+        <g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="{{ section.settings.bg-color }}" stroke-width="1.5" stroke-linecap="round"/> <path d="M4 12L20 12" stroke="{{ section.settings.bg-color }}" stroke-width="1.5" stroke-linecap="round"/> <path d="M4 6L20 6" stroke="{{ section.settings.bg-color }}" stroke-width="01.5" stroke-linecap="round"/> </g>
+      </svg>
+        </a>
+      <!--       <a data-w-id="b46ce580-dd6b-e4df-f0e5-7b65957d9288" href="#" class="filter-btn w-button" style="color:{{ section.settings.text-color }}; background-color:{{ section.settings.bg-color }}">{{ 't4b47dc54' | t }}</a>
+       -->
+      {%- else -%}
+      <!--       <a data-w-id="2f3b53d5-a54c-c842-2fc8-1e63eee6812e" href="#" class="filter-btn w-button" style="color:{{ section.settings.text-color }}; background-color:{{ section.settings.bg-color }}">{{ 't4b47dc54' | t }}</a>
+       -->
+            <a data-w-id="2f3b53d5-a54c-c842-2fc8-1e63eee6812e" href="#" class="filter-btn">
+      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+        <g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="{{ section.settings.bg-color }}" stroke-width="1.5" stroke-linecap="round"/> <path d="M4 12L20 12" stroke="{{ section.settings.bg-color }}" stroke-width="1.5" stroke-linecap="round"/> <path d="M4 6L20 6" stroke="{{ section.settings.bg-color }}" stroke-width="1.5" stroke-linecap="round"/> </g>
+      </svg>
+        </a>
+    {%- endif -%}
+    <a href="{{ routes.root_url }}" class="logo-link w-inline-block">
+      {% if settings.collection_screen_logo %}
+        <img
+          src="{{ settings.collection_screen_logo | image_url }}"
+          style="width: {{ settings.collection_screen_logo_size }}px"
+          loading="lazy"
+          alt=""
+          class="logo"
+        >
+      {% else %}
+        <img src="{{ 'Supreme-dummy.png' | asset_url }}" loading="lazy" alt="" class="logo">
+      {% endif %}
+    </a>
+    {%  if section.settings.show_date_time %}
+    <div class="date-time-container">
+        <div class="date" style="color: {{ section.settings.index_date_color }}">{{ 'tn7d8e379f' | t }}</div>
+        <div class="time" style="color: {{ section.settings.index_time_color }}">{{ 't589b2285' | t }}</div>
+    </div>
+    {% endif %}
+    <div class="cart-wrapper">
+      <div
+        data-node-type="commerce-cart-wrapper"
+        data-open-product=""
+        data-wf-cart-type="rightSidebar"
+        data-wf-cart-query=""
+        data-wf-page-link-href-prefix=""
+        data-wf-cart-duration="1000"
+        class="w-commerce-commercecartwrapper"
+      >
+        <a
+          href="#"
+          data-node-type="commerce-cart-open-link"
+          aria-haspopup="dialog"
+          aria-label="Open cart"
+          style="padding-top: 0px; padding-bottom: 0px;"
+          role="button"
+          class="w-commerce-commercecartopenlink cart-button-2 w-inline-block"
+        >
+          <svg class="w-commerce-commercecartopenlinkicon icon-3" width="17px" height="17px" viewBox="0 0 17 17">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path d="M2.60592789,2 L0,2 L0,0 L4.39407211,0 L4.84288393,4 L16,4 L16,9.93844589 L3.76940945,12.3694378 L2.60592789,2 Z M15.5,17 C14.6715729,17 14,16.3284271 14,15.5 C14,14.6715729 14.6715729,14 15.5,14 C16.3284271,14 17,14.6715729 17,15.5 C17,16.3284271 16.3284271,17 15.5,17 Z M5.5,17 C4.67157288,17 4,16.3284271 4,15.5 C4,14.6715729 4.67157288,14 5.5,14 C6.32842712,14 7,14.6715729 7,15.5 C7,16.3284271 6.32842712,17 5.5,17 Z" fill="currentColor" fill-rule="nonzero"></path>
+            </g>
+          </svg>
+                <div class="center-cart">
+                    <div style="color: {{ section.settings.cart_text_color }}" class="text-block-16 w-inline-block">
+                      {{ 't1fef40' | t }}
+                    </div>
+                    <div
+                      style="line-height: 20px; background-color: {{ section.settings.cart_number_bg_color }}; color: {{ section.settings.cart_number_color }}"
+                      class="w-commerce-commercecartopenlinkcount cart-quantity-2"
+                    >
+                      {{ cart.item_count }}
+                    </div>
+                  </div>
+        </a>
+        <div
+          data-node-type="commerce-cart-container-wrapper"
+          style="display:none"
+          class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-rightSidebar"
+        >
+          <div role="dialog" data-node-type="commerce-cart-container" class="w-commerce-commercecartcontainer">
+            <div class="w-commerce-commercecartheader" style="border-bottom-color: {{ settings.cart_divider_color }}; background-color: {{ settings.upper_cart_bg_color }};">
+              <h4 class="w-commerce-commercecartheading heading-5" style="color: {{ settings.upper_cart_txt_color }};">Your Cart</h4>
+              <a
+                href="#"
+                data-node-type="commerce-cart-close-link"
+                role="button"
+                aria-label="Close cart"
+                class="w-commerce-commercecartcloselink w-inline-block"
+              >
+                <svg width="16px" height="16px" viewBox="0 0 16 16">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g fill-rule="nonzero" fill="{{ settings.cart_close_btn_color }}">
+                      <polygon points="6.23223305 8 0.616116524 13.6161165 2.38388348 15.3838835 8 9.76776695 13.6161165 15.3838835 15.3838835 13.6161165 9.76776695 8 15.3838835 2.38388348 13.6161165 0.616116524 8 6.23223305 2.38388348 0.616116524 0.616116524 2.38388348 6.23223305 8"></polygon>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <div class="w-commerce-commercecartformwrapper">
+              <form data-node-type="commerce-cart-form" style="display:none" class="w-commerce-commercecartform">
+                <script type="text/x-wf-template" id="wf-template-b46ce580-dd6b-e4df-f0e5-7b65957d929d">
+                  <div data-node-type="cart-item" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d929e" class="w-commerce-commercecartitem"><img data-node-type="cart-item-image" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d929f" class="w-commerce-commercecartitemimage" src="<%= it.image %>"><div data-node-type="cart-item-info" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d92a0" class="w-commerce-commercecartiteminfo">
+                  <div data-node-type="cart-product-name" style="color: {{ settings.center_cart_txt_color }};" class="text-block-10 w-commerce-commercecartproductname" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d92a1"><%= it.title %></div>
+                  <div style="color: {{ settings.center_cart_txt_color }};" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d92a2"><%= it.price %></div><ul template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d92a3" class="w-commerce-commercecartoptionlist"><% Object.entries(it.properties).forEach( data =>  { %>
+                  <li style="color: {{ settings.center_cart_txt_color }};" data-node-type="cart-option-list-item"><span data-node-type="cart-option-list-item-label" class="text-block-11" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d92a5"><%= data[0] %></span><span>: </span><span data-node-type="cart-option-list-item-value" class="text-block-12" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d92a8"><%= data[1] %></span></li><% }) %></ul>
+                  <a style="color: {{ settings.center_cart_txt_color }};" data-node-type="cart-remove-link" class="remove-button" href="#" role="button" aria-label="Remove item from cart" template-part-bind="b46ce580-dd6b-e4df-f0e5-7b65957d92a9" data-product-id="<%= it.id %>"><div class="text-block-13">Remove</div></a></div><input class="w-commerce-commercecartquantity cart-quantity" name="<%= it.id %>" type="number" min="0" min="1" value="<%= it.quantity %>" data-node-type="cart-quantity"></div>
+                </script>
+                <div
+                  class="w-commerce-commercecartlist"
+                  style="background-color: {{ settings.center_cart_bg_color }}; {% if settings.center_cart_bg_img %}background-repeat: no-repeat; background-position: center; background-size: cover; object-fit: cover; background-image: url('{{ settings.center_cart_bg_img | image_url }}'); {% endif %}"
+                  data-wf-collection="database.commerceOrder.userItems"
+                  data-wf-template-id="wf-template-b46ce580-dd6b-e4df-f0e5-7b65957d929d"
+                ></div>
+                <div class="w-commerce-commercecartfooter" style="border-top-color: {{ settings.cart_divider_color }}; background-color:{{ settings.lower_cart_bg_color }};">
+                  <div aria-atomic="true" aria-live="polite" class="w-commerce-commercecartlineitem">
+                    <div style="color:{{ settings.lower_cart_txt_color }};" class="text-block-14">{{ 'tn76f396dc' | t }}</div>
+                    <div style="color:{{ settings.lower_cart_txt_color }};" class="w-commerce-commercecartordervalue text-block-15">
+                      {{ cart.items_subtotal_price | money }}
+                    </div>
+                  </div>
+                  <div>
+                    <div data-node-type="commerce-cart-quick-checkout-actions">
+                      {{ content_for_additional_checkout_buttons }}
+                    </div>
+                    <a
+                      style="background-color: {{ settings.checkout_btn_bg_color }}; color: {{ settings.checkout_btn_txt_color }};"
+                      href="/checkout"
+                      value="Continue to Checkout"
+                      data-node-type="cart-checkout-button"
+                      class="w-commerce-commercecartcheckoutbutton checkout-button-2"
+                      data-loading-text="Hang Tight..."
+                    >
+                      {{- 'tn7941186e' | t -}}
+                    </a>
+                  </div>
+                </div>
+              </form>
+              <div class="w-commerce-commercecartemptystate" style="color: {{ settings.center_cart_txt_color }}; background-color: {{ settings.center_cart_bg_color }}; {% if settings.center_cart_bg_img %}background-repeat: no-repeat; background-position: center; background-size: cover; object-fit: cover; background-image: url('{{ settings.center_cart_bg_img | image_url }}'); {% endif %}">
+                <div aria-live="polite" aria-label="This cart is empty">{{ 't3d503d2b' | t }}</div>
+              </div>
+              <div
+                aria-live="assertive"
+                style="display:none"
+                data-node-type="commerce-cart-error"
+                class="w-commerce-commercecarterrorstate"
+              >
+                <div
+                  class="w-cart-error-msg"
+                  data-w-cart-quantity-error="Product is not available in this quantity."
+                  data-w-cart-general-error="Something went wrong when adding this item to the cart."
+                  data-w-cart-checkout-error="Checkout is disabled on this site."
+                  data-w-cart-cart_order_min-error="The order minimum was not met. Add more items to your cart to continue."
+                  data-w-cart-subscription_error-error="Before you purchase, please use your email invite to verify your address so we can send order updates."
+                >
+                  {{ 'tn1c765d0d' | t }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div
+  class="site-container"
+  style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      position: relative;
+      bottom: 0;
+    height: 100%;
+  "
+>
+  <div
+    class="shop-section"
+    style="
+      {% if section.settings.reverse_desktop_menu %}
+        flex-direction: row;
+      {% endif %}
+      {% if settings.make_product_box_responsive %} width: 75%; {% endif %}
+      {% if settings.enable_endless_scroll %}
+        position: relative;
+        top: initial;
+        left: initial;
+        transform:none;
+      {% endif %}
+    "
+  >
+    <div
+      class="middle w-col w-col-stack shop-container desktop"
+      style="{% if settings.make_product_box_responsive %} width: 100%; {% else %} max-width:{{ settings.product-box-width }}px; {% endif %}"
+    >
+{%- if collection -%}
+{% capture listItems %}
+{% paginate collection.products by 999 %}
+{% for item in collection.products %}
+  <div style="width: {{ settings.product-size }}%; height: auto;
+    min-width: 1px;
+    min-height: 150px;
+    " role="listitem" class="collection-item w-dyn-item">
+    <a style="width:100%; height:100%; height:100%; border-radius: {{ section.settings.product_bg_radius }}px; 
+      background-color: {% if section.settings.product_bg_transparent == false %}{{ section.settings.product_bg_color }}; {% endif %}"href="{{ item.url | within: collection }}" class="link-block-2 w-inline-block collection-product-container">
+      <img
+            width="390px"
+            height="390px"
+            {% if settings.enable_lazy_loading %}
+            data-sizes="auto"
+            data-srcset="
+            {{ item.featured_media.preview_image | img_url: '325x' }} 325w,
+    		{{ item.featured_media.preview_image | img_url: '400x' }} 500w,
+            {{ item.featured_media.preview_image | img_url: '500x' }} 500w,
+            {{ item.featured_media.preview_image | img_url: '600x' }} 500w,
+            {{ item.featured_media.preview_image | img_url: '700x' }} 500w,
+    		{{ item.featured_media.preview_image | img_url: '1024x' }} 1524w"
+            {% else %} 
+            src="{{ item.featured_media.preview_image | img_url: 'master' }}" alt="{{ item.featured_media.preview_image.alt }}" 
+            {% endif %}  
+            style="border-radius: {{ section.settings.product_bg_radius }}px; width: 100%; height: 100%; --product-border-color: {{ section.settings.product_border_color }}; --product-border-thickness: {{ section.settings.product_border_thickness | append: "px"}};" 
+            class="product-image lazyload" data-commerce-type="variation-image"> 
+        {% if settings.enable_product_hover %}
+          {% if item.media[1].preview_image != null and item.media[1].media_type != 'video' and item.media[1].media_type != 'external_video' %}
+          <img 
+            width="390px"
+            height="390px"
+            {% if settings.enable_lazy_loading %}
+            data-sizes="auto"
+            data-srcset="
+            {{ item.media[1].preview_image | img_url: '325x' }} 325w,
+    		{{ item.media[1].preview_image | img_url: '400x' }} 400w,
+            {{ item.media[1].preview_image | img_url: '500x' }} 500w,
+            {{ item.media[1].preview_image | img_url: '600x' }} 600w,
+            {{ item.media[1].preview_image | img_url: '700x' }} 700w,
+    		{{ item.media[1].preview_image | img_url: '1024x' }} 1524w"
+            {% else %}
+            src="{{ item.media[1].preview_image | img_url: 'master' }}" alt="{{ item.media[1].preview_image.alt }}"
+            {% endif %}  
+            style="border-radius: {{ section.settings.product_bg_radius }}px; position: absolute; top: 0; width: 100%; height: auto; visibility: hidden; --product-border-color: {{ section.settings.product_border_color }}; --product-border-thickness: {{ section.settings.product_border_thickness | append: "px"}};" 
+            class="product-image lazyload" data-commerce-type="variation-image" >
+          {% endif %}
+        {% endif %}
+    </a>
+    {%- if section.settings.show-title -%}
+    <div style="color: {{ section.settings.product_title_color }}; font-size:{{ section.settings.product_title_size }}px" class="prouduct-title">{{ item.title }}</div>
+    {%- endif -%}
+
+  {%- if section.settings.show_price -%}    
+    <div style="color: {{ section.settings.product_price_color }}; font-size:{{ section.settings.product_price_size }}px" class="prouduct-title">
+    {% if section.settings.currency_format == "with_currency" %}  
+      {{ item.price | money_with_currency }}
+    {% endif %}
+    {% if section.settings.currency_format == "without_currency" %}
+      {{ item.price | money }}
+      {% endif %} 
+    </div>
+    {%- endif -%}
+
+  {% if item.available %}
+  {%- if  section.settings.show_on_sale -%} 
+  {%- if item.compare_at_price and item.compare_at_price > 0 -%}
+    {% assign labelHeight = section.settings.on_sale_size | minus: 40 %}
+              {% assign labelHeightMobile = section.settings.on_sale_size_mobile | minus: 35 %}
+              <div class="on-sale" style=
+                "--on-sale-label-width-desk: {{ section.settings.on_sale_size | append: "px" }}; 
+                 --on-sale-label-height-desk: {{ labelHeight | append: "px" }};
+                 --on-sale-label-width-mobile: {{ section.settings.on_sale_size_mobile | append: "px" }};
+                 --on-sale-label-height-mobile: {{ labelHeightMobile | append: "px" }};
+                    background-color: {{ section.settings.on_sale_bg_color }};">
+                <div class="text-block-22" style="padding: 0 3px; --on-sale-label-txt-size-desktop: {{ section.settings.on_sale_text_size | append: "px" }}; color: {{ section.settings.on_sale_text_color }}">On Sale</div>
+              </div>
+  {%- endif -%}
+  {%- endif -%}
+  {% endif %}
+
+  {% if section.settings.show_oos %}
+  {%- if item.available == false -%}
+    {% assign labelHeight = section.settings.on_sale_size | minus: 40 %}
+              {% assign labelHeightMobile = section.settings.on_sale_size_mobile | minus: 35 %}
+              <div class="out-of-stock-label" style=
+                "--oos-label-width-desk: {{ section.settings.on_sale_size | append: "px" }}; 
+                 --oos-label-height-desk: {{ labelHeight | append: "px" }};
+                 --oos-label-width-mobile: {{ section.settings.on_sale_size_mobile | append: "px" }};
+                 --oos-label-height-mobile: {{ labelHeightMobile | append: "px" }};
+                    background-color: {{ section.settings.oos_bg_color }};">
+                <div class="text-block-22" style="padding: 0 3px; --on-sale-label-txt-size-desktop: {{ section.settings.on_sale_text_size | append: "px" }}; color: {{ section.settings.oos_text_color }}">Sold Out</div>
+              </div>
+  {%- endif -%}
+  {% endif %}
+
+</div>
+{%- endfor -%}
+{% endpaginate %}
+{% endcapture %}
+  {% assign items_length = listItems | strip | size %}
+
+  <div
+    style="margin-bottom: 30px; {% if settings.enable_endless_scroll %} height: auto; {% else %} overflow-y:scroll; {% endif %} {% if settings.make_product_box_responsive %} max-width: 100%; {% else %} max-width:{{ settings.product-box-width }}px; {% endif %} text-align: center; {% if settings.make_product_box_responsive or settings.enable_endless_scroll  %} padding-right: 0; left: 0; {% else %} padding-right:{{ settings.scrollbar-distance | append:"px" }}; left:{{ settings.scrollbar-distance | append:"px" }} {% endif %};"   
+    class="collection-list-wrapper "
+  >
+    {%- unless items_length == 0 -%}
+<!--       <div
+        style=" grid-template-columns:{{settings.mobile-layout }}; grid-row-gap:{{ settings.row-gap-mobile }}px; grid-column-gap:{{ settings.column-gap-mobile }}px;"
+        role="list"
+        class="collection-list w-dyn-items mobile"
+      >
+        {{ listItems }}
+      </div> -->
+      <div
+        style=" 
+      --mobile-grid-template-columns:{{settings.mobile-layout }}; --mobile-grid-row-gap:{{ settings.row-gap-mobile }}px; --mobile-grid-column-gap:{{ settings.column-gap-mobile }}px;  
+      --desktop-grid-template-columns:{{settings.desktop-layout }}; --desktop-grid-row-gap:{{ settings.row-gap-desktop }}px; --desktop-grid-column-gap:{{ settings.column-gap-desktop }}px;"
+        role="list"
+        class="collection-list w-dyn-items desktop"
+      >
+        {{ listItems }}
+      </div>
+    {%- endunless -%}
+    {%- if items_length == 0 -%}
+      <div class="empty-state-4 w-dyn-empty">
+        <div class="text-block-16">Nothing here. Come back later.</div>
+      </div>
+    {%- endif -%}
+  </div>
+
+{%- else -%}
+
+{% capture listItems %}
+{% paginate collections.all.products by 999 %}
+  
+{%- for item in collections.all.products -%}
+  <div style="width: {{ settings.product-size }}%" role="listitem" class="collection-item w-dyn-item">
+    <a href="{{ item.url | within: collection }}" class="link-block-2 w-inline-block">
+      <img style="--product-border-color: {{ section.settings.product_border_color }}; --product-border-thickness: {{ section.settings.product_border_thickness | append: "px"}};" src="{{ item.featured_image | img_url: 'master' }}"  alt="{{ item.featured_image.alt }}" class="product-image" data-commerce-type="variation-image" srcset="{{ item.featured_image | img_url: '1920x' }} 1920w,{{ item.featured_image | img_url: '1600x' }} 1600w,{{ item.featured_image | img_url: '1366x' }} 1366w,{{ item.featured_image | img_url: '1024x' }} 1024w,{{ item.featured_image | img_url: '768x' }} 768w,{{ item.featured_image | img_url: '640x' }} 640w">
+    </a>
+  {%- if section.settings.show-title -%}
+    <div style="color: {{ section.settings.product_title_color }}; font-size:{{ section.settings.product_title_size }}px;" class="prouduct-title">{{ item.title }}</div>
+    {%- endif -%}
+    
+  {%- if  section.settings.show_on_sale -%}
+  {%- if item.compare_at_price and item.compare_at_price > 0 -%}
+              {% assign labelHeight = section.settings.on_sale_size | minus: 40 %}
+              {% assign labelHeightMobile = section.settings.on_sale_size_mobile | minus: 35 %}
+              <div class="on-sale" style=
+                "--on-sale-label-width-desk: {{ section.settings.on_sale_size | append: "px" }}; 
+                 --on-sale-label-height-desk: {{ labelHeight | append: "px" }};
+                 --on-sale-label-width-mobile: {{ section.settings.on_sale_size_mobile | append: "px" }};
+                 --on-sale-label-height-mobile: {{ labelHeightMobile | append: "px" }};
+                    background-color: {{ section.settings.on_sale_bg_color }};">
+                <div class="text-block-22" style="padding: 0 3px; --on-sale-label-txt-size-desktop: {{ section.settings.on_sale_text_size | append: "px" }}; color: {{ section.settings.on_sale_text_color }}">On Sale</div>
+              </div>
+            {%- endif -%}
+    {%- endif -%}
+          </div>
+{%- endfor -%}
+{% endpaginate %}
+{% endcapture %}
+  {% assign items_length = listItems | strip | size %}
+
+  <div
+    style="{% if settings.enable_endless_scroll %} height: auto; {% else %} overflow-y:scroll; {% endif %} {% if settings.make_product_box_responsive %} max-width: 100%; {% else %} max-width:{{ settings.product-box-width }}px; {% endif %} text-align: center; padding-right:{{ settings.scrollbar-distance | append:"px" }}; left:{{ settings.scrollbar-distance | append:"px" }};"
+    class="collection-list-wrapper w-dyn-list"
+    udy-collection="product"
+  >
+    {%- unless items_length == 0 -%}
+      <div
+        style=" grid-template-columns:{{settings.desktop-layout }}; grid-row-gap:{{ settings.row-gap-desktop }}px; grid-column-gap:{{ settings.column-gap-desktop }}px;"
+        role="list"
+        class="collection-list w-dyn-items desktop"
+      >
+        {{ listItems }}
+      </div>
+
+      <div
+        style=" grid-template-columns:{{settings.mobile-layout }}; grid-row-gap:{{ settings.row-gap-mobile }}px; grid-column-gap:{{ settings.column-gap-mobile }}px;"
+        role="list"
+        class="collection-list w-dyn-items mobile"
+      >
+        {{ listItems }}
+      </div>
+    {%- endunless -%}
+    {%- if items_length == 0 -%}
+      <div class="empty-state-3 w-dyn-empty">
+        <div>
+          No items yet.<br>
+          <br>
+          Follow us for the latest release dates
+        </div>
+        <div class="social-container shop">
+          <a href="#" class="social-link w-inline-block"
+            ><img src="{{ 'instagram-black-outline.png' | asset_url }}" loading="lazy" alt="" class="social-logo"
+          ></a>
+          <a href="#" class="social-link twitter w-inline-block"
+            ><img
+              src="{{ 'icons8-twitter-500.png' | asset_url }}"
+              loading="lazy"
+              sizes="100vw"
+              srcset="{{ 'icons8-twitter-500-p-500.png' | asset_url }} 500w, {{ 'icons8-twitter-500.png' | asset_url }} 500w"
+              alt=""
+              class="social-logo"
+          ></a>
+          <a href="#" class="social-link facebook w-inline-block"
+            ><img
+              src="{{ 'icons8-facebook-500.png' | asset_url }}"
+              loading="lazy"
+              sizes="100vw"
+              srcset="{{ 'icons8-facebook-500-p-500.png' | asset_url }} 500w, {{ 'icons8-facebook-500.png' | asset_url }} 500w"
+              alt=""
+              class="social-logo"
+          ></a>
+          <a href="#" class="social-link youtube w-inline-block"
+            ><img src="{{ 'youtube-black.png' | asset_url }}" loading="lazy" alt="" class="social-logo"
+          ></a>
+          <a href="#" class="social-link tik-tok w-inline-block"
+            ><img
+              src="{{ 'icons8-tiktok-500.png' | asset_url }}"
+              loading="lazy"
+              sizes="100vw"
+              srcset="{{ 'icons8-tiktok-500-p-500.png' | asset_url }} 500w, {{ 'icons8-tiktok-500.png' | asset_url }} 500w"
+              alt=""
+              class="social-logo"
+          ></a>
+          <a href="#" class="social-link tumblr w-inline-block"
+            ><img
+              src="{{ 'icons8-tumblr-500.png' | asset_url }}"
+              loading="lazy"
+              sizes="100vw"
+              srcset="{{ 'icons8-tumblr-500-p-500.png' | asset_url }} 500w, {{ 'icons8-tumblr-500.png' | asset_url }} 500w"
+              alt=""
+              class="social-logo"
+          ></a>
+          <a href="#" class="social-link discord w-inline-block"
+            ><img
+              src="{{ 'icons8-discord-500.png' | asset_url }}"
+              loading="lazy"
+              sizes="100vw"
+              srcset="{{ 'icons8-discord-500-p-500.png' | asset_url }} 500w, {{ 'icons8-discord-500.png' | asset_url }} 500w"
+              alt=""
+              class="social-logo"
+          ></a>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+
+<script defer src="{{ 'collection-product-hover.js' | asset_url }}" type="text/javascript"></script>
+    </div>
+    <div class="left-shop w-col w-col-stack desktop" style="max-width:100%;">
+      {% capture listItems %}
+          {%- for link in linklists["shop-menu"].links -%}
+            <div role="listitem" class="collection-item-5 w-dyn-item" style=" line-height: 104%; text-align:{{ section.settings.text-alignment }};">
+              <a style="margin-top:{{ section.settings.menu-spacing }}px" href="{{ link.url }}" class="link-block shop _1 desktop w-inline-block">
+                  <div style="{% if link.url == collection.url %}color: {{ section.settings.navlink_hover_color }}; background-color: {{ section.settings.navlink_background_color }};{% endif %}{% if settings.disable_highlight_animation %} animation-duration: 0s; {% endif %} white-space: {{ section.settings.whitespace }}; font-size:{{ section.settings.font-size }}px; --nav-link-color:{{ section.settings.menu-link-color }}; --navlink-background-color: {{ section.settings.navlink_background_color }}; --navlink-hover-color: {{ section.settings.navlink_hover_color }};" 
+            class="nav-link shop desktop">{{ link.title }}</div>
+              </a>
+            </div>
+          {%- endfor -%}         
+      {% endcapture %}
+      {% capture listItems2 %}
+          {%- for link in linklists["directory"].links -%}
+            <div role="listitem" class="collection-item-5 w-dyn-item" style=" line-height: 104%; text-align:{{ section.settings.text-alignment }};">
+              <a style="margin-top:{{ section.settings.menu-spacing }}px" href="{{ link.url }}" class="link-block shop _1 desktop w-inline-block">
+                  <div style="{% if link.url == collection.url %}color: {{ section.settings.navlink_hover_color }}; background-color: {{ section.settings.navlink_background_color }};{% endif %}{% if settings.disable_highlight_animation %} animation-duration: 0s; {% endif %} white-space: {{ section.settings.whitespace }}; font-size:{{ section.settings.font-size }}px; --nav-link-color:{{ section.settings.menu-link-color }}; --navlink-background-color: {{ section.settings.navlink_background_color }}; --navlink-hover-color: {{ section.settings.navlink_hover_color }};" 
+            class="nav-link shop desktop">{{ link.title }}</div>
+              </a>
+            </div>
+          {%- endfor -%}         
+      {% endcapture %}
+          {% assign items_length = listItems | strip | size %}
+
+          <div style="
+            word-wrap: break-word;
+            {% if section.settings.fix_desktop_menu %} 
+            position: fixed; 
+            width: 108px;
+            {% else %} 
+            position:absolute; 
+            {% endif %}
+            
+            {% if section.settings.reverse_desktop_menu and section.settings.fix_desktop_menu == false %}
+            right: -80px;
+            {% elsif section.settings.fix_desktop_menu == true and section.settings.reverse_desktop_menu == false and section.settings.text-alignment == 'right'%}
+            left: 14px;
+            {% elsif section.settings.fix_desktop_menu == true and section.settings.reverse_desktop_menu == false and section.settings.text-alignment == 'left'%}
+            left: 26px;
+            {% elsif section.settings.fix_desktop_menu == true and section.settings.reverse_desktop_menu == false and section.settings.text-alignment == 'center'%}
+            left: 20px;
+            {% elsif section.settings.fix_desktop_menu == false %}
+            left: -80px;
+            {% endif %}"
+            class="collection-list-wrapper-5 w-dyn-list desktop-menu" udy-collection="collection">
+            {%- unless items_length == 0 -%}
+            <div role="list" class="w-dyn-items" style="text-align:{{ section.settings.text-alignment }};">
+              {{ listItems }}
+            </div>
+              <div role="list" class="w-dyn-items" style="text-align:{{ section.settings.text-alignment }}; margin-top: 20px;">
+              {{ listItems2 }}
+            </div>
+            {%- endunless -%}
+            {%- if items_length == 0 -%}
+            <a style="margin-top:{{ section.settings.menu-spacing }}px; " href="{{ routes.root_url }}" class="link-block shop _1 w-inline-block">
+                  <div style="{% if settings.disable_highlight_animation %} animation-duration: 0s; {% endif %} font-size:{{ section.settings.font-size }}px; --navlink-color:{{ section.settings.menu-link-color }}; --navlink-hover-color: {{ section.settings.navlink_hover_color }}; --navlink-background-color: {{ section.settings.navlink_background_color }};" class="nav-link shop">Back Home</div>
+              </a>
+            {%- endif -%}
+          </div>
+        </div>
+    <div class="category-container" style="background-color:{{ section.settings.bg_color }};">
+  <div class="logo-container categories">
+    <a href="{{ routes.root_url }}" aria-current="page" class="logo-link w-inline-block w--current">
+      {% if settings.collection_screen_logo %}
+        <img
+          src="{{ settings.collection_screen_logo | image_url }}"
+          height="auto"
+          style="width: {{ settings.collection_screen_logo_size }};"
+          alt=""
+          class="logo"
+          loading="lazy"
+        >
+      {% else %}
+        <img src="{{ 'Supreme-dummy.png' | asset_url }}" loading="lazy" alt="" class="logo">
+      {% endif %}
+    </a>
+  </div>
+  {% capture listItems %}
+          
+          {%- assign allItems = collections -%}
+          {%- assign allItems = allItems | sort: 'title' -%}
+          {%- for link in linklists["shop-menu"].links -%}
+            <div role="listitem" class="collection-item-5 w-dyn-item" style="text-align:{{ section.settings.mobile-text-alignment }};">
+              <a href="{{ link.url }}" class="link-block shop _1 w-inline-block" style=" margin-top: {{ section.settings.mobile-menu-spacing }}px">
+                  <div style="{% if link.url == collection.url %}color: {{ section.settings.mobile-navlink_hover_color }}; background-color: {{ section.settings.mobile-navlink_background_color }};{% endif %}{% if settings.disable_highlight_animation %} animation-duration: 0s; {% endif %} font-size:{{ section.settings.mobile-font-size }}px; text-align:{{ section.settings.mobile-text-alignment }} ;  --navlink-color:{{ section.settings.mobile-menu-link-color }}; --navlink-hover-color: {{ section.settings.mobile-navlink_hover_color }}; --navlink-background-color: {{ section.settings.mobile-navlink_background_color }};" 
+            class="nav-link shop">{{ link.title }}</div>
+              </a>
+            </div>
+          {%- endfor -%}
+          
+          {% endcapture %}
+  {% assign items_length = listItems | strip | size %}
+
+  <div class="collection-list-wrapper-5 w-dyn-list" udy-collection="collection">
+    {%- unless items_length == 0 -%}
+      <div role="list" class="w-dyn-items">
+        {{ listItems }}
+        <a
+          style="text-align:{{ section.settings.mobile-text-alignment }}; margin-top:{{ section.settings.mobile-menu-spacing }}px; "
+          href="{{ routes.root_url }}"
+          class="link-block shop _1 w-inline-block"
+        >
+          <div
+            style="{% if settings.disable_highlight_animation %} animation-duration: 0s; {% endif %} text-align:{{ section.settings.mobile-text-alignment }}; font-size:{{ section.settings.mobile-font-size }}px; --navlink-color:{{ section.settings.mobile-menu-link-color }}; --navlink-hover-color: {{ section.settings.mobile-navlink_hover_color }}; --navlink-background-color: {{ section.settings.mobile-navlink_background_color }};"
+            class="nav-link shop"
+          >
+            Back Home
+          </div>
+        </a>
+        <div class="mobile-spacer"></div>
+      </div>
+    {%- endunless -%}
+    {%- if items_length == 0 -%}
+      <div class="w-dyn-empty">
+        <a
+          style="text-align:{{ section.settings.mobile-text-alignment }}; margin-top:{{ section.settings.mobile-menu-spacing }}px; "
+          href="{{ routes.root_url }}"
+          class="link-block shop _1 w-inline-block"
+        >
+          <div
+            style="{% if settings.disable_highlight_animation %} animation-duration: 0s; {% endif %} text-align:{{ section.settings.mobile-text-alignment }}; font-size:{{ section.settings.mobile-font-size }}px; --navlink-color:{{ section.settings.mobile-menu-link-color }}; --navlink-hover-color: {{ section.settings.mobile-navlink_hover_color }}; --navlink-background-color: {{ section.settings.mobile-navlink_background_color }};"
+            class="nav-link shop"
+          >
+            Back Home
+          </div>
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+
+  <a
+    data-w-id="7c65dd6c-0bfc-7992-033e-27bb1d7510b4"
+    href="#"
+    class="close-filter-btn w-button"
+    style="color: {{ section.settings.close_button_color }};"
+  >
+    {{- 't58' | t -}}
+  </a>
+</div>
+
+<script>
+  var currentSection = document.currentScript.closest('.shopify-section');
+</script>
+    </div>
+
+    <div class="right w-col w-col-2 w-col-stack desktop"></div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Collection Items View 1",
+    "settings": [
+    {
+      "type": "header",
+      "content": "Date & Time"
+    },
+       {
+      "type": "checkbox",
+      "id": "show_date_time",
+      "label": "Show Date/Time",
+      "default": true
+      },
+      {
+      "type": "color",
+      "id": "index_date_color",
+      "label": "Date Color",
+      "default": "#000000"
+    },
+     {
+      "type": "color",
+      "id": "index_time_color",
+      "label": "Time Color",
+      "default": "#000000"
+    },
+      {
+      "type": "header",
+      "content": "Cart"
+    },
+      {
+      "type": "color",
+      "id": "cart_text_color",
+      "label": "Cart Text Color",
+      "default": "#000000"
+    },
+     {
+      "type": "color",
+      "id": "cart_number_color",
+      "label": "Cart Quantiy Color",
+      "default": "#FFF"
+    },
+    {
+      "type": "color",
+      "id": "cart_number_bg_color",
+      "label": "Cart Quantity Background Color",
+      "default": "#000"
+    },
+      {
+      "type": "header",
+      "content": "How To Add A Shop Menu"
+    },
+      {
+      "type": "paragraph",
+      "content": "To setup/edit the order of links of the Sidebar, go to the Shopify Dashboard and follow these steps:"
+    },
+    {
+      "type": "paragraph",
+      "content": "Online Store > Navigation > Add Menu > name it \"Shop Menu\" and customize"
+    },
+      {
+      "type": "header",
+      "content": "Desktop Menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "reverse_desktop_menu",
+      "label": "Reverse Desktop Menu",
+      "default": false
+    },  
+      {
+      "type": "checkbox",
+      "id": "fix_desktop_menu",
+      "label": "Make Desktop Menu Fixed",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "menu-link-color",
+      "label": "Menu Link Colors",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "navlink_background_color",
+      "label": "Menu Link Hover Background Colors",
+      "default": "#fe0000"
+    },
+    {
+      "type": "color",
+      "id": "navlink_hover_color",
+      "label": "Menu Link Hover Text Colors",
+      "default": "#FFF"
+    },
+    { 
+      "type": "range",
+      "id": "font-size",
+      "min": 10,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size",
+      "default": 12
+    },
+    { 
+      "type": "range",
+      "id": "menu-spacing",
+      "min": 0,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "label": "Vertical Spacing",
+      "default": 8
+    },
+    {
+      "type": "select",
+      "id": "text-alignment",
+      "label": "Text Alignment",
+      "options": [
+      {
+        "value": "left",
+        "label": "Left"
+      },
+      {
+        "value": "center",
+        "label": "Center"
+      },
+      {
+        "value": "right",
+        "label": "Right"
+      }
+    ],
+  "default": "right"
+    },
+      {
+      "type": "header",
+      "content": "Mobile Menu"
+    },
+    {
+      "type": "color",
+      "id": "bg-color",
+      "label": "Menu Icon Color",
+      "default": "#000000"
+    },
+        {
+      "type": "color",
+      "id": "mobile-menu-link-color",
+      "label": "Link Colors",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Menu Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "mobile-navlink_background_color",
+      "label": "Link Hover Colors",
+      "default": "#FE0000"
+    },
+    {
+      "type": "color",
+      "id": "mobile-navlink_hover_color",
+      "label": "Menu Link Hover Text Colors",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "close_button_color",
+      "label": "Close Button Color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "mobile-text-alignment",
+      "label": "Text Alignment",
+      "options": [
+      {
+        "value": "left",
+        "label": "Left"
+      },
+      {
+        "value": "center",
+        "label": "Center"
+      },
+      {
+        "value": "right",
+        "label": "Right"
+      }
+    ],
+  "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "mobile-font-size",
+      "min": 10,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mobile-menu-spacing",
+      "min": 0,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "label": "Vertical Spacing",
+      "default": 0
+    },
+       
+      {
+      "type": "header",
+      "content": "Product Titles"
+    },
+    {
+      "type": "color",
+      "id": "product_title_color",
+      "label": "Product Titles",
+      "default": "#000000"
+    },
+     {
+        "type": "range",
+        "id": "product_title_size",
+        "label": "Product Title Size",
+        "min": 10,
+        "max": 21,
+        "unit": "px",
+        "step": 1,
+        "default": 12
+    },
+   {
+      "type": "checkbox",
+      "id": "show-title",
+      "label": "Show Product Titles",
+      "default": false
+    },
+   {
+      "type": "header",
+      "content": "Product Prices"
+    },
+    {
+      "type": "color",
+      "id": "product_price_color",
+      "label": "Product Price Color",
+      "default": "#000000"
+    },
+     {
+        "type": "range",
+        "id": "product_price_size",
+        "label": "Product Price Size",
+        "min": 10,
+        "max": 21,
+        "unit": "px",
+        "step": 1,
+        "default": 12
+    },
+   {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "Show Product Prices",
+      "default": false
+    },
+    {
+      "type": "radio",
+      "id": "currency_format",
+      "label": "Currency Format",
+      "options": [
+        {
+          "value": "with_currency",
+          "label": "With Currency"
+        },
+        {
+          "value": "without_currency",
+          "label": "Without Currency"
+        }
+      ],
+      "default": "without_currency"
+    },
+    {
+      "type": "header",
+      "content": "Labels"
+    },
+    {
+      "type": "color",
+      "id": "on_sale_bg_color",
+      "label": "On Sale BG",
+      "default": "#000000"
+    },
+     {
+      "type": "color",
+      "id": "on_sale_text_color",
+      "label": "On Sale Text Color",
+      "default": "#FFF"
+    },
+    {
+      "type": "color",
+      "id": "oos_bg_color",
+      "label": "Out Of Stock Label BG",
+      "default": "#FF0100"
+    },
+     {
+      "type": "color",
+      "id": "oos_text_color",
+      "label": "Out Of Stock Text Color",
+      "default": "#FFF"
+    },
+    {
+      "type": "range",
+      "id": "on_sale_text_size",
+      "label": "Label Font Size",
+      "min": 6,
+      "max": 20,
+      "unit": "px",
+      "step": 1,
+      "default": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_sale",
+      "label": "Show On Sale Labels",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_oos",
+      "label": "Show Out Of Stock Labels",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Label Sizes"
+    },
+    {
+      "type": "range",
+      "id": "on_sale_size",
+      "label": "Desktop Size",
+      "min": 55,
+      "max": 85,
+      "unit": "px",
+      "step": 1,
+      "default": 62
+    },
+    {
+      "type": "range",
+      "id": "on_sale_size_mobile",
+      "label": "Mobile Size",
+      "min": 35,
+      "max": 75,
+      "unit": "px",
+      "step": 1,
+      "default": 55
+    },
+    {
+      "type": "header",
+      "content": "Product Frames"
+    },
+    {
+      "type": "paragraph",
+      "content": "This affects the frame around your product images when a customer hovers over them. To hide the frame set the border thickness to 0px."
+    },
+    {
+      "type": "color",
+      "id": "product_border_color",
+      "label": "Product Frame Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+        "id": "product_border_thickness",
+        "label": "Product Border Thickness",
+        "min": 0,
+        "max": 8,
+        "step": 0.5,
+        "default": 0,
+        "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Product Background"
+    },
+      {
+      "type": "checkbox",
+      "id": "product_bg_transparent",
+      "label": "Make Bg Transparent",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "product_bg_color",
+      "label": "Product Bg Color",
+      "default": "#fff"
+    },
+    {
+      "type": "range",
+        "id": "product_bg_radius",
+        "label": "Product Bg Radius",
+        "min": 0,
+        "max": 20,
+        "step": 0.5,
+        "default": 0,
+        "unit": "px"
+    },
+    
+    {
+      "type": "select",
+      "id": "whitespace",
+      "label": "Enable Line Break On Whitespace",
+      "options": [
+      {
+        "value": "normal",
+        "label": "Line Break Between Spaces"
+      },
+      {
+        "value": "nowrap",
+        "label": "Don't Break Between Spaces"
+      }
+    ],
+  "default": "normal"
+    }
+    
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}

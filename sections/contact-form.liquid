@@ -1,0 +1,81 @@
+      {%- form "contact",  class: "form-2" -%}
+
+        <div class="w-row">
+          <div class="column-8 w-col w-col-6 w-col-small-6 w-col-tiny-6">
+            <input style="background-color:{{ section.settings.field-bg-color }}; color:{{ section.settings.field-text-color }};" type="text" class="text-field w-input" maxlength="256" name="contact[first_name_]" data-name="First Name 2" placeholder="First Name" id="First-Name-2" option:color="First Name Text Color">
+            <input style="background-color:{{ section.settings.field-bg-color }}; color:{{ section.settings.field-text-color }};" type="email" class="text-field w-input" maxlength="256" name="contact[email]" data-name="Email Address 2" placeholder="Email Address" id="Email-Address-2" option:color="Email Address Text Color" required="">
+          </div>
+          <div class="column-9 w-col w-col-6 w-col-small-6 w-col-tiny-6">
+            <input style="background-color:{{ section.settings.field-bg-color }}; color:{{ section.settings.field-text-color }};" type="text" class="text-field w-input" maxlength="256" name="contact[last_name_]" data-name="Last Name 2" placeholder="Last Name" id="Last-Name-2" option:color="Last Name Text Color" required="">
+            <input style="background-color:{{ section.settings.field-bg-color }}; color:{{ section.settings.field-text-color }};" type="text" class="text-field w-input" maxlength="256" name="contact[order_number_]" data-name="Order Number 2" placeholder="Order Number" id="Order-Number-2">
+          </div>
+        </div>
+      <input style="background-color:{{ section.settings.field-bg-color }}; color:{{ section.settings.field-text-color }};" type="text" class="text-field w-input" maxlength="256" name="contact[subject_]" data-name="Subject 2" placeholder="Subject" id="Subject-2">
+      <textarea style="background-color:{{ section.settings.field-bg-color }}; color:{{ section.settings.field-text-color }};" id="Message-2" name="contact[message_]" maxlength="5000" data-name="Message 2" placeholder="Message" required="" class="textarea w-input"></textarea>
+        
+        <div class="div-block-8" style="flex-direction: row-reverse;">
+          <input style="margin-right: 0; margin-left: auto; border:none; background-color:{{ section.settings.submit-bg-color }}; color:{{ section.settings.submit-text-color }};" type="submit" value="Send" data-wait="Please wait..." class="btn form left w-button">
+          <a style="margin-left: 0; margin-right: auto;border:none; background-color:{{ section.settings.back-home-color }}; color:{{ section.settings.back-home-text-color }};" href="{{ routes.root_url }}" class="btn form right w-button">{{ 'tn3c849388' | t }}</a>
+        </div>
+      
+        
+      {%- assign form_success = form.posted_successfully? -%}
+      {%- assign form_errors = form.errors -%}
+      {%- render "form-general-script", form_success: form_success, form_errors: form_errors -%}
+      {%- endform -%}
+      <div class="success-message w-form-done  {% if form_success %}form-posted-successfully{% endif %}">
+        <div class="text-block-17">{{ 't5a0ea5a1' | t }}</div>
+        <a href="{{ routes.root_url }}" class="btn w-button">{{ 'tnc0d2788' | t }}</a>
+      </div>
+      {%- unless form_success -%}<div class="w-form-fail  {% if form.errors %}form-has-errors{% endif %}">
+        <div>{%- render "form-errors", form_errors: form_errors -%}</div>
+      </div>
+      {%- endunless -%}
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');</script>
+        
+{% schema %}
+{
+  "name": "Contact Form Colors",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "color",
+      "id": "field-bg-color",
+      "label": "Form BG Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "field-text-color",
+      "label": "Form Text Color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "submit-bg-color",
+      "label": "Submit Button Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "submit-text-color",
+      "label": "Submit Text Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "back-home-color",
+      "label": "Home Button Color",
+      "default": "#000000"
+    },
+    
+    {
+      "type": "color",
+      "id": "back-home-text-color",
+      "label": "Home Text Color",
+      "default": "#fff"
+    }
+  ]
+}
+{% endschema %}

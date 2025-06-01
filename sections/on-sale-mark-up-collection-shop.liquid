@@ -1,0 +1,54 @@
+{% capture listItems %}
+{% for item in collections[settings.collection_shop].products limit: settings.collection_shop_limit %}
+<div role="listitem" class="collection-item w-dyn-item">
+            <a href="{{ item.url | within: collection }}" class="link-block-2 w-inline-block">
+              <img src="{{ item.featured_image | img_url: 'master' }}" loading="lazy" alt="{{ item.featured_image.alt }}" class="product-image" data-commerce-type="variation-image" srcset="{{ item.featured_image | img_url: '1920x' }} 1920w,{{ item.featured_image | img_url: '1600x' }} 1600w,{{ item.featured_image | img_url: '1366x' }} 1366w,{{ item.featured_image | img_url: '1024x' }} 1024w,{{ item.featured_image | img_url: '768x' }} 768w,{{ item.featured_image | img_url: '640x' }} 640w">
+            </a>
+            {%- if item.compare_at_price and item.compare_at_price > 0 -%}
+              <div class="on-sale" style="background-color: {{ section.settings.on_sale_bg_color }}">
+                <div class="text-block-22" style="color: {{ section.settings.on_sale_text_color }}">On Sale</div>
+              </div>
+            {%- endif -%}
+          </div>
+{%- endfor -%}
+
+{% endcapture %}
+{% assign items_length = listItems | strip | size %}
+<div class="collection-list-wrapper w-dyn-list" udy-collection="product">
+        {%- unless items_length == 0 -%}<div role="list" class="collection-list w-dyn-items">
+          {{ listItems }}
+        </div>{%- endunless -%}
+        {%- if items_length == 0 -%}<div class="empty-state-3 w-dyn-empty">
+          <div>No items yet.<br><br>Follow us for the latest release dates</div>
+          <div class="social-container shop">
+            <a href="#" class="social-link w-inline-block"><img src="{{ 'instagram-black-outline.png' | asset_url }}" loading="lazy" alt="" class="social-logo"></a>
+            <a href="#" class="social-link twitter w-inline-block"><img src="{{ 'icons8-twitter-500.png' | asset_url }}" loading="lazy" sizes="100vw" srcset="{{ 'icons8-twitter-500-p-500.png' | asset_url }} 500w, {{ 'icons8-twitter-500.png' | asset_url }} 500w" alt="" class="social-logo"></a>
+            <a href="#" class="social-link facebook w-inline-block"><img src="{{ 'icons8-facebook-500.png' | asset_url }}" loading="lazy" sizes="100vw" srcset="{{ 'icons8-facebook-500-p-500.png' | asset_url }} 500w, {{ 'icons8-facebook-500.png' | asset_url }} 500w" alt="" class="social-logo"></a>
+            <a href="#" class="social-link youtube w-inline-block"><img src="{{ 'youtube-black.png' | asset_url }}" loading="lazy" alt="" class="social-logo"></a>
+            <a href="#" class="social-link tik-tok w-inline-block"><img src="{{ 'icons8-tiktok-500.png' | asset_url }}" loading="lazy" sizes="100vw" srcset="{{ 'icons8-tiktok-500-p-500.png' | asset_url }} 500w, {{ 'icons8-tiktok-500.png' | asset_url }} 500w" alt="" class="social-logo"></a>
+            <a href="#" class="social-link tumblr w-inline-block"><img src="{{ 'icons8-tumblr-500.png' | asset_url }}" loading="lazy" sizes="100vw" srcset="{{ 'icons8-tumblr-500-p-500.png' | asset_url }} 500w, {{ 'icons8-tumblr-500.png' | asset_url }} 500w" alt="" class="social-logo"></a>
+            <a href="#" class="social-link discord w-inline-block"><img src="{{ 'icons8-discord-500.png' | asset_url }}" loading="lazy" sizes="100vw" srcset="{{ 'icons8-discord-500-p-500.png' | asset_url }} 500w, {{ 'icons8-discord-500.png' | asset_url }} 500w" alt="" class="social-logo"></a>
+          </div>
+        </div>{%- endif -%}
+      </div>
+
+{% schema %}
+{
+  "name": "On Sale Label",
+  "tag": "div",
+  "settings": [
+   {
+      "type": "color",
+      "id": "on_sale_bg_color",
+      "label": "On Sale Background Color",
+      "default": "#000000"
+    },
+     {
+      "type": "color",
+      "id": "on_sale_text_color",
+      "label": "On Sale Text Color",
+      "default": "#FFF"
+    }
+  ]
+}
+{% endschema %}

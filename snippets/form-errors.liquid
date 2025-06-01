@@ -1,0 +1,7 @@
+{% for field in form_errors %}
+    {% if field == 'form' %}
+        {{ form_errors.messages[field] }}
+    {% else %}
+        {{ form_errors.translated_fields[field] }} - {{ form_errors.messages[field] }}
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,12 @@
+{% case media.media_type %}
+  {% when 'model' %}
+      {{ media | model_viewer_tag: style: 'height: 590px; width: 100%; position:relative;' }}
+  {% when 'image' %}
+      {{ media | image_url: width: auto, height: auto | image_tag: style: 'margin-right: auto; margin-left: auto; width: 800px; height: auto;', id: 'main-product-image' }}
+  {% when 'video' %}
+      {{ media | video_tag: controls: true, style: 'width: 100%; position:relative;'}}
+    {% when 'external_video' %}
+      {{ media | video_tag: controls: true, style: 'margin-right: auto; margin-left: auto; height: 400px; width: 100%; position:relative;'}}
+  {% else %}
+      {{ media | media_tag }}
+{% endcase %}

@@ -1,0 +1,79 @@
+
+      <div style="grid-template-columns: {{ section.settings.lookbook-columns }};" class="w-layout-grid lookbook-content desktop">
+        {%- for block in section.blocks -%}
+        {%- if block.type == "lookbook_photos" -%}
+          <div id="w-node-_85b12953-e350-f9c3-d65f-9d5a4852e55a-d0cacf15" block.shopify_attributes>{%- if section.settings.lookbook_images_image == nil -%}{%- if block.settings.image == nil -%}<img class="lookbook-images" src="{{ 'image-2.png' | asset_url }}" alt="" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 95vw, (max-width: 1279px) 91vw, (max-width: 1439px) 92vw, (max-width: 1919px) 94vw, 99vw" id="w-node-d9c44e62-9a0f-43ee-114e-3503d0cacf17-d0cacf15" loading="lazy" srcset="{{ 'image-2-p-500.png' | asset_url }} 500w, {{ 'image-2-p-800.png' | asset_url }} 800w, {{ 'image-2.png' | asset_url }} 1000w">{%- else -%}<img class="lookbook-images" src="{{ block.settings.image.src | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}" id="w-node-d9c44e62-9a0f-43ee-114e-3503d0cacf17-d0cacf15" loading="lazy" srcset="{{ block.settings.image | img_url: '1920x' }} 1920w,{{ block.settings.image | img_url: '1600x' }} 1600w,{{ block.settings.image | img_url: '1366x' }} 1366w,{{ block.settings.image | img_url: '1024x' }} 1024w,{{ block.settings.image | img_url: '768x' }} 768w,{{ block.settings.image | img_url: '640x' }} 640w">{%- endif -%}{%- else -%}{%- if block.settings.image == nil -%}<img class="lookbook-images" src="{{ section.settings.lookbook_images_image.src | img_url: 'master' }}" alt="{{ section.settings.lookbook_images_image.alt | escape }}" id="w-node-d9c44e62-9a0f-43ee-114e-3503d0cacf17-d0cacf15" loading="lazy">{%- else -%}<img class="lookbook-images" src="{{ block.settings.image.src | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}" id="w-node-d9c44e62-9a0f-43ee-114e-3503d0cacf17-d0cacf15" loading="lazy" srcset="{{ block.settings.image | img_url: '1920x' }} 1920w,{{ block.settings.image | img_url: '1600x' }} 1600w,{{ block.settings.image | img_url: '1366x' }} 1366w,{{ block.settings.image | img_url: '1024x' }} 1024w,{{ block.settings.image | img_url: '768x' }} 768w,{{ block.settings.image | img_url: '640x' }} 640w">{%- endif -%}{%- endif -%}</div>{%- endif -%}{%- endfor -%}
+      </div>
+
+      <div style="grid-template-columns:{{ section.settings.lookbook-columns-mobile }};" class="w-layout-grid lookbook-content mobile">
+        {%- for block in section.blocks -%}{%- if block.type == "lookbook_photos" -%}<div id="w-node-_85b12953-e350-f9c3-d65f-9d5a4852e55a-d0cacf15" block.shopify_attributes>{%- if section.settings.lookbook_images_image == nil -%}{%- if block.settings.image == nil -%}<img class="lookbook-images" src="{{ 'image-2.png' | asset_url }}" alt="" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 95vw, (max-width: 1279px) 91vw, (max-width: 1439px) 92vw, (max-width: 1919px) 94vw, 99vw" id="w-node-d9c44e62-9a0f-43ee-114e-3503d0cacf17-d0cacf15" loading="lazy" srcset="{{ 'image-2-p-500.png' | asset_url }} 500w, {{ 'image-2-p-800.png' | asset_url }} 800w, {{ 'image-2.png' | asset_url }} 1000w">{%- else -%}<img class="lookbook-images" src="{{ block.settings.image.src | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}" id="w-node-d9c44e62-9a0f-43ee-114e-3503d0cacf17-d0cacf15" loading="lazy" srcset="{{ block.settings.image | img_url: '1920x' }} 1920w,{{ block.settings.image | img_url: '1600x' }} 1600w,{{ block.settings.image | img_url: '1366x' }} 1366w,{{ block.settings.image | img_url: '1024x' }} 1024w,{{ block.settings.image | img_url: '768x' }} 768w,{{ block.settings.image | img_url: '640x' }} 640w">{%- endif -%}{%- else -%}{%- if block.settings.image == nil -%}<img class="lookbook-images" src="{{ section.settings.lookbook_images_image.src | img_url: 'master' }}" alt="{{ section.settings.lookbook_images_image.alt | escape }}" id="w-node-d9c44e62-9a0f-43ee-114e-3503d0cacf17-d0cacf15" loading="lazy">{%- else -%}<img class="lookbook-images" src="{{ block.settings.image.src | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}" id="w-node-d9c44e62-9a0f-43ee-114e-3503d0cacf17-d0cacf15" loading="lazy" srcset="{{ block.settings.image | img_url: '1920x' }} 1920w,{{ block.settings.image | img_url: '1600x' }} 1600w,{{ block.settings.image | img_url: '1366x' }} 1366w,{{ block.settings.image | img_url: '1024x' }} 1024w,{{ block.settings.image | img_url: '768x' }} 768w,{{ block.settings.image | img_url: '640x' }} 640w">{%- endif -%}{%- endif -%}</div>{%- endif -%}{%- endfor -%}
+      </div>
+    
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');</script>
+        
+{% schema %}
+{
+  "name": "Lookbook Content",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Lookbook Columns"
+    },
+    {
+      "type": "select",
+      "id": "lookbook-columns",
+      "label": "Desktop",
+      "options": [
+        {
+          "value": "1fr",
+          "label": "One"
+        },
+        {
+          "value": "1fr 1fr",
+          "label": "Two"
+        },
+        {
+          "value": "1fr 1fr 1fr",
+          "label": "Three"
+        }
+      ],
+      "default": "1fr 1fr 1fr"
+    },
+    {
+      "type": "select",
+      "id": "lookbook-columns-mobile",
+      "label": "Mobile",
+      "options": [
+        {
+          "value": "1fr",
+          "label": "One"
+        },
+        {
+          "value": "1fr 1fr",
+          "label": "Two"
+        },
+        {
+          "value": "1fr 1fr 1fr",
+          "label": "Three"
+        }
+      ],
+      "default": "1fr 1fr"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Image",
+      "type": "lookbook_photos",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Upload"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

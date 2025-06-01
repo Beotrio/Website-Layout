@@ -1,0 +1,32 @@
+.w-commerce-option-name + span {
+    white-space: pre;
+}
+.w-commerce-commerceaddtocartbutton.disabled {
+    cursor: not-allowed;
+}
+
+.udesly-fake-number-input::-webkit-outer-spin-button, .udesly-fake-number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.udesly-fake-number-input {
+    -moz-appearance: textfield;
+}
+[data-node-type="cart-remove-link"] * {
+    pointer-events: none;
+}
+.form-posted-successfully form {
+  display: none;
+}
+
+.form-posted-successfully .w-form-done {
+  display: inherit;
+}
+
+.form-failed .w-form-fail, .w-form-fail.form-has-errors {
+  display: inherit;
+}
+
+.notyf__icon {
+    display: none;
+}

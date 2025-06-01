@@ -1,0 +1,23 @@
+<div class="rich-text-block w-richtext" style="color: {{ section.settings.content_text_color }};">{{ page.content }}</div>   
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","content-container");</script>
+        
+{% schema %}
+{
+  "name": "About Content",
+  "tag": "div",
+  "class": "content-container",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "color",
+      "id": "content_text_color",
+      "label": "Content Text Color",
+      "default": "#000000"
+    }
+  ]
+}
+{% endschema %}

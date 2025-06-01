@@ -1,0 +1,94 @@
+<h1 class="product-title" style="margin-top: 0; margin-bottom:0; color: {{ section.settings.product_title }}">{{ product.title }}</h1>
+           <h5 style="color: #9f9f9f;font-size: 12px; margin-top: 0; margin-bottom:14px;">SKU: {{ product.variants.first.sku }}</h5>
+            <h5  class="price" style="color: {{ section.settings.product_price }}; font-size: {{ section.settings.price_font_size }}px;">
+              {% if section.settings.currency_format == "with_currency" %}  
+                {{ product.price | money_with_currency }}
+              {% endif %}
+              {% if section.settings.currency_format == "without_currency" %}
+                {{ product.price | money }}
+              {% endif %} 
+            </h5>
+            {% if product.compare_at_price > 0 %}
+            <div style="margin-bottom: 14px;" bind="65834151-3ec6-d9d3-9e6a-a3389e709e9c" class="compare-price-container">
+              <div class="text-block-20" style="color: {{ section.settings.product_was_text }}">Was:
+              </div>
+              <div bind="fb9624fb-26e0-e75a-28fd-203591880cfd" class="price sale" style="font-size: {{ section.settings.sales_price_font_size }}px; color: {{ section.settings.product_before_price }}">{{ product.compare_at_price | money }}
+              </div>
+            </div>
+{% endif %} 
+
+
+{% schema %}
+{
+  "name": "Text Colors",
+  "tag": "div",
+  "settings": [
+   {
+      "type": "color",
+      "id": "product_title",
+      "label": "Product Title",
+      "default": "#000000"
+    },
+     {
+      "type": "color",
+      "id": "product_description",
+      "label": "Product Description",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "product_price",
+      "label": "Price",
+      "default": "#000000"
+    },
+    {
+        "type": "range",
+        "id": "price_font_size",
+        "label": "Price Font Size",
+        "min": 10,
+        "max": 30,
+        "unit": "px",
+        "step": 1,
+        "default": 24
+    },
+     {
+      "type": "radio",
+      "id": "currency_format",
+      "label": "Currency Format",
+      "options": [
+        {
+          "value": "with_currency",
+          "label": "With Currency"
+        },
+        {
+          "value": "without_currency",
+          "label": "Without Currency"
+        }
+      ],
+      "default": "without_currency"
+    },
+    {
+      "type": "color",
+      "id": "product_was_text",
+      "label": "Sale Text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "product_before_price",
+      "label": "Sale Price",
+      "default": "#FF0000"
+    },
+    {
+        "type": "range",
+        "id": "sales_price_font_size",
+        "label": "Sales Price Font Size",
+        "min": 10,
+        "max": 30,
+        "unit": "px",
+        "step": 1,
+        "default": 16
+    }
+  ]
+}
+{% endschema %}

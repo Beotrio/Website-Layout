@@ -1,0 +1,101 @@
+<div id="searchresults">
+  <form action="/search" method="get">
+    <p style="display: flex; margin-bottom: 20px;">
+      <input
+        style="
+          -webkit-border: none;
+          border: none;
+          border-right: none;
+          height: 30px;
+          box-shadow: -5px 3px 4px #0000001a;
+        "
+        type="text"
+        name="q"
+        value="{{search.terms  | escape}}"
+        id="result-q"
+        placeholder="search here"
+      >
+      <input type="hidden" name="type" value="product,page">
+      <input
+        class="search-input-button"
+        style="
+          box-shadow: 0px 3px 4px 0px #0000001a;
+          -webkit-border: none;
+          Border: none;
+          background-color: {{ settings.search_button_color }};
+          color: {{ settings.search_button_txt_color }};
+        "
+        type="submit"
+        value="Search"
+        style="width:100px"
+      >
+    </p>
+  </form>
+
+  {% if search.performed %}
+    {% paginate search.results by 10 %}
+      {% if search.results == empty %}
+        <p>Your search for "{{ search.terms | escape }}" did not yield any results</p>
+      {% else %}
+        <ol
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 0;
+            width: 100%;
+          "
+        >
+          {% for item in search.results %}
+            <li
+              class="search-card"
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 80%;
+                box-shadow: 3px 3px 5px #0000001a;
+                padding: 20px;
+                background-color: {{ settings.search_card_color }};
+                margin-bottom: 20px;
+              "
+            >
+              <h3 style="cursor: pointer; text-align: center;">
+                <a
+                  href="{{ item.url }}"
+                  style="
+                    text-align: center;
+                    text-decoration: none;
+                    color:  {{ settings.search_header_color }};
+                  "
+                >
+                  {{ item.title }}
+                </a>
+              </h3>
+              {% if item.featured_image %}
+                <div class="result-image">
+                  <a
+                    href="{{item.url}}"
+                    title=""
+                  >
+                    {{- item.featured_image | product_img_url: 'medium' | img_tag }}
+                  </a>
+                </div>
+              {% endif %}
+              <span style="text-align:center; margin-top: 8px; color: {{ settings.search_description_color }};">
+                {{- item.content | strip_html | truncatewords: 40 | highlight: search.terms -}}
+              </span>
+              <div style="clear:left"></div>
+            </li>
+          {% endfor %}
+        </ol>
+      {% endif %}
+
+      <p
+        style="font-size: 20px"
+      >
+        {{ paginate | default_pagination }}
+      </p>
+    {% endpaginate %}
+  {% endif %}
+</div>

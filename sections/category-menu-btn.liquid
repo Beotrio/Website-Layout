@@ -1,0 +1,46 @@
+{%- if collection -%}
+  <a data-w-id="..." href="#" class="filter-btn" style="display: flex; align-items: center; gap: 8px;">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="SVGRepo_iconCarrier">
+        <path d="M4 18L20 18" stroke="{{ section.settings.bg-color }}" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M4 12L20 12" stroke="{{ section.settings.bg-color }}" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M4 6L20 6" stroke="{{ section.settings.bg-color }}" stroke-width="1.5" stroke-linecap="round"/>
+      </g>
+    </svg>
+    <span style="font-size: 16px; color: {{ section.settings.bg-color }};">Menu</span>
+  </a>
+
+  <!--
+    <a data-w-id="b46ce580-dd6b-e4df-f0e5-7b65957d9288" href="#" class="filter-btn w-button" style="color:{{ section.settings.text-color }}; background-color:{{ section.settings.bg-color }}">{{ 't4b47dc54' | t }}</a>
+  -->
+{%- else -%}
+  <!--
+    <a data-w-id="2f3b53d5-a54c-c842-2fc8-1e63eee6812e" href="#" class="filter-btn w-button" style="color:{{ section.settings.text-color }}; background-color:{{ section.settings.bg-color }}">{{ 't4b47dc54' | t }}</a>
+  -->
+  <a data-w-id="2f3b53d5-a54c-c842-2fc8-1e63eee6812e" href="#" class="filter-btn">
+    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+      <g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="{{ section.settings.bg-color }}" stroke-width="1.5" stroke-linecap="round"/> <path d="M4 12L20 12" stroke="{{ section.settings.bg-color }}" stroke-width="1.5" stroke-linecap="round"/> <path d="M4 6L20 6" stroke="{{ section.settings.bg-color }}" stroke-width="1.5" stroke-linecap="round"/> </g>
+    </svg>
+  </a>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Mobile Menu Icon",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Switch to mobile view to see the changes for this setting"
+    },
+    {
+      "type": "color",
+      "id": "bg-color",
+      "label": "Menu Color",
+      "default": "#000000"
+    }
+  ]
+}
+{% endschema %}

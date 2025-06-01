@@ -1,0 +1,230 @@
+<div class="add-to-cart-section">
+  <div class="add-to-cart">
+    {%- form 'product',
+      product,
+      data-node-type: 'commerce-add-to-cart-form',
+      class: 'w-commerce-commerceaddtocartform default-state',
+      style: 'width: 100%'
+    -%}
+      {% if product.available %}
+        <div data-node-type="add-to-cart-option-list" position-id="bdbed2d6-a133-db7e-3733-9a1352b3c43c">
+          {%- for option in product.options_with_values -%}
+            <fieldset
+              data-node-type="add-to-cart-option"
+              style="height: 31px; margin-bottom: 10px; {% if product.has_only_default_variant or product.variants.size == 0 %}display: none; {% endif %}"
+            >
+              <select
+                data-node-type="add-to-cart-option-select"
+                class="select-field w-select"
+                name="{{ "option" | append: forloop.index }}"
+              >
+                {%- render 'product-options', option: option -%}
+              </select>
+              <div
+                data-node-type="add-to-cart-option-pill-group"
+                class="w-commerce-commerceaddtocartoptionpillgroup"
+                aria-label="{{ "option" | append: forloop.index  }}"
+              >
+                {%- for value in option.values -%}
+                  <div
+                    data-node-type="add-to-cart-option-pill"
+                    class="w-commerce-commerceaddtocartoptionpill"
+                    data-option-name="{{ value | handle }}"
+                  >
+                    <div data-node-type="block">{{ value }}</div>
+                  </div>
+                {%- endfor -%}
+              </div>
+            </fieldset>
+          {%- endfor -%}
+        </div>
+      {% endif %}
+      {% if product.available %}
+        {% if product.has_only_default_variant %}
+          <div style="height: 31px;"></div>
+          <input
+            style="background-color:{{ section.settings.add_to_cart_bg }}; color: {{ section.settings.add_to_cart_text }};"
+            type="submit"
+            position-id="bdbed2d6-a133-db7e-3733-9a1352b3c446"
+            data-node-type="commerce-add-to-cart-button"
+            data-loading-text="Adding..."
+            value="Add To Cart"
+            aria-busy="false"
+            aria-haspopup="dialog"
+            class="w-commerce-commerceaddtocartbutton add-to-cart-button"
+          >
+        {% else %}
+          <input
+            style="background-color:{{ section.settings.add_to_cart_bg }}; color: {{ section.settings.add_to_cart_text }};"
+            type="submit"
+            position-id="bdbed2d6-a133-db7e-3733-9a1352b3c446"
+            data-node-type="commerce-add-to-cart-button"
+            data-loading-text="Adding..."
+            value="Add To Cart"
+            aria-busy="false"
+            aria-haspopup="dialog"
+            class="w-commerce-commerceaddtocartbutton add-to-cart-button"
+          >
+        {% endif %}
+      {% endif %}
+      {%- render 'product-variants-data', product: product -%}
+    {%- endform -%}
+    {% if product.available == false %}
+      <div style="height:31px;"></div>
+      <div
+        style="background-color: {{ section.settings.out_of_stock_bg }}"
+        tabindex="0"
+        style="display:none"
+        class="sold-out-product-btn-2"
+      >
+        <div style=" text-align: center; color: {{ section.settings.out_of_stock_text}}">Sold Out</div>
+      </div>
+    {% endif %}
+    <div
+      style="background-color: {{ section.settings.out_of_stock_bg }}"
+      tabindex="0"
+      style="display:none"
+      class="sold-out-product-btn"
+    >
+      <div style=" text-align: center; color: {{ section.settings.out_of_stock_text}}">Sold Out</div>
+    </div>
+
+    <div
+      aria-live="assertive"
+      data-node-type="commerce-add-to-cart-error"
+      style="display:none"
+      class="w-commerce-commerceaddtocarterror"
+    >
+      <div
+        data-node-type="commerce-add-to-cart-error"
+        data-w-add-to-cart-quantity-error="Product is not available in this quantity."
+        data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
+        data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription."
+        data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
+        data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
+        data-w-add-to-cart-select-all-options-error="Please select an option in each set."
+      >
+        {{ 'tn1c765d0d' | t }}
+      </div>
+    </div>
+  </div>
+  <div class="div-block-3" style="top:0px">
+    <a
+      style="
+        text-decoration: none;
+        --next-item-txt-color: {{ section.settings.next_item_text_color }};
+        --next-item-highlight-color: {{ section.settings.next_item_highlight_color }};
+        --next-item-highlight-txt-color: {{ section.settings.next_item_highlight_txt_color }};
+      "
+      href="
+        {% if collection %}
+          {% if collection.next_product %}
+            {{ collection.next_product.url }}
+          {% else %}
+            {{ collection.products.first.url | within:collection }}
+          {% endif %}
+        {% else %}
+          {%- assign itemIndex = 1 -%}
+          {%- assign allProductsSize = collections.all.products | size -%}
+          {% for item in collections.all.products %}
+             {% if product.title == item.title %}
+             {% break %}
+             {% else %}
+               {%- assign itemIndex = itemIndex | plus: 1 -%}
+             {% endif %}
+          {% endfor %}
+
+            {% if itemIndex == allProductsSize %}
+              {%- assign itemIndex = 0 -%}
+            {% endif %}
+
+            {{ collections.all.products[itemIndex].url }}
+
+        {% endif %}
+      "
+      class="link"
+    >
+      {{ 't43e13c3e' | t }}
+    </a>
+    <a
+      style="
+        margin-top: 10px;
+        height: 31px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration:none;
+        font-size: small;
+        background-color:{{ section.settings.keep_shopping_bg }}; color: {{ section.settings.keep_shopping_text }};
+      "
+      href="/collections/all"
+      class="button"
+    >
+      {{- 'tn33c4345d' | t -}}
+    </a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Buttons",
+  "tag": "div",
+  "settings": [
+   {
+      "type": "color",
+      "id": "add_to_cart_bg",
+      "label": "Add To Cart Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "add_to_cart_text",
+      "label": "Add To Cart Text",
+      "default": "#FFF"
+    },
+     {
+      "type": "color",
+      "id": "keep_shopping_bg",
+      "label": "Keep Shopping Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "keep_shopping_text",
+      "label": "Keep Shopping Text",
+      "default": "#FFF"
+    },
+    {
+      "type": "color",
+      "id": "next_item_text_color",
+      "label": "Next Item Text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "next_item_highlight_color",
+      "label": "Next Item Highlight Color",
+      "default": "#FE0000"
+    },
+    {
+      "type": "color",
+      "id": "next_item_highlight_txt_color",
+      "label": "Next Item Txt Highlight Color",
+      "default": "#FFF"
+    },
+    {
+      "type": "color",
+      "id": "out_of_stock_bg",
+      "label": "Out of Stock Background",
+      "default": "#FE0000"
+    },
+    {
+      "type": "color",
+      "id": "out_of_stock_text",
+      "label": "Out of Stock Text",
+      "default": "#FFF"
+    }
+  ]
+}
+{% endschema %}

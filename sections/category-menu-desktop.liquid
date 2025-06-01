@@ -1,0 +1,128 @@
+{% capture listItems %}
+          
+          {%- assign allItems = collections -%}
+          {%- assign allItems = allItems | sort: 'title' -%}
+          {%- for link in linklists["shop-menu"].links -%}
+            <div role="listitem" class="collection-item-5 w-dyn-item" style=" line-height: 104%; text-align:{{ section.settings.text-alignment }};">
+              <a style="margin-top:{{ section.settings.menu-spacing }}px" href="{{ link.url }}" class="link-block shop _1 desktop w-inline-block">
+                  <div style="white-space: {{ section.settings.whitespace }}; font-size:{{ section.settings.font-size }}px; --nav-link-color:{{ section.settings.menu-link-color }}; --navlink-background-color: {{ section.settings.navlink_background_color }}; --navlink-hover-color: {{ section.settings.navlink_hover_color }};" class="nav-link shop desktop">{{ link.title }}</div>
+              </a>
+            </div>
+          {%- endfor -%}
+          
+          {% endcapture %}
+          {% assign items_length = listItems | strip | size %}
+
+          <div style="position:absolute; left: -80px;" class="collection-list-wrapper-5 w-dyn-list desktop-menu" udy-collection="collection">
+            {%- unless items_length == 0 -%}
+            <div role="list" class="w-dyn-items" style="text-align:{{ section.settings.text-alignment }};">
+              {{ listItems }}
+              <a style="margin-top:{{ section.settings.menu-spacing }}px" href="{{ routes.root_url }}" class="link-block shop _1 desktop w-inline-block">
+                  <div style="white-space: {{ section.settings.whitespace }}; font-size:{{ section.settings.font-size }}px; --nav-link-color:{{ section.settings.menu-link-color }}; --navlink-background-color: {{ section.settings.navlink_background_color }}; --navlink-hover-color: {{ section.settings.navlink_hover_color }}; " class="nav-link shop desktop">Back Home</div>
+              </a>
+            </div>
+            {%- endunless -%}
+            {%- if items_length == 0 -%}
+            <a style="margin-top:{{ section.settings.menu-spacing }}px; " href="{{ routes.root_url }}" class="link-block shop _1 w-inline-block">
+                  <div style="font-size:{{ section.settings.font-size }}px; --navlink-color:{{ section.settings.menu-link-color }}; --navlink-hover-color: {{ section.settings.navlink_hover_color }}; --navlink-background-color: {{ section.settings.navlink_background_color }};" class="nav-link shop">Back Home</div>
+              </a>
+            {%- endif -%}
+          </div>
+        </div>
+      
+
+        
+{% schema %}
+{
+  "name": "Desktop Menu",
+  "tag": "div",
+  "settings": [
+ {
+      "type": "paragraph",
+      "content": "These settings control the side menu shown only on desktop."
+    },
+    {
+      "type": "paragraph",
+      "content": "To change the order of collection links, go to the Shopify admin panel and follow these steps:"
+    },
+    {
+      "type": "paragraph",
+      "content": "Go to Online Store > Navigation > Add Menu > name it \"Shop Menu\" and customize"
+    },
+    {
+      "type": "color",
+      "id": "menu-link-color",
+      "label": "Menu Link Colors",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "navlink_background_color",
+      "label": "Menu Link Hover Background Colors",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "navlink_hover_color",
+      "label": "Menu Link Hover Text Colors",
+      "default": "#FFF"
+    },
+    { 
+      "type": "range",
+      "id": "font-size",
+      "min": 10,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size",
+      "default": 26
+    },
+    { 
+      "type": "range",
+      "id": "menu-spacing",
+      "min": 0,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "label": "Vertical Spacing",
+      "default": 8
+    },
+    {
+      "type": "select",
+      "id": "text-alignment",
+      "label": "Text Alignment",
+      "options": [
+      {
+        "value": "left",
+        "label": "Left"
+      },
+      {
+        "value": "center",
+        "label": "Center"
+      },
+      {
+        "value": "right",
+        "label": "Right"
+      }
+    ],
+  "default": "right"
+    },
+    {
+      "type": "select",
+      "id": "whitespace",
+      "label": "Enable Line Break On Whitespace",
+      "options": [
+      {
+        "value": "normal",
+        "label": "Line Break Between Spaces"
+      },
+      {
+        "value": "nowrap",
+        "label": "Don't Break Between Spaces"
+      }
+    ],
+  "default": "nowrap"
+    }
+  ]
+}
+{% endschema %}

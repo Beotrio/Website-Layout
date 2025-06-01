@@ -1,0 +1,7 @@
+{% assign optionLine = "option" | append: optionPosition %}
+{% for variant in variants %}
+{% if variant[optionLine] == optionValue %}
+{{ variant.featured_image | img_url: 'large' }}
+{% break %}
+{% endif %}
+{% endfor %}

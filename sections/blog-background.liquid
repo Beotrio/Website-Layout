@@ -1,0 +1,223 @@
+{%- if section.settings.show_background_video -%}
+  {% if section.settings.show_background_image_mobile %}
+    {% assign display = 'none' %}
+  {% else %}
+    {% assign display = 'block' %}
+  {% endif %}
+
+  <div style="--hide-video: {{ display }}; position: relative; width: 100%; height: 100%;" class="video-container">
+    <video
+      autoplay
+      muted
+      defaultmuted
+      oncontextmenu="return false;"
+      preload="auto"
+      playsinline
+      loop
+      class="myVideo"
+      style="       
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        transform: none;
+      "
+    >
+      <source src="{{ section.settings.video_url }}" type="video/mp4">
+    </video>
+
+    <div
+      class="video-overlay"
+      style="
+        background-image: linear-gradient(180deg, {{ section.settings.overlay_top_color | color_modify: 'alpha', section.settings.overlay_top_opacity }}, {{ section.settings.overlay_bottom_color | color_modify: 'alpha', section.settings.overlay_bottom_opacity }});
+        --background-opacity-mobile: linear-gradient(180deg, {{ section.settings.overlay_top_color_mobile | color_modify: 'alpha', section.settings.overlay_top_opacity_mobile }}, {{ section.settings.overlay_bottom_color_mobile | color_modify: 'alpha', section.settings.overlay_bottom_opacity_mobile }});
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 15% 32px;
+        line-height: 1.5;
+        text-align: center;
+      "
+    ></div>
+  </div>
+{%- endif -%}
+    {%- if section.settings.desktop_bg_image == nil -%}
+      {%- if section.settings.show_background_image -%}
+        <div class="bg-image enter-screen" style="background-image: linear-gradient(180deg, {{ section.settings.overlay_top_color | color_modify: 'alpha', section.settings.overlay_top_opacity }}, {{ section.settings.overlay_bottom_color | color_modify: 'alpha', section.settings.overlay_bottom_opacity }}), url('');">
+          
+        </div>
+        {%- endif -%}
+      {%- endif -%}
+      
+      {%- if section.settings.show_background_image -%}
+      <div class="bg-image enter-screen desktop" style="background-image: linear-gradient(180deg, {{ section.settings.overlay_top_color | color_modify: 'alpha', section.settings.overlay_top_opacity }}, {{ section.settings.overlay_bottom_color | color_modify: 'alpha', section.settings.overlay_bottom_opacity }}), url('{{ section.settings.desktop_bg_image.src | img_url: 'master' }}');"></div>
+      {%- endif -%}
+      
+      {%- if section.settings.show_background_image_mobile -%}
+      <div class="bg-image enter-screen mobile" style="background-image: linear-gradient(180deg, {{ section.settings.overlay_top_color_mobile | color_modify: 'alpha', section.settings.overlay_top_opacity_mobile }}, {{ section.settings.overlay_bottom_color_mobile | color_modify: 'alpha', section.settings.overlay_bottom_opacity_mobile }}), url('{{ section.settings.mobile_bg_image.src | img_url: 'master' }}');"></div>
+      {%- endif -%}
+      
+      <div class="bg-color enter-screen desktop" style="background-color: {{ section.settings.bg_color }}; background-image: linear-gradient(180deg, {{ section.settings.overlay_top_color | color_modify: 'alpha', section.settings.overlay_top_opacity }}, {{ section.settings.overlay_bottom_color | color_modify: 'alpha', section.settings.overlay_bottom_opacity }})"></div>
+      <div class="bg-color enter-screen mobile" style="background-color: {{ section.settings.bg_color_mobile }}; background-image: linear-gradient(180deg, {{ section.settings.overlay_top_color_mobile | color_modify: 'alpha', section.settings.overlay_top_opacity_mobile }}, {{ section.settings.overlay_bottom_color_mobile | color_modify: 'alpha', section.settings.overlay_bottom_opacity_mobile }})"></div>
+  
+
+<script>var currentSection = document.currentScript.closest('.shopify-section'); currentSection.setAttribute("class","background-image shop");</script>
+        
+{% schema %}
+{
+  "name": "Background",
+  "tag": "div",
+  "class": "background-image shop",
+  "settings": [
+     {
+      "type": "header",
+      "content": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_bg_image",
+      "label": "Desktop"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_background_image",
+      "label": "Show On Desktop",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_bg_image",
+      "label": "Mobile"
+    },
+       {
+      "type": "checkbox",
+      "id": "show_background_image_mobile",
+      "label": "Show On Mobile",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Video Background"
+    },
+    {
+      "type": "paragraph",
+      "content": "Displays on both desktop and mobile. Note: On iPhones, if 'Low Battery Mode' is enabled, the background will not autoplay. These are guidelines set by Apple."
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Background Video URL"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_background_video",
+      "label": "Show Background Video",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Desktop",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "bg_color_mobile",
+      "label": "Mobile",
+      "default": "#ffffff"
+    },
+    
+    {
+      "type": "header",
+      "content": "Background Overlays"
+    },
+    {
+      "type": "paragraph",
+      "content": "Use these settings to set a blended color overlay over your background."
+    },
+    {
+      "type": "header",
+      "content": "Desktop"
+    },
+    {
+      "type": "color",
+      "id": "overlay_top_color",
+      "label": "Overlay Desktop Color (Top)",
+      "default": "#000000"
+    },
+    {
+    "type": "range",
+    "id": "overlay_top_opacity",
+    "min": 0,
+    "max": 1,
+    "step": 0.1,
+    "unit": "px",
+    "label": "Overlay Desktop Opacity (Top)",
+    "default": 0
+    },
+    {
+      "type": "color",
+      "id": "overlay_bottom_color",
+      "label": "Overlay Desktop Color (Bottom)",
+      "default": "#000000"
+    },
+    {
+  "type": "range",
+  "id": "overlay_bottom_opacity",
+  "min": 0,
+  "max": 1,
+  "step": 0.1,
+  "unit": "px",
+  "label": "Overlay Desktop Opacity (Bottom)",
+  "default":0
+},
+      {
+      "type": "header",
+      "content": "Mobile"
+    },
+  {
+      "type": "color",
+      "id": "overlay_top_color_mobile",
+      "label": "Overlay Mobile Color (Top)",
+      "default": "#000000"
+    },
+    {
+  "type": "range",
+  "id": "overlay_top_opacity_mobile",
+  "min": 0,
+  "max": 1,
+  "step": 0.1,
+  "unit": "px",
+  "label": "Overlay Mobile Opacity (Top)",
+  "default": 0
+},
+    {
+      "type": "color",
+      "id": "overlay_bottom_color_mobile",
+      "label": "Overlay Mobile Color (Bottom)",
+      "default": "#000000"
+    },
+    {
+  "type": "range",
+  "id": "overlay_bottom_opacity_mobile",
+  "min": 0,
+  "max": 1,
+  "step": 0.1,
+  "unit": "px",
+  "label": "Overlay Mobile Opacity (Bottom)",
+  "default": 0
+}
+  ]
+}
+{% endschema %}

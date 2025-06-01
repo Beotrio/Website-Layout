@@ -1,0 +1,55 @@
+{%- if settings.show_footer -%}
+  <div
+    class="footer footer-desktop"
+    style="height: {{ settings.footer_height }}px; justify-content: {{ settings.footer_link_alignment }}; background-color: {{ settings.footer_background_color | color_modify: 'alpha', settings.footer_opacity}}; "
+  >
+ 
+    {%- for link in linklists['footer-menu'].links -%}
+      <a class="footer-desktop-links" href="{{ link.url }}">
+        <p
+          class="footer-links"
+          style="
+          font-size: {{ settings.footer_text_size }}px;
+          margin-left: {{ settings.footer_link_margin }}px; 
+          margin-right: {{ settings.footer_link_margin }}px;
+          --footer-txt-color: {{ settings.footer_text_color }};
+          --footer-highlight-txt-color: {{ settings.footer_text_color_highlighed }};
+          --footer-highlight-txt-bg-color: {{ settings.footer_text_color_highlighed_bg }};
+          "
+        >
+          {{ link.title }}
+        </p>
+      </a>
+      
+    {%- endfor -%}
+  </div>
+
+    <div
+    class="footer footer-mobile"
+    style="height: {{ settings.footer_height }}px; justify-content: {{ settings.footer_link_alignment }}; background-color: {{ settings.footer_background_color | color_modify: 'alpha', settings.footer_opacity}}; "
+  >
+ 
+    {%- for link in linklists['footer-menu'].links -%}
+      <a class="footer-mobile-links" href="{{ link.url }}">
+        <p
+          class="footer-links"
+          style="
+          font-size: {{ settings.footer_text_size_mobile }}px;
+          margin-left: {{ settings.footer_link_margin }}px; 
+          margin-right: {{ settings.footer_link_margin }}px;
+          --footer-txt-color: {{ settings.footer_text_color }};
+          --footer-highlight-txt-color: {{ settings.footer_text_color_highlighed }};
+          --footer-highlight-txt-bg-color: {{ settings.footer_text_color_highlighed_bg }};
+          "
+        >
+          {{ link.title }}
+        </p>
+      </a>
+      
+    {%- endfor -%}
+  </div>
+{%- endif -%}
+
+<script>
+  var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","credits");
+</script>

@@ -1,0 +1,147 @@
+{%  if section.settings.show_article_side_bar %}
+  
+  {% assign blogArticles = blog.articles | limit: 500 %}
+  {%- assign articleIndex = 1 -%}
+  {%- assign articlesSize = blog.articles_count -%}
+  {% for x in blog.articles limit: 500 %}
+    {% if x.title == article.title %}
+      {% break %}
+    {% else %}
+      {%- assign articleIndex = articleIndex | plus: 1 -%}
+    {% endif %}
+  {% endfor %}
+
+  {% if articleIndex == blog.articles_count %}
+    {%- assign articleIndex = 0 -%}
+  {% endif %}
+
+<section  
+  style="
+  {% if settings.disable_highlight_animation %} animation-duration: 0s; {% endif %}
+  --side-article-hover-txt-color: {{ section.settings.side_article_highlight_txt_color }}; 
+  --side-article-hover-bg-color:{{ section.settings.side_article_highlight_color }}; 
+  --side-article-txt-color:{{ section.settings.side_article_txt_color }};
+  --side-article-radius:{{ section.settings.img_radius }}px;"
+  class="other-articles">
+          {% if blog.articles_count >= 2 %}
+        <a href="{{ blogArticles[articleIndex].url }}">
+          <div style="animation: fadeIn {{ section.settings.fade_duration }}s forwards;" class="other-article">
+            <img
+              class="other-article-image"
+              src="{{ blogArticles[articleIndex].image | img_url: 'master' }}"
+              alt="Article Image"
+            >
+            <h6 class="other-article-title">{{ blogArticles[articleIndex].title }}</h6>
+          </div>
+        </a>
+        {% endif %}
+        {% if blog.articles_count >= 3 %}
+        {%- assign articleIndex2 = articleIndex | plus: 1 -%}
+        {% if articleIndex2 == blog.articles_count %}
+          {%- assign articleIndex2 = 0 -%}
+        {% endif %}
+        <a href="{{ blogArticles[articleIndex2].url }}">
+          <div style="animation: fadeIn {{ section.settings.fade_duration }}s forwards;" class="other-article">
+            <img
+              class="other-article-image"
+              src="{{ blogArticles[articleIndex2].image | img_url: 'master' }}"
+              alt="Article Image"
+            >
+            <h6 class="other-article-title">{{ blogArticles[articleIndex2].title }}</h6>
+          </div>
+        </a>
+        {% endif %}
+        {% if blog.articles_count >= 4 %}
+        {%- assign articleIndex3 = articleIndex2 | plus: 1 -%}
+        {% if articleIndex3 == blog.articles_count %}
+          {%- assign articleIndex3 = 0 -%}
+        {% endif %}
+        <a href="{{ blogArticles[articleIndex3].url }}">
+          <div style="animation: fadeIn {{ section.settings.fade_duration }}s forwards;" class="other-article">
+            <img
+              class="other-article-image"
+              src="{{ blogArticles[articleIndex3].image | img_url: 'master' }}"
+              alt="Article Image"
+            >
+            <h6 class="other-article-title">{{ blogArticles[articleIndex3].title }}</h6>
+          </div>
+        </a>
+        {% endif %}
+      </section>
+  
+{% endif %}
+
+
+{% schema %}
+  {
+  "name": "Article Side Bar",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_article_side_bar",
+      "label": "Display Article Side Bar",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "side_article_txt_color",
+      "label": "Related Article Title Color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "side_article_highlight_color",
+      "label": "Related Article Hover BG Color",
+      "default": "#FE0000"
+    },
+   {
+      "type": "color",
+      "id": "side_article_highlight_txt_color",
+      "label": "Related Article Hover Text Color",
+      "default": "#FFF"
+    },
+    
+    
+    {
+      "type": "header",
+      "content": "Fade Animation"
+    },
+      {
+      "type": "paragraph",
+      "content": "This settings affects how long it takes the articles to fade-in to the page."
+    },
+    {
+    "type": "range",
+    "id": "fade_duration",
+    "min": 0,
+    "max": 8,
+    "step": 1,
+    "unit": "sec",
+    "label": "Fade-In Duration",
+    "default": 2
+      },
+    {
+      "type": "header",
+      "content": "Article Card Corners"
+    },
+     {
+      "type": "paragraph",
+      "content": "This settings affects the curve of the article cards corners."
+    },
+    {
+    "type": "range",
+    "id": "img_radius",
+    "min": 0,
+    "max": 10,
+    "step": 1,
+    "unit": "px",
+    "label": "Card Curve",
+    "default": 0
+    }
+    
+    
+
+  ]
+}
+{% endschema %}

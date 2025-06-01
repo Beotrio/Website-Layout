@@ -1,0 +1,24 @@
+{% capture listItems %}
+{% paginate collections.all.products by 999 %}
+{%- assign allItems = collections.all.products -%}
+{%- for item in allItems -%}{% assign refs = item.collections | map: "handle" %}{% assign condition_0 = false %}                  
+                {% if refs contains collection.handle %}
+                    {% assign condition_0 = true %}
+                {% endif %}{% if condition_0 %}
+ <div role="listitem" class="collection-item w-dyn-item">
+            <a href="{{ item.url | within: collection }}" class="link-block-2 w-inline-block"><img src="{{ item.featured_image | img_url: 'master' }}" loading="lazy" alt="{{ item.featured_image.alt }}" class="product-image" data-commerce-type="variation-image" srcset="{{ item.featured_image | img_url: '1920x' }} 1920w,{{ item.featured_image | img_url: '1600x' }} 1600w,{{ item.featured_image | img_url: '1366x' }} 1366w,{{ item.featured_image | img_url: '1024x' }} 1024w,{{ item.featured_image | img_url: '768x' }} 768w,{{ item.featured_image | img_url: '640x' }} 640w"></a>
+          </div>
+{% endif %}
+{%- endfor -%}
+{% endpaginate %}
+{% endcapture %}
+{% assign items_length = listItems | strip | size %}
+
+<div class="collection-list-wrapper w-dyn-list" udy-collection="product">
+        {%- unless items_length == 0 -%}<div role="list" class="collection-list w-dyn-items">
+          {{ listItems }}
+        </div>{%- endunless -%}
+        {%- if items_length == 0 -%}<div class="empty-state-4 w-dyn-empty">
+          <div class="text-block-21">Nothing here. Come back later.</div>
+        </div>{%- endif -%}
+      </div>
