@@ -168,6 +168,20 @@ main{
     opacity: 0.8;
 }
 
+  .menu-btn {
+  display: flex;
+  align-items: center; /* Vertically center bars + text */
+  gap: 10px; /* Space between bars and text */
+}
+
+.menu-icon {
+  order: 1; /* Bars come first */
+}
+
+.menu-label {
+  order: 2; /* Text comes after */
+}
+
 .side-menu a {
     padding: 0px 1px 0px 2px;
     text-decoration: none;
