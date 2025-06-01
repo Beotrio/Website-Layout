@@ -170,7 +170,7 @@ main{
 
   .menu-btn {
   display: fixed;
-  align-items: center; /* Vertically center bars + text */
+  align-items: right; /* Vertically center bars + text */
   gap: 10px; /* Space between bars and text */
 }
 
