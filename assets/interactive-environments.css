@@ -139,7 +139,7 @@ main{
 }
 
 .menu-btn {
-    position: sticky;
+    position: fixed;
     top: 20px;
     left: 20px;
     cursor: pointer;
