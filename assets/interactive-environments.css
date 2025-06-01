@@ -153,7 +153,31 @@ main{
     margin: 10px 0;
     transition: 0.4s;
 }
+/* Turns the middle bar transparent & rotates the others to form an "X" */
+.menu-btn.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.menu-btn.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-btn.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
 
+/* Example: Slide-in menu */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Hidden by default */
+    width: 250px;
+    height: 100vh;
+    background: #333;
+    transition: 0.3s;
+    z-index: 10;
+}
+.menu.show {
+    left: 0; /* Slides in when active */
+}
 .side-menu {
     position: fixed;
     top: 0;
