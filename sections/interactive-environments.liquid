@@ -89,23 +89,9 @@
     <div class="bar" style="background-color: {{ section.settings.menu_btn_color }};"></div>
     <div class="bar" style="background-color: {{ section.settings.menu_btn_color }};"></div>
   </div>
-  <span class="menu-label" style="color: {{ section.settings.menu_btn_color }};">Menu</span>
+
 </div>
-<style>
-  .menu-btn {
-  display: flex;
-  align-items: center; /* Vertically center bars + text */
-  gap: 10px; /* Space between bars and text */
-}
 
-.menu-icon {
-  order: 1; /* Bars come first */
-}
-
-.menu-label {
-  order: 2; /* Text comes after */
-}
-</style>
 <div id="sideMenu" class="side-menu">
   <button id="close-menu" class="close-menu" style="color: {{ section.settings.menu_btn_color}};">
     &#10006;
