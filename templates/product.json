@@ -113,7 +113,7 @@
             "accordion_drop_title_color": "#fe0000",
             "accordion_drop_content_color": "#000000",
             "accordion_arrow_color": "#000000",
-            "accordion_description": "<p>~Place Details Here (Size Chart, Care Instructions, etc)~</p>",
+            "accordion_description": "<p>{{ product.metafields.custom.care_instructions | metafield_tag }}</p>",
             "accordion_page": "",
             "accordion_margin": 20,
             "accordion_margin_mobile": 15
