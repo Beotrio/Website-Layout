@@ -147,10 +147,10 @@ main{
 }
 
 .menu-btn .bar {
-    width: 25px;
+    width: 50px;
     height: 3px;
     background-color: #fff;
-    margin: 5px 0;
+    margin: 10px 0;
     transition: 0.4s;
 }
 
