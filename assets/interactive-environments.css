@@ -169,7 +169,7 @@ main{
 }
 
   .menu-btn {
-  display: flex;
+  display: fixed;
   align-items: center; /* Vertically center bars + text */
   gap: 10px; /* Space between bars and text */
 }
