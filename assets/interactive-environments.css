@@ -168,7 +168,7 @@ main{
     opacity: 0.8;
 }
 
-  .menu-btn {
+  .menu-label {
   display: fixed;
   align-items: right; /* Vertically center bars + text */
   gap: 10px; /* Space between bars and text */
