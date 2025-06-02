@@ -8,7 +8,7 @@
       {% if settings.enable_large_announcement_bar %}
       height: 52px;
       {% endif %}
-      display: flex;
+      display: sticky;
       align-items: center;
       justify-content: center;
       {% if settings.enable_announcement_floater %}
@@ -50,7 +50,7 @@
         {% else %}
           {{ settings.announement-text-color }};
         {% endif %}
-      border-radius: 8px;
+      border-radius: 24px;
     "
   >
     <p
