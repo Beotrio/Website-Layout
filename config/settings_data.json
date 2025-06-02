@@ -373,9 +373,7 @@
       },
       "contact-content": {
         "type": "contact-content",
-        "custom_css": [
-          "h2 {font-size: 20px;}"
-        ],
+        "custom_css": [],
         "settings": {
           "contact-message": "Allow 3-5 business days for a response to your inquiry.",
           "contact_text_color": "#ffffff"
