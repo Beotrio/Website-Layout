@@ -60,7 +60,7 @@
           "settings": {
             "product_title": "#ffffff",
             "product_title_font_size": 35,
-            "product_title_font_size_mobile": 32,
+            "product_title_font_size_mobile": 35,
             "product_header_margin": 0,
             "product_header_margin_mobile": 0
           }

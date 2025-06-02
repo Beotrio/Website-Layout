@@ -353,12 +353,12 @@
           "show_background_video": false,
           "bg_color": "#ffffff",
           "bg_color_mobile": "#ffffff",
-          "overlay_top_color": "#000000",
-          "overlay_top_opacity": 0,
+          "overlay_top_color": "{{ shop.brand.colors.secondary[0].background }}",
+          "overlay_top_opacity": 1,
           "overlay_bottom_color": "#000000",
           "overlay_bottom_opacity": 0,
-          "overlay_top_color_mobile": "#000000",
-          "overlay_top_opacity_mobile": 0.9,
+          "overlay_top_color_mobile": "{{ shop.brand.colors.secondary[0].background }}",
+          "overlay_top_opacity_mobile": 1,
           "overlay_bottom_color_mobile": "#000000",
           "overlay_bottom_opacity_mobile": 0.9
         }
@@ -367,15 +367,18 @@
         "type": "contact-timezone",
         "settings": {
           "show_date_time": true,
-          "index_date_color": "#000000",
-          "index_time_color": "#000000"
+          "index_date_color": "#ffffff",
+          "index_time_color": "#ffffff"
         }
       },
       "contact-content": {
         "type": "contact-content",
+        "custom_css": [
+          "h2 {font-size: 20px;}"
+        ],
         "settings": {
           "contact-message": "Allow 3-5 business days for a response to your inquiry.",
-          "contact_text_color": "#000000"
+          "contact_text_color": "#ffffff"
         }
       },
       "contact-form": {
