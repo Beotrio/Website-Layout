@@ -14,6 +14,7 @@
     "shop_screen_logo": "shopify://shop_images/Asset_37.png",
     "product_screen_logo": "shopify://shop_images/Official_Logo.svg",
     "product_screen_logo_size": 65,
+    "announcement_background_color": "#5a4b44",
     "hide_announcemenet_bar_on_home": true,
     "enable_announcement_shadow": true,
     "enable_announcement_floater": true,
@@ -51,6 +52,7 @@
     "footer_copyright_text": "",
     "footer_logo_size": 60,
     "disable_email_modal": false,
+    "search_button_color": "#5a4b44",
     "sections": {
       "homepage-background": {
         "type": "homepage-background",
@@ -239,7 +241,7 @@
           "preloader_text": "",
           "preloader_txt_color": "#000000",
           "preloader_txt_size": 12,
-          "menu_btn_color": "#FFF",
+          "menu_btn_color": "#ffffff",
           "show_swipe_gesture": true
         }
       },
@@ -990,21 +992,20 @@
       "default-page-background": {
         "type": "default-page-background",
         "settings": {
-          "desktop_bg_image": "shopify://shop_images/IMG_2192.heic",
           "show_background_image": true,
           "show_background_image_mobile": true,
           "video_url": "",
           "show_background_video": false,
-          "bg_color": "#ffffff",
-          "bg_color_mobile": "#ffffff",
-          "overlay_top_color": "#000000",
-          "overlay_top_opacity": 0,
-          "overlay_bottom_color": "#000000",
-          "overlay_bottom_opacity": 0,
-          "overlay_top_color_mobile": "#000000",
-          "overlay_top_opacity_mobile": 0.9,
-          "overlay_bottom_color_mobile": "#000000",
-          "overlay_bottom_opacity_mobile": 0.9
+          "bg_color": "#f6f3ee",
+          "bg_color_mobile": "#f6f3ee",
+          "overlay_top_color": "#8d7b72",
+          "overlay_top_opacity": 1,
+          "overlay_bottom_color": "#dad2cb",
+          "overlay_bottom_opacity": 0.3,
+          "overlay_top_color_mobile": "#8c7b75",
+          "overlay_top_opacity_mobile": 1,
+          "overlay_bottom_color_mobile": "#dad2cb",
+          "overlay_bottom_opacity_mobile": 0.3
         }
       },
       "default-timezone": {
