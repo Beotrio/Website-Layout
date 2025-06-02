@@ -553,12 +553,22 @@
           href="{{ routes.root_url }}"
           class="link-block shop _1 w-inline-block"
         >
-          <div
-            style="{% if settings.disable_highlight_animation %} animation-duration: 0s; {% endif %} text-align:{{ section.settings.mobile-text-alignment }}; font-size:{{ section.settings.mobile-font-size }}px; --navlink-color:{{ section.settings.mobile-menu-link-color }}; --navlink-hover-color: {{ section.settings.mobile-navlink_hover_color }}; --navlink-background-color: {{ section.settings.mobile-navlink_background_color }};"
-            class="nav-link shop"
-          >
-            Back Home
-          </div>
+         <div
+  style="{% if settings.disable_highlight_animation %} animation-duration: 0s; {% endif %}
+         text-align: {{ section.settings.mobile-text-alignment }};
+         font-size: {{ section.settings.mobile-font-size }}px;
+         --navlink-color: {{ section.settings.mobile-menu-link-color }};
+         --navlink-hover-color: {{ section.settings.mobile-navlink_hover_color }};
+         --navlink-background-color: {{ section.settings.mobile-navlink_background_color }};
+         background-color: #f0f0f0;   /* light grey box background */
+         padding: 8px 12px;          /* space inside the box */
+         border-radius: 4px;         /* rounded corners */
+         display: inline-block;"      /* shrink box to text size */
+  class="nav-link shop"
+>
+  Back Home
+</div>
+
         </a>
         <div class="mobile-spacer"></div>
       </div>
