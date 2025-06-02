@@ -972,22 +972,25 @@
       },
       "lookbook-header": {
         "type": "lookbook-header",
+        "custom_css": [
+          "/* For desktop buttons */.lookbook-details-container.desktop .btn.small {border-radius: 20px !important;}",
+          "/* For mobile buttons */.lookbook-details-container.mobile .btn.small {border-radius: 20px !important;}"
+        ],
         "settings": {
-          "lookbook_logo": "shopify://shop_images/Asset_40.png",
-          "lookbook_logo_size": 94,
-          "lookbook_title": "Garden of Gethsemane",
-          "title_color": "{{ shop.brand.colors.primary[0].foreground }}",
+          "lookbook_logo_size": 120,
+          "lookbook_title": "Lookbook Title",
+          "title_color": "#000000",
           "lookbook_description": "Write a description of your collection here",
-          "description_color": "{{ shop.brand.colors.primary[0].foreground }}",
-          "shop_now_link": "shopify://collections/all",
+          "description_color": "#000000",
+          "shop_now_link": "",
           "shop_now_link_text": "Shop Now",
           "shop_now_button_color": "#f71500",
           "shop_now_text_color": "#ffffff",
-          "back_home_button_color": "{{ shop.brand.colors.primary[0].background }}",
+          "back_home_button_color": "#000000",
           "back_home_text_color": "#ffffff",
           "show_date_time": true,
-          "date_color": "#ffffff",
-          "time_color": "#ffffff"
+          "date_color": "#000000",
+          "time_color": "#000000"
         }
       },
       "lookbook-content": {
