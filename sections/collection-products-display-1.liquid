@@ -571,22 +571,14 @@
           href="{{ routes.root_url }}"
           class="link-block shop _1 w-inline-block"
         >
-        <div
-  style="{% if settings.disable_highlight_animation %} animation-duration: 0s; {% endif %}
-         text-align: {{ section.settings.mobile-text-alignment }};
-         font-size: {{ section.settings.mobile-font-size }}px;
-         --navlink-color: {{ section.settings.mobile-menu-link-color }};
-         --navlink-hover-color: {{ section.settings.mobile-navlink_hover_color }};
-         --navlink-background-color: {{ section.settings.mobile-navlink_background_color }};
-         background-color: var(--navlink-background-color);
-         padding: 8px 12px;
-         border-radius: 4px;
-         display: inline-block;"
-  class="nav-link shop"
->
-  Back Home
-</div>
-
+          {% comment %}
+          <div
+            style="{% if settings.disable_highlight_animation %} animation-duration: 0s; {% endif %} text-align:{{ section.settings.mobile-text-alignment }}; font-size:{{ section.settings.mobile-font-size }}px; --navlink-color:{{ section.settings.mobile-menu-link-color }}; --navlink-hover-color: {{ section.settings.mobile-navlink_hover_color }}; --navlink-background-color: {{ section.settings.mobile-navlink_background_color }};"
+            class="nav-link shop"
+          >
+            Back Home
+          </div>
+      {% endcomment %}
         </a>
       </div>
     {%- endif -%}
