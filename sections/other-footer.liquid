@@ -54,40 +54,19 @@
             {{ settings.footer_email_header }}
           </h3>
           <div class="footer-email">
-            <!-- Email input -->
             <input
-              style="
-                color:{{ settings.footer_input_txt_color }};
-                border:none;
-                width:174px;
-                height:26px;
-                padding-left:5px;
-                background-color: {{ settings.footer_input_color }};
-                --footer-placeholder-color: {{ settings.footer_input_placeholder_color }};
-                border-radius: 12px;
-              "
-              <!--
-              Added
-              --
+              style="color:{{ settings.footer_input_txt_color }}; border:none; width:174px; height:26px; padding-left:5px; background-color: {{ settings.footer_input_color }}; --footer-placeholder-color: {{ settings.footer_input_placeholder_color }};"
+              placeholder="Enter Email"
+              type="email"
+              name="contact[email]"
             >
-            placeholder="Enter Email" type="email" name="contact[email]" >
-
-            <!-- Submit button -->
+          </div>
+          <div class="footer-email-submit">
             <input
-              style="
-                color: {{ settings.footer_email_btn_txt_color }};
-                height:23px;
-                padding: 0 8px;
-                cursor: pointer;
-                background-color: {{ settings.footer_email_btn_color }};
-                border: none;
-                border-radius: 12px;
-              "
-              <!--
-              Added
-              --
+              style="color: {{ settings.footer_email_btn_txt_color }}; height:23px; padding: 0 8px; cursor: pointer; background-color: {{ settings.footer_email_btn_color }}; border: none;"
+              type="submit"
+              value="{{ settings.footer_email_button_txt }}"
             >
-            type="submit" value="{{ settings.footer_email_button_txt }}" >
           </div>
         {% endform %}
       </div>
