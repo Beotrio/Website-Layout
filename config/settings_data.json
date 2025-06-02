@@ -9,9 +9,9 @@
  */
 {
   "current": {
-    "enter_screen_logo": "shopify://shop_images/Asset_37.png",
+    "enter_screen_logo": "shopify://shop_images/Asset_40.png",
     "enter_screen_logo_size": 60,
-    "shop_screen_logo": "shopify://shop_images/Asset_37.png",
+    "shop_screen_logo": "shopify://shop_images/Asset_40.png",
     "shop_screen_logo_size": 70,
     "product_screen_logo": "shopify://shop_images/Official_Logo.svg",
     "product_screen_logo_size": 65,
@@ -47,11 +47,17 @@
     "enable_custom_btn_font": true,
     "custom_btn_font_name": "",
     "custom_btn_font": "https://www.dafont.com/made-tommy.font",
-    "footer_logo": "shopify://shop_images/Asset_37.png",
+    "footer_logo": "shopify://shop_images/Asset_40.png",
     "footer_links_title": "Additional Links",
     "footer_email_header": "Join our newsletter below for updates & promotions.",
     "footer_copyright_text": "",
+    "footer_background_color": "#4a5e4d",
+    "footer_links_title_color": "#FFF",
+    "footer_text_color_highlighed_bg": "{{ shop.brand.colors.primary[0].background }}",
+    "footer_email_btn_color": "#5a4b44",
     "footer_logo_size": 60,
+    "footer_header_text_size_desktop": 21,
+    "show_footer_logo": true,
     "disable_email_modal": false,
     "search_button_color": "#5a4b44",
     "sections": {
@@ -1019,7 +1025,7 @@
       "default-home-btn": {
         "type": "default-home-btn",
         "settings": {
-          "bg-color": "#5a4b44",
+          "bg-color": "{{ shop.brand.colors.primary[0].background }}",
           "text-color": "#ffffff"
         }
       },
