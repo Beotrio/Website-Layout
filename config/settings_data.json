@@ -12,7 +12,7 @@
     "enter_screen_logo": "shopify://shop_images/Asset_40.png",
     "enter_screen_logo_size": 90,
     "shop_screen_logo": "shopify://shop_images/Asset_40.png",
-    "shop_screen_logo_size": 70,
+    "shop_screen_logo_size": 80,
     "collection_screen_logo": "shopify://shop_images/Asset_40.png",
     "collection_screen_logo_size": 97,
     "product_screen_logo": "shopify://shop_images/Asset_40.png",
@@ -376,7 +376,8 @@
         "custom_css": [],
         "settings": {
           "contact-message": "Allow 3-5 business days for a response to your inquiry.",
-          "contact_text_color": "#ffffff"
+          "contact_text_color": "#ffffff",
+          "contact_font_size": 22
         }
       },
       "contact-form": {
@@ -384,9 +385,9 @@
         "settings": {
           "field-bg-color": "#ffffff",
           "field-text-color": "#000000",
-          "submit-bg-color": "#000000",
+          "submit-bg-color": "#556b5b",
           "submit-text-color": "#ffffff",
-          "back-home-color": "#000000",
+          "back-home-color": "{{ shop.brand.colors.primary[0].background }}",
           "back-home-text-color": "#ffffff"
         }
       },
