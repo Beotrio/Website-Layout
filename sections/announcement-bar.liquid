@@ -39,6 +39,29 @@
       top: 30px;
     "
   >
+    <script>
+      window.addEventListener('scroll', function () {
+        var bar = document.getElementById('announcementBar');
+        if (!bar) return;
+
+        if (window.scrollY > 80) {
+          bar.style.position = 'fixed';
+          bar.style.top = '0px';
+          bar.style.left = '0';
+          bar.style.transform = 'none';
+          bar.style.width = '100%';
+          bar.style.borderRadius = '0';
+        } else {
+          bar.style.position = 'absolute';
+          bar.style.top = '30px';
+          bar.style.left = '50%';
+          bar.style.transform = 'translateX(-50%)';
+          bar.style.width = '';
+          bar.style.borderRadius = '24px';
+        }
+      });
+    </script>
+
     <p
       {% if settings.enable_moving_announcement %}
         class="marquee"
