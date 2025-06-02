@@ -145,6 +145,9 @@
         "template--20852784955674__f24fee3c-963f-499e-a65c-378b790abca9-product_accordion-1",
         "product_accordion_DkLkjJ"
       ],
+      "custom_css": [
+        "@media (max-width: 767px) {.product-title {font-size: {{block.settings.product_title_font_size_mobile }}px !important; }}"
+      ],
       "settings": {
         "switch_productinfo_image": false,
         "place_additional_photos_under_main": false,
