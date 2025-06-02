@@ -974,20 +974,21 @@
         "type": "lookbook-header",
         "custom_css": [],
         "settings": {
-          "lookbook_logo_size": 120,
-          "lookbook_title": "Lookbook Title",
-          "title_color": "#000000",
+          "lookbook_logo": "shopify://shop_images/Asset_40.png",
+          "lookbook_logo_size": 102,
+          "lookbook_title": "Garden in Gethsemane",
+          "title_color": "#ffffff",
           "lookbook_description": "Write a description of your collection here",
-          "description_color": "#000000",
-          "shop_now_link": "",
+          "description_color": "#FFF",
+          "shop_now_link": "shopify://collections/all",
           "shop_now_link_text": "Shop Now",
           "shop_now_button_color": "#f71500",
           "shop_now_text_color": "#ffffff",
-          "back_home_button_color": "#000000",
+          "back_home_button_color": "{{ shop.brand.colors.primary[0].background }}",
           "back_home_text_color": "#ffffff",
           "show_date_time": true,
-          "date_color": "#000000",
-          "time_color": "#000000"
+          "date_color": "#FFF",
+          "time_color": "#FFF"
         }
       },
       "lookbook-content": {
