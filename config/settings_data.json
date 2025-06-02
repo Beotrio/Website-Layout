@@ -56,6 +56,8 @@
     "footer_text_color_highlighed_bg": "{{ shop.brand.colors.primary[0].background }}",
     "footer_email_btn_color": "#5a4b44",
     "footer_logo_size": 60,
+    "footer_text_size": 21,
+    "footer_text_size_mobile": 15,
     "footer_header_text_size_desktop": 21,
     "show_footer_logo": true,
     "disable_email_modal": false,
