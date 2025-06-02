@@ -28,6 +28,8 @@
     "show_home_time": true,
     "hide_homepage": false,
     "collection_style": "classic_collection",
+    "desktop-layout": "1fr 1fr 1fr 1fr 1fr",
+    "mobile-layout": "1fr 1fr",
     "password_page_style": "modern",
     "show_music": false,
     "show_music_mobile": false,
