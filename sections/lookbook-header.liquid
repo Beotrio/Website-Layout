@@ -37,9 +37,10 @@
       <a
         href="{{ section.settings.shop_now_link }}"
         class="btn small shop-now w-button"
-        style="margin-top: 0; height: 40px; text-transform: none; color:{{ section.settings.shop_now_text_color }}; background-color: {{ section.settings.shop_now_button_color }}; font-size: 16px;"
-        >...</a
+        style="margin-top: 0; height: 40px; text-transform: none; color:{{ section.settings.shop_now_text_color }}; background-color: {{ section.settings.shop_now_button_color }}; border-radius: 20px;"
       >
+        {{- section.settings.shop_now_link_text -}}
+      </a>
     {% else %}
       <a
         href="{{ routes.all_products_collection_url}}"
@@ -52,9 +53,10 @@
     <a
       href="{{ routes.root_url }}"
       class="btn small w-button"
-      style="margin-top: 0; height: 40px; text-transform: none; color:{{ section.settings.back_home_text_color }}; background-color: {{ section.settings.back_home_button_color }}; font-size: 16px;"
-      >...</a
+      style="margin-top: 0; height: 40px; text-transform: none; color:{{ section.settings.back_home_text_color }}; background-color: {{ section.settings.back_home_button_color }}; border-radius: 20px;"
     >
+      {{- 'tnc0d2788' | t -}}
+    </a>
   </div>
 </div>
 
