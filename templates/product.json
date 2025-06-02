@@ -24,7 +24,7 @@
         "bg_color_mobile": "#ffffff",
         "overlay_top_color": "{{ shop.brand.colors.secondary[0].background }}",
         "overlay_top_opacity": 1,
-        "overlay_bottom_color": "#FFF",
+        "overlay_bottom_color": "#ffffff",
         "overlay_bottom_opacity": 0.1,
         "overlay_top_color_mobile": "{{ shop.brand.colors.secondary[0].background }}",
         "overlay_top_opacity_mobile": 1,
@@ -35,12 +35,12 @@
     "header": {
       "type": "product-logo-section",
       "settings": {
-        "cart_text_color": "#FFF",
-        "cart_number_color": "#000",
-        "cart_number_bg_color": "#FFF",
+        "cart_text_color": "#ffffff",
+        "cart_number_color": "#000000",
+        "cart_number_bg_color": "#ffffff",
         "show_date_time": true,
-        "index_date_color": "#FFF",
-        "index_time_color": "#FFF"
+        "index_date_color": "#ffffff",
+        "index_time_color": "#ffffff"
       }
     },
     "f24fee3c-963f-499e-a65c-378b790abca9": {
@@ -58,7 +58,9 @@
         "template--20852784955674__f24fee3c-963f-499e-a65c-378b790abca9-product_header-1": {
           "type": "product_header",
           "settings": {
-            "product_title": "#FFF",
+            "product_title": "#ffffff",
+            "product_title_font_size": 28,
+            "product_title_font_size_mobile": 32,
             "product_header_margin": 0,
             "product_header_margin_mobile": 0
           }
