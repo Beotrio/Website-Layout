@@ -22,25 +22,25 @@
         "show_background_video": false,
         "bg_color": "#ffffff",
         "bg_color_mobile": "#ffffff",
-        "overlay_top_color": "#000000",
-        "overlay_top_opacity": 0,
-        "overlay_bottom_color": "#000000",
-        "overlay_bottom_opacity": 0,
-        "overlay_top_color_mobile": "#000000",
-        "overlay_top_opacity_mobile": 0,
+        "overlay_top_color": "{{ shop.brand.colors.secondary[0].background }}",
+        "overlay_top_opacity": 1,
+        "overlay_bottom_color": "#FFF",
+        "overlay_bottom_opacity": 0.1,
+        "overlay_top_color_mobile": "{{ shop.brand.colors.secondary[0].background }}",
+        "overlay_top_opacity_mobile": 1,
         "overlay_bottom_color_mobile": "#000000",
-        "overlay_bottom_opacity_mobile": 0
+        "overlay_bottom_opacity_mobile": 0.1
       }
     },
     "header": {
       "type": "product-logo-section",
       "settings": {
-        "cart_text_color": "#000000",
-        "cart_number_color": "#ffffff",
-        "cart_number_bg_color": "#000000",
+        "cart_text_color": "#FFF",
+        "cart_number_color": "#000",
+        "cart_number_bg_color": "#FFF",
         "show_date_time": true,
-        "index_date_color": "#000000",
-        "index_time_color": "#000000"
+        "index_date_color": "#FFF",
+        "index_time_color": "#FFF"
       }
     },
     "f24fee3c-963f-499e-a65c-378b790abca9": {
@@ -151,7 +151,7 @@
         "reverse_additional_photos_and_main": false,
         "product_info_alignment": "left",
         "magnifier_frame_color": "#000000",
-        "fade_duration": 1,
+        "fade_duration": 7,
         "gallery_column_amount": 2,
         "gallery_desktop_image_size": 50,
         "gallery_mobile_image_size": 40,
