@@ -55,11 +55,21 @@
           </h3>
           <div class="footer-email">
             <input
-              style="color:{{ settings.footer_input_txt_color }}; border:none; width:174px; height:26px; padding-left:5px; background-color: {{ settings.footer_input_color }}; --footer-placeholder-color: {{ settings.footer_input_placeholder_color }};"
-              placeholder="Enter Email"
-              type="email"
-              name="contact[email]"
+              style="
+                color:{{ settings.footer_input_txt_color }};
+                border:none;
+                width:174px;
+                height:26px;
+                padding-left:5px;
+                background-color: {{ settings.footer_input_color }};
+                --footer-placeholder-color: {{ settings.footer_input_placeholder_color }};
+                border-radius: 12px;
+              "
+              <!--
+              Added
+              --
             >
+            placeholder="Enter Email" type="email" name="contact[email]" >
           </div>
           <div class="footer-email-submit">
             <input
