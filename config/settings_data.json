@@ -136,7 +136,7 @@
               "nav_link_color": "#ffffff",
               "navlink_hover_color": "#ffffff",
               "navlink_background_color": "#fe0100",
-              "main_link_size": 20,
+              "main_link_size": 25,
               "disable_highlight_effect": false
             }
           },
