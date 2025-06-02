@@ -1,1 +1,1041 @@
-{"current":{"enter_screen_logo":"shopify:\/\/shop_images\/Asset_37.png","enter_screen_logo_size":70,"shop_screen_logo":"shopify:\/\/shop_images\/Asset_37.png","hide_announcemenet_bar_on_home":true,"enable_announcement_shadow":true,"enter_page_style":"interactive_environments","show_home_logo":true,"show_home_time":true,"password_page_style":"modern","show_music_mobile":false,"music_url":"","enable_custom_nav_font":true,"custom_nav_font_name":"helvetica","enable_custom_dialog_font":true,"custom_dialog_font_name":"helvetica","enable_custom_countdown_font":true,"custom_countdown_font_name":"helvetica","enable_custom_font_header":true,"custom_font_header_name":"helvetica","enable_custom_body_font":true,"custom_body_font_name":"helvetica","enable_custom_btn_font":true,"custom_btn_font_name":"helvetica","disable_email_modal":false,"sections":{"homepage-background":{"type":"homepage-background","settings":{"show_background_image":false,"show_background_image_mobile":false,"video_url":"","show_background_video":false,"bg_color":"#ffffff","bg_color_mobile":"#ffffff","overlay_top_color":"#000000","overlay_top_opacity":0,"overlay_bottom_color":"#000000","overlay_bottom_opacity":0,"overlay_top_color_mobile":"#000000","overlay_top_opacity_mobile":0,"overlay_bottom_color_mobile":"#000000","overlay_bottom_opacity_mobile":0}},"index-timezone":{"type":"index-timezone","settings":{"show_date_time":true,"index_date_color":"#000000","index_time_color":"#000000"}},"nav-link":{"type":"nav-link","settings":{"nav_link_color":"#000000","navlink_hover_color":"#ffffff","navlink_background_color":"#fe0100","link-alignment":"left","font-size":14,"menu-spacing":21,"disable_highlight_effect":false,"enable_nav_scaling":false}},"social-media-links":{"type":"social-media-links","settings":{"social_media_size":15,"link-alignment":"left","invert_social_media_links":false,"instagram_link":"","twitter_link":"","facebook_link":"","youtube_channel_link":"","tik_tok_link":"","applemusic_link":"","spotify_link":"","tidal_link":"","soundcloud_link":"","tumblr_link":"","discord_link":"","show_instagram":true,"show_twitter":false,"show_facebook":false,"show_youtube":true,"show_tik_tok":true,"show_tumblr":false,"show_discord":false,"show_applemusic":false,"show_spotify":false,"show_tidal":false,"show_soundcloud":false}},"music-player":{"type":"music-player","settings":{}},"other-footer":{"type":"other-footer","settings":{}},"interactive-environments":{"type":"interactive-environments","blocks":{"2fd96122-0115-498f-ab3f-23f17fe449ab":{"type":"main_menu_link","settings":{"nav_link_color":"#ffffff","navlink_hover_color":"#ffffff","navlink_background_color":"#fe0100","main_link_size":20,"disable_highlight_effect":false}},"46520e61-c126-47d0-b4c7-c1d698b40871":{"type":"interactive_menu_link","settings":{"nav_link_color":"#ffffff","navlink_hover_color":"#ffffff","navlink_background_color":"#fe0100","main_link_size":20,"disable_highlight_effect":false}},"89477101-faba-46d4-8cbe-00bc4391cefe":{"type":"social_media_block","settings":{"show_youtube":true,"show_apple":true,"show_discord":false,"show_facebook":false,"show_instagram":true,"show_pinterest":false,"show_reddit":false,"show_snapchat":false,"show_spotify":false,"show_soundcloud":false,"show_telegram":false,"show_threads":false,"show_tiktok":false,"show_tumblr":false,"show_twitter":false,"show_twitch":false,"show_whatsapp":false,"youtube_link":"","apple_link":"","discord_link":"","facebook_link":"","instagram_link":"","pinterest_link":"","reddit_link":"","snapchat_link":"","spotify_link":"","soundcloud_link":"","telegram_link":"","threads_link":"","tiktok_link":"","tumblr_link":"","twitter_link":"","twitch_link":"","whatsapp_link":"","youtube_color":"#ffffff","apple_color":"#ffffff","discord_color":"#ffffff","facebook_color":"#ffffff","instagram_color":"#ffffff","pinterest_color":"#ffffff","reddit_color":"#ffffff","snapchat_color":"#ffffff","spotify_color":"#ffffff","soundcloud_color":"#ffffff","telegram_color":"#ffffff","threads_color":"#ffffff","tiktok_color":"#ffffff","tumblr_color":"#ffffff","twitter_color":"#ffffff","twitch_color":"#ffffff","whatsapp_color":"#ffffff"}},"70e257e1-322b-464a-91ac-d4094b278bf0":{"type":"index_timezone","settings":{"index_date_color":"#ffffff","index_time_color":"#ffffff"}},"e65c402d-923b-4158-b248-6e75340cdf7f":{"type":"interactive_point","settings":{"dialog_box_title":"Tops","ip_color":"#ffffff","dialog_box_color":"#ffffff","dialog_word_color":"#000000","ring_pulse_color":"#ffffff","ip_x_coordinate":47,"ip_y_coordinate":35,"ip_link":""}},"28196fe6-b7aa-4666-b3e7-cee1614094fa":{"type":"interactive_point","settings":{"dialog_box_title":"Bottoms","ip_color":"#ffffff","dialog_box_color":"#ffffff","dialog_word_color":"#000000","ring_pulse_color":"#ffffff","ip_x_coordinate":52,"ip_y_coordinate":61,"ip_link":""}},"b96db5a9-925b-4782-8dce-9d0e46fb815d":{"type":"interactive_point","settings":{"dialog_box_title":"Kicks","ip_color":"#ffffff","dialog_box_color":"#ffffff","dialog_word_color":"#000000","ring_pulse_color":"#ffffff","ip_x_coordinate":43,"ip_y_coordinate":83,"ip_link":""}},"faf86529-3ac1-4d2a-8ebc-1bde4d89d1a5":{"type":"transition_mark","settings":{"direction":"right","transition_title":"Shop All","background_color":"#000000","border_color":"#ffffff","transition_word_color":"#ffffff","arrow_color":"#ffffff","ip_x_coordinate":63,"ip_y_coordinate":50,"transition_width":135,"ip_link":"shopify:\/\/collections\/all","enable_transparent_bg":false,"enable_transparent_border":false}},"d41dbdf1-b18b-4977-aa89-9994a6c4c618":{"type":"environment_background","settings":{}}},"block_order":["2fd96122-0115-498f-ab3f-23f17fe449ab","46520e61-c126-47d0-b4c7-c1d698b40871","89477101-faba-46d4-8cbe-00bc4391cefe","70e257e1-322b-464a-91ac-d4094b278bf0","e65c402d-923b-4158-b248-6e75340cdf7f","28196fe6-b7aa-4666-b3e7-cee1614094fa","b96db5a9-925b-4782-8dce-9d0e46fb815d","faf86529-3ac1-4d2a-8ebc-1bde4d89d1a5","d41dbdf1-b18b-4977-aa89-9994a6c4c618"],"settings":{"show_preloader":false,"preloader_color":"#151515","preloader_logo_type":"image","preloader_text":"The Plain Jane Collection","preloader_txt_color":"#000000","preloader_txt_size":12,"menu_btn_color":"#ffffff","show_swipe_gesture":true}},"announcement-bar":{"type":"announcement-bar","settings":{}},"shop-background":{"type":"shop-background","settings":{"show_background_image":false,"show_background_image_mobile":false,"video_url":"","show_background_video":false,"bg_color":"#ffffff","bg_color_mobile":"#ffffff","overlay_top_color":"#000000","overlay_top_opacity":0,"overlay_bottom_color":"#000000","overlay_bottom_opacity":0,"overlay_top_color_mobile":"#000000","overlay_top_opacity_mobile":0,"overlay_bottom_color_mobile":"#000000","overlay_bottom_opacity_mobile":0}},"collection-products-display-2":{"type":"collection-products-display-2","settings":{"sidebar_nav_color":"#171717","sidebar_nav_opacity":1,"flip_side_navbar":false,"make_side_navbar_fixed":true,"enable_sidebar_box_shadow":true,"show_date_time":true,"index_date_color":"#ffffff","index_time_color":"#ffffff","mobile_index_date_color":"#000000","mobile_index_time_color":"#000000","cart_text_color":"#ffffff","cart_number_color":"#000000","cart_number_bg_color":"#ffffff","mobile_cart_text_color":"#000000","mobile_cart_number_color":"#ffffff","mobile_cart_number_bg_color":"#000000","font-size":12,"menu-spacing":16,"menu-link-color":"#ffffff","navlink_hover_color":"#ffffff","navlink_background_color":"#ff0100","whitespace":"nowrap","mobile-font-size":16,"mobile-menu-spacing":0,"bg-color":"#000000","mobile-menu-link-color":"#000000","bg_color":"#ffffff","mobile-navlink_background_color":"#fe0000","mobile-navlink_hover_color":"#ffffff","close_button_color":"#000000","mobile-text-alignment":"left","show-title":true,"product_title_size":12,"product_title_color":"#000000","mobile_product_title_color":"#000000","show_price":true,"product_price_size":12,"product_price_color":"#000000","mobile_product_price_color":"#000000","currency_format":"without_currency","show_on_sale":true,"show_oos":true,"on_sale_bg_color":"#000000","on_sale_text_color":"#ffffff","oos_bg_color":"#ff0100","oos_text_color":"#ffffff","on_sale_text_size":12,"on_sale_size":62,"on_sale_size_mobile":55,"product_border_color":"#000000","product_border_thickness":0,"product_bg_transparent":true,"product_bg_color":"#ffffff","product_bg_radius":0}},"contact-background":{"type":"contact-background","settings":{"show_background_image":true,"show_background_image_mobile":true,"video_url":"","show_background_video":false,"bg_color":"#ffffff","bg_color_mobile":"#ffffff","overlay_top_color":"#000000","overlay_top_opacity":0,"overlay_bottom_color":"#000000","overlay_bottom_opacity":0,"overlay_top_color_mobile":"#000000","overlay_top_opacity_mobile":0.9,"overlay_bottom_color_mobile":"#000000","overlay_bottom_opacity_mobile":0.9}},"contact-timezone":{"type":"contact-timezone","settings":{"show_date_time":true,"index_date_color":"#000000","index_time_color":"#000000"}},"contact-content":{"type":"contact-content","settings":{"contact-message":"Allow 3-5 business days for a response to your inquiry.","contact_text_color":"#000000"}},"contact-form":{"type":"contact-form","settings":{"field-bg-color":"#ffffff","field-text-color":"#000000","submit-bg-color":"#000000","submit-text-color":"#ffffff","back-home-color":"#000000","back-home-text-color":"#ffffff"}},"blog-background":{"type":"blog-background","settings":{"show_background_image":true,"show_background_image_mobile":true,"video_url":"","show_background_video":false,"bg_color":"#ffffff","bg_color_mobile":"#ffffff","overlay_top_color":"#000000","overlay_top_opacity":0,"overlay_bottom_color":"#000000","overlay_bottom_opacity":0,"overlay_top_color_mobile":"#000000","overlay_top_opacity_mobile":0,"overlay_bottom_color_mobile":"#000000","overlay_bottom_opacity_mobile":0}},"blog-timezone":{"type":"blog-timezone","settings":{"show_date_time":true,"index_date_color":"#000000","index_time_color":"#000000"}},"blog-articles":{"type":"blog-articles","settings":{"column_amount":"3","header_alignment":"left","card_color":"#ffffff","header_color":"#000000","date_color":"#000000","show_article_date":true,"card_radius":0,"fade_duration":2}},"article-background":{"type":"article-background","settings":{"show_background_image":true,"show_background_image_mobile":true,"video_url":"","show_background_video":false,"bg_color":"#ffffff","bg_color_mobile":"#ffffff","overlay_top_color":"#000000","overlay_top_opacity":0,"overlay_bottom_color":"#000000","overlay_bottom_opacity":0,"overlay_top_color_mobile":"#000000","overlay_top_opacity_mobile":0,"overlay_bottom_color_mobile":"#000000","overlay_bottom_opacity_mobile":0}},"article-timezone":{"type":"article-timezone","settings":{"show_date_time":true,"index_date_color":"#000000","index_time_color":"#000000"}},"article-header":{"type":"article-header","settings":{"article_title_alignment":"center","article_title_txt_color":"#000000","article_divider_color":"#000000","article_author_txt_color":"#000000","article_date_txt_color":"#000000","article_next_txt_color":"#000000","article_next_highlight_color":"#fe0000","article_next_highlight_txt_color":"#ffffff","show_divider":true,"show_next_btn":true,"show_create_date":true,"show_author":true,"article_metadata_alignment":"row"}},"article-tags":{"type":"article-tags","settings":{"article_title_txt_color":"#fe0000","article_tag_txt_color":"#ffffff","article_tags_alignment":"left","show_article_tags":true}},"article-side-bar":{"type":"article-side-bar","settings":{"show_article_side_bar":true,"side_article_txt_color":"#000000","side_article_highlight_color":"#fe0000","side_article_highlight_txt_color":"#ffffff","fade_duration":2,"img_radius":0}},"article-bottom-buttons":{"type":"article-bottom-buttons","settings":{"article_btn_bg_color":"#fe0000","article_btn_txt_color":"#ffffff"}},"interactive-environments-1":{"type":"interactive-environments-1","blocks":{"874224a9-bc6f-4fd1-b33a-5ce11708ff94":{"type":"main_menu_link","settings":{"nav_link_color":"#ffffff","navlink_hover_color":"#ffffff","navlink_background_color":"#fe0100","main_link_size":20,"disable_highlight_effect":false}},"d8298225-48fe-44d7-9ad7-93f21b4b674c":{"type":"interactive_menu_link","settings":{"nav_link_color":"#ffffff","navlink_hover_color":"#ffffff","navlink_background_color":"#fe0100","main_link_size":20,"disable_highlight_effect":false}},"aecd9f3b-54f6-4c0c-8fba-dce0850dff2c":{"type":"index_timezone","settings":{"index_date_color":"#ffffff","index_time_color":"#ffffff"}},"7dbe5741-d13c-4217-9e10-967d8c156de8":{"type":"environment_background","settings":{}}},"block_order":["874224a9-bc6f-4fd1-b33a-5ce11708ff94","d8298225-48fe-44d7-9ad7-93f21b4b674c","aecd9f3b-54f6-4c0c-8fba-dce0850dff2c","7dbe5741-d13c-4217-9e10-967d8c156de8"],"settings":{"show_preloader":false,"preloader_color":"#ffffff","preloader_logo_type":"text","preloader_text":"The Plain Jane Collection","preloader_txt_color":"#000000","preloader_txt_size":12,"menu_btn_color":"#ffffff","show_swipe_gesture":true}},"interactive-environments-2":{"type":"interactive-environments-2","blocks":{"a5f91715-36d9-43e7-bd26-18ec4d9d09d6":{"type":"main_menu_link","settings":{"nav_link_color":"#fff","navlink_hover_color":"#FFF","navlink_background_color":"#FE0100","main_link_size":20,"disable_highlight_effect":false}},"da13e5a0-ee2b-47e9-8679-ec6c5edc5621":{"type":"interactive_menu_link","settings":{"nav_link_color":"#fff","navlink_hover_color":"#FFF","navlink_background_color":"#FE0100","main_link_size":20,"disable_highlight_effect":false}},"6252b0ba-0336-472b-96a0-23ecf7846a17":{"type":"index_timezone","settings":{"index_date_color":"#ffffff","index_time_color":"#ffffff"}},"86b7a0ae-da56-4b82-944c-35144e809815":{"type":"environment_background","settings":{}}},"block_order":["a5f91715-36d9-43e7-bd26-18ec4d9d09d6","da13e5a0-ee2b-47e9-8679-ec6c5edc5621","6252b0ba-0336-472b-96a0-23ecf7846a17","86b7a0ae-da56-4b82-944c-35144e809815"],"settings":{"show_preloader":false,"preloader_color":"#fff","preloader_logo_type":"text","preloader_text":"The Plain Jane Collection","preloader_txt_color":"#000","preloader_txt_size":12,"menu_btn_color":"#fff","show_swipe_gesture":true}},"interactive-environments-3":{"type":"interactive-environments-3","blocks":{"5057300c-e3e8-4275-8c23-fd5852190f3a":{"type":"main_menu_link","settings":{"nav_link_color":"#fff","navlink_hover_color":"#FFF","navlink_background_color":"#FE0100","main_link_size":20,"disable_highlight_effect":false}},"6bad7250-b3db-42b7-bc7b-7f567993be83":{"type":"interactive_menu_link","settings":{"nav_link_color":"#fff","navlink_hover_color":"#FFF","navlink_background_color":"#FE0100","main_link_size":20,"disable_highlight_effect":false}},"9cbe5a29-851e-48e9-bce6-d838a8dafb0e":{"type":"index_timezone","settings":{"index_date_color":"#ffffff","index_time_color":"#ffffff"}},"1dd6d973-871a-42be-89ed-b3a5383df2d1":{"type":"environment_background","settings":{}}},"block_order":["5057300c-e3e8-4275-8c23-fd5852190f3a","6bad7250-b3db-42b7-bc7b-7f567993be83","9cbe5a29-851e-48e9-bce6-d838a8dafb0e","1dd6d973-871a-42be-89ed-b3a5383df2d1"],"settings":{"show_preloader":false,"preloader_color":"#fff","preloader_logo_type":"text","preloader_text":"The Plain Jane Collection","preloader_txt_color":"#000","preloader_txt_size":12,"menu_btn_color":"#fff","show_swipe_gesture":true}},"interactive-environments-4":{"type":"interactive-environments-4","blocks":{"d8770565-33f2-4f98-b0f5-0bbfb3313bcf":{"type":"main_menu_link","settings":{"nav_link_color":"#fff","navlink_hover_color":"#FFF","navlink_background_color":"#FE0100","main_link_size":20,"disable_highlight_effect":false}},"e2a0b975-c556-4234-b2ee-ab1a1c3f3641":{"type":"interactive_menu_link","settings":{"nav_link_color":"#fff","navlink_hover_color":"#FFF","navlink_background_color":"#FE0100","main_link_size":20,"disable_highlight_effect":false}},"8ed73b53-b8c4-4835-8aab-96b9f3ea19f6":{"type":"index_timezone","settings":{"index_date_color":"#ffffff","index_time_color":"#ffffff"}},"01c8e6ae-ed6e-4bde-8f24-46803ccf8462":{"type":"environment_background","settings":{}}},"block_order":["d8770565-33f2-4f98-b0f5-0bbfb3313bcf","e2a0b975-c556-4234-b2ee-ab1a1c3f3641","8ed73b53-b8c4-4835-8aab-96b9f3ea19f6","01c8e6ae-ed6e-4bde-8f24-46803ccf8462"],"settings":{"show_preloader":false,"preloader_color":"#fff","preloader_logo_type":"text","preloader_text":"The Plain Jane Collection","preloader_txt_color":"#000","preloader_txt_size":12,"menu_btn_color":"#fff","show_swipe_gesture":true}},"interactive-environments-5":{"type":"interactive-environments-5","blocks":{"47d74919-bbe5-4912-94fe-348009a32ba8":{"type":"main_menu_link","settings":{"nav_link_color":"#fff","navlink_hover_color":"#FFF","navlink_background_color":"#FE0100","main_link_size":20,"disable_highlight_effect":false}},"2dbfde58-177f-4ead-9ddb-b423fc0c7906":{"type":"interactive_menu_link","settings":{"nav_link_color":"#fff","navlink_hover_color":"#FFF","navlink_background_color":"#FE0100","main_link_size":20,"disable_highlight_effect":false}},"0f18cd85-4001-4f3d-8682-923bad1f2e11":{"type":"index_timezone","settings":{"index_date_color":"#ffffff","index_time_color":"#ffffff"}},"d68279e0-1ca5-4e73-a289-9a2da7530a44":{"type":"environment_background","settings":{}}},"block_order":["47d74919-bbe5-4912-94fe-348009a32ba8","2dbfde58-177f-4ead-9ddb-b423fc0c7906","0f18cd85-4001-4f3d-8682-923bad1f2e11","d68279e0-1ca5-4e73-a289-9a2da7530a44"],"settings":{"show_preloader":false,"preloader_color":"#fff","preloader_logo_type":"text","preloader_text":"The Plain Jane Collection","preloader_txt_color":"#000","preloader_txt_size":12,"menu_btn_color":"#fff","show_swipe_gesture":true}},"interactive-environments-6":{"type":"interactive-environments-6","blocks":{"ae4c66e7-6d17-4772-9a0a-2f761b902c63":{"type":"main_menu_link","settings":{"nav_link_color":"#fff","navlink_hover_color":"#FFF","navlink_background_color":"#FE0100","main_link_size":20,"disable_highlight_effect":false}},"f86bec57-d4d5-4da1-a1e7-7f9d4e3a39e4":{"type":"interactive_menu_link","settings":{"nav_link_color":"#fff","navlink_hover_color":"#FFF","navlink_background_color":"#FE0100","main_link_size":20,"disable_highlight_effect":false}},"9e9e057f-cc5a-4c6d-833f-4d1104fa82b8":{"type":"index_timezone","settings":{"index_date_color":"#ffffff","index_time_color":"#ffffff"}},"11473435-1cc3-4e4e-ade8-bef48bdf98be":{"type":"environment_background","settings":{}}},"block_order":["ae4c66e7-6d17-4772-9a0a-2f761b902c63","f86bec57-d4d5-4da1-a1e7-7f9d4e3a39e4","9e9e057f-cc5a-4c6d-833f-4d1104fa82b8","11473435-1cc3-4e4e-ade8-bef48bdf98be"],"settings":{"show_preloader":false,"preloader_color":"#fff","preloader_logo_type":"text","preloader_text":"The Plain Jane Collection","preloader_txt_color":"#000","preloader_txt_size":12,"menu_btn_color":"#fff","show_swipe_gesture":true}},"collection-list-background":{"type":"collection-list-background","settings":{"show_background_image":true,"show_background_image_mobile":true,"video_url":"","show_background_video":false,"bg_color":"#ffffff","bg_color_mobile":"#ffffff","overlay_top_color":"#000000","overlay_top_opacity":0,"overlay_bottom_color":"#000000","overlay_bottom_opacity":0,"overlay_top_color_mobile":"#000000","overlay_top_opacity_mobile":0,"overlay_bottom_color_mobile":"#000000","overlay_bottom_opacity_mobile":0}},"collection-list-timezone":{"type":"collection-list-timezone","settings":{"show_date_time":true,"index_date_color":"#000000","index_time_color":"#000000"}},"collection-card":{"type":"collection-card","settings":{}},"password-section-1":{"type":"password-section-1","settings":{"show_background_image":true,"show_background_image_mobile":true,"video_url":"","show_background_video":false,"bg_color":"#ffffff","bg_color_mobile":"#ffffff","overlay_top_color":"#000000","overlay_top_opacity":0,"overlay_bottom_color":"#000000","overlay_bottom_opacity":0,"overlay_top_color_mobile":"#000000","overlay_top_opacity_mobile":0,"overlay_bottom_color_mobile":"#000000","overlay_bottom_opacity_mobile":0,"index_date_color":"#000","index_time_color":"#000","store_owner_text_color":"#000","password_input_color":"#FFFFFF","password_input_text_color":"#000","password_submit_bg":"#FE060A","password_submit_text_color":"#FFFFFF","email_form_h_txt":"Store is closed rn man...","email_form_p_txt":"Some example text of what you could possibly write so you can collect emails for your site while it is closed.","email_form_input_label_txt":"Email","email_form_input_placeholder_txt":"example@gmail.com","email_form_btn_txt":"Subscribe","email_form_success_msg":"Thank you!","email_form_h_color":"#000","email_form_bg_color":"#FFFFFF","email_form_p_color":"#000","email_form_input_label_color":"#000","email_form_input_placeholder_color":"#000","email_form_input_color":"#FFF","email_form_success_msg_color":"#000","email_form_btn_color":"#FE060A","email_form_btn_txt_color":"#FFF","email_form_bg_color_opacity":1,"enable_box_shadow":true}},"password-countdown-section":{"type":"password-countdown-section","settings":{"show_store_logo":true,"show_timer":true,"countdown_month":"Sep","countdown_day":7,"countdown_year":2024,"countdown_hour":9,"countdown_min":0,"countdown_ampm":"pm","show_countdown_metrics":true,"switch_timer_info":true,"enable_countdown_glow":false,"show_countdown_boxes":false,"enable_box_radius":true,"countdown_box_opacity":0.5,"countdown_box_color":"#fe0000","days_value_color":"#fe0000","hours_value_color":"#fe0000","minutes_value_color":"#fe0000","seconds_value_color":"#fe0000","days_color":"#171717","hours_color":"#171717","minutes_color":"#171717","seconds_color":"#171717","customer_info_store_header_txt":"We'll Be Back","customer_info_txt":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex pariatur, eius ab ipsa voluptatibus fugit numquam maxime obcaecati magni quos.","show_customer_info_title":true,"show_customer_info":true,"show_customer_info_box":true,"show_customer_info_txt":true,"show_customer_email_form":true,"customer_info_box_opacity":1,"customer_info_box_color":"#171717","customer_info_store_header_txt_color":"#ffffff","customer_info_txt_color":"#ffffff","customer_email_form_color":"#ffffff","customer_email_form_txt_color":"#000000","customer_email_submit_btn_color":"#fe0000","customer_email_submit_btn_txt_color":"#ffffff","password_bg_style":"video","password_video_url":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4e7bf2d0f7d94bbf890cc19c8d806e19.mp4","password_bg_color":"#ffffff","password_bg_overlay_color":"#000000","password_bg_overlay_opacity":0,"countdown_music":"<place url here><\/place>","entrance_screen_txt":"ENTER","entrance_screen_bg_color":"#000000","entrance_screen_txt_color":"#ffffff","enable_entrance_text_glow":true,"store_owner_txt":"Store Owner?","pass_form_txt":"ENTER STORE PASSWORD","show_store_ownwer_txt":true,"bold_store_ownwer_txt":false,"enable_owner_highlight_txt":true,"store_owner_txt_color":"#000000","store_owner_txt_color_mobile":"#ffffff","store_owner_highlight_color":"#fe0000","store_owner_highlight_txt_color":"#ffffff","pass_form_bg_color":"#ffffff","pass_form_txt_color":"#000000","pass_form_cancel_color":"#000000","pass_form_submit_btn_color":"#fe0000","pass_form_submit_btn_txt_color":"#ffffff","pass_input_form_color":"#eeeeee","pass_form_input_txt_color":"#000000","pass_form_opacity":1}},"lookbook-background":{"type":"lookbook-background","settings":{"show_background_image":true,"show_background_image_mobile":true,"video_url":"","show_background_video":false,"bg_color":"#ffffff","bg_color_mobile":"#ffffff","overlay_top_color":"#000000","overlay_top_opacity":0,"overlay_bottom_color":"#000000","overlay_bottom_opacity":0,"overlay_top_color_mobile":"#000000","overlay_top_opacity_mobile":0.9,"overlay_bottom_color_mobile":"#000000","overlay_bottom_opacity_mobile":0.9}},"lookbook-header":{"type":"lookbook-header","settings":{"lookbook_logo_size":120,"lookbook_title":"Lookbook Title","title_color":"#000000","lookbook_description":"Write a description of your collection here","description_color":"#000000","shop_now_link":"","shop_now_link_text":"Shop Now","shop_now_button_color":"#F71500","shop_now_text_color":"#ffffff","back_home_button_color":"#000000","back_home_text_color":"#ffffff","show_date_time":true,"date_color":"#000000","time_color":"#000000"}},"lookbook-content":{"type":"lookbook-content","blocks":{"dcae845c-879a-4500-ad5c-4cf8e19e16f2":{"type":"lookbook_photos","settings":{}}},"block_order":["dcae845c-879a-4500-ad5c-4cf8e19e16f2"],"settings":{"lookbook-columns":"1fr 1fr 1fr","lookbook-columns-mobile":"1fr 1fr"}}},"content_for_index":[]}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "enter_screen_logo": "shopify://shop_images/Asset_37.png",
+    "enter_screen_logo_size": 70,
+    "shop_screen_logo": "shopify://shop_images/Asset_37.png",
+    "hide_announcemenet_bar_on_home": true,
+    "enable_announcement_shadow": true,
+    "enter_page_style": "interactive_environments",
+    "show_home_logo": true,
+    "show_home_time": true,
+    "password_page_style": "modern",
+    "show_music_mobile": false,
+    "music_url": "",
+    "enable_custom_nav_font": true,
+    "custom_nav_font_name": "helvetica",
+    "enable_custom_dialog_font": true,
+    "custom_dialog_font_name": "helvetica",
+    "enable_custom_countdown_font": true,
+    "custom_countdown_font_name": "helvetica",
+    "enable_custom_font_header": true,
+    "custom_font_header_name": "helvetica",
+    "enable_custom_body_font": true,
+    "custom_body_font_name": "helvetica",
+    "enable_custom_btn_font": true,
+    "custom_btn_font_name": "helvetica",
+    "footer_logo": "shopify://shop_images/Asset_37.png",
+    "footer_links_title": "Additional Links",
+    "footer_email_header": "Join our newsletter below for updates & promotions.",
+    "footer_copyright_text": "",
+    "footer_logo_size": 60,
+    "disable_email_modal": false,
+    "sections": {
+      "homepage-background": {
+        "type": "homepage-background",
+        "settings": {
+          "show_background_image": false,
+          "show_background_image_mobile": false,
+          "video_url": "",
+          "show_background_video": false,
+          "bg_color": "#ffffff",
+          "bg_color_mobile": "#ffffff",
+          "overlay_top_color": "#000000",
+          "overlay_top_opacity": 0,
+          "overlay_bottom_color": "#000000",
+          "overlay_bottom_opacity": 0,
+          "overlay_top_color_mobile": "#000000",
+          "overlay_top_opacity_mobile": 0,
+          "overlay_bottom_color_mobile": "#000000",
+          "overlay_bottom_opacity_mobile": 0
+        }
+      },
+      "index-timezone": {
+        "type": "index-timezone",
+        "settings": {
+          "show_date_time": true,
+          "index_date_color": "#000000",
+          "index_time_color": "#000000"
+        }
+      },
+      "nav-link": {
+        "type": "nav-link",
+        "settings": {
+          "nav_link_color": "#000000",
+          "navlink_hover_color": "#ffffff",
+          "navlink_background_color": "#fe0100",
+          "link-alignment": "left",
+          "font-size": 14,
+          "menu-spacing": 21,
+          "disable_highlight_effect": false,
+          "enable_nav_scaling": false
+        }
+      },
+      "social-media-links": {
+        "type": "social-media-links",
+        "settings": {
+          "social_media_size": 15,
+          "link-alignment": "left",
+          "invert_social_media_links": false,
+          "instagram_link": "",
+          "twitter_link": "",
+          "facebook_link": "",
+          "youtube_channel_link": "",
+          "tik_tok_link": "",
+          "applemusic_link": "",
+          "spotify_link": "",
+          "tidal_link": "",
+          "soundcloud_link": "",
+          "tumblr_link": "",
+          "discord_link": "",
+          "show_instagram": true,
+          "show_twitter": false,
+          "show_facebook": false,
+          "show_youtube": true,
+          "show_tik_tok": true,
+          "show_tumblr": false,
+          "show_discord": false,
+          "show_applemusic": false,
+          "show_spotify": false,
+          "show_tidal": false,
+          "show_soundcloud": false
+        }
+      },
+      "music-player": {
+        "type": "music-player",
+        "settings": {}
+      },
+      "other-footer": {
+        "type": "other-footer",
+        "settings": {}
+      },
+      "interactive-environments": {
+        "type": "interactive-environments",
+        "blocks": {
+          "2fd96122-0115-498f-ab3f-23f17fe449ab": {
+            "type": "main_menu_link",
+            "settings": {
+              "nav_link_color": "#ffffff",
+              "navlink_hover_color": "#ffffff",
+              "navlink_background_color": "#fe0100",
+              "main_link_size": 20,
+              "disable_highlight_effect": false
+            }
+          },
+          "46520e61-c126-47d0-b4c7-c1d698b40871": {
+            "type": "interactive_menu_link",
+            "settings": {
+              "nav_link_color": "#ffffff",
+              "navlink_hover_color": "#ffffff",
+              "navlink_background_color": "#fe0100",
+              "main_link_size": 20,
+              "disable_highlight_effect": false
+            }
+          },
+          "89477101-faba-46d4-8cbe-00bc4391cefe": {
+            "type": "social_media_block",
+            "settings": {
+              "show_youtube": true,
+              "show_apple": true,
+              "show_discord": false,
+              "show_facebook": false,
+              "show_instagram": true,
+              "show_pinterest": false,
+              "show_reddit": false,
+              "show_snapchat": false,
+              "show_spotify": false,
+              "show_soundcloud": false,
+              "show_telegram": false,
+              "show_threads": false,
+              "show_tiktok": false,
+              "show_tumblr": false,
+              "show_twitter": false,
+              "show_twitch": false,
+              "show_whatsapp": false,
+              "youtube_link": "",
+              "apple_link": "",
+              "discord_link": "",
+              "facebook_link": "",
+              "instagram_link": "",
+              "pinterest_link": "",
+              "reddit_link": "",
+              "snapchat_link": "",
+              "spotify_link": "",
+              "soundcloud_link": "",
+              "telegram_link": "",
+              "threads_link": "",
+              "tiktok_link": "",
+              "tumblr_link": "",
+              "twitter_link": "",
+              "twitch_link": "",
+              "whatsapp_link": "",
+              "youtube_color": "#ffffff",
+              "apple_color": "#ffffff",
+              "discord_color": "#ffffff",
+              "facebook_color": "#ffffff",
+              "instagram_color": "#ffffff",
+              "pinterest_color": "#ffffff",
+              "reddit_color": "#ffffff",
+              "snapchat_color": "#ffffff",
+              "spotify_color": "#ffffff",
+              "soundcloud_color": "#ffffff",
+              "telegram_color": "#ffffff",
+              "threads_color": "#ffffff",
+              "tiktok_color": "#ffffff",
+              "tumblr_color": "#ffffff",
+              "twitter_color": "#ffffff",
+              "twitch_color": "#ffffff",
+              "whatsapp_color": "#ffffff"
+            }
+          },
+          "70e257e1-322b-464a-91ac-d4094b278bf0": {
+            "type": "index_timezone",
+            "settings": {
+              "index_date_color": "#ffffff",
+              "index_time_color": "#ffffff"
+            }
+          },
+          "e65c402d-923b-4158-b248-6e75340cdf7f": {
+            "type": "interactive_point",
+            "settings": {
+              "dialog_box_title": "Tops",
+              "ip_color": "#ffffff",
+              "dialog_box_color": "#ffffff",
+              "dialog_word_color": "#000000",
+              "ring_pulse_color": "#ffffff",
+              "ip_x_coordinate": 47,
+              "ip_y_coordinate": 35,
+              "ip_link": ""
+            }
+          },
+          "28196fe6-b7aa-4666-b3e7-cee1614094fa": {
+            "type": "interactive_point",
+            "settings": {
+              "dialog_box_title": "Bottoms",
+              "ip_color": "#ffffff",
+              "dialog_box_color": "#ffffff",
+              "dialog_word_color": "#000000",
+              "ring_pulse_color": "#ffffff",
+              "ip_x_coordinate": 52,
+              "ip_y_coordinate": 61,
+              "ip_link": ""
+            }
+          },
+          "b96db5a9-925b-4782-8dce-9d0e46fb815d": {
+            "type": "interactive_point",
+            "settings": {
+              "dialog_box_title": "Kicks",
+              "ip_color": "#ffffff",
+              "dialog_box_color": "#ffffff",
+              "dialog_word_color": "#000000",
+              "ring_pulse_color": "#ffffff",
+              "ip_x_coordinate": 43,
+              "ip_y_coordinate": 83,
+              "ip_link": ""
+            }
+          },
+          "faf86529-3ac1-4d2a-8ebc-1bde4d89d1a5": {
+            "type": "transition_mark",
+            "settings": {
+              "direction": "right",
+              "transition_title": "Shop All",
+              "background_color": "#000000",
+              "border_color": "#ffffff",
+              "transition_word_color": "#ffffff",
+              "arrow_color": "#ffffff",
+              "ip_x_coordinate": 63,
+              "ip_y_coordinate": 50,
+              "transition_width": 135,
+              "ip_link": "shopify://collections/all",
+              "enable_transparent_bg": false,
+              "enable_transparent_border": false
+            }
+          },
+          "d41dbdf1-b18b-4977-aa89-9994a6c4c618": {
+            "type": "environment_background",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "2fd96122-0115-498f-ab3f-23f17fe449ab",
+          "46520e61-c126-47d0-b4c7-c1d698b40871",
+          "89477101-faba-46d4-8cbe-00bc4391cefe",
+          "70e257e1-322b-464a-91ac-d4094b278bf0",
+          "e65c402d-923b-4158-b248-6e75340cdf7f",
+          "28196fe6-b7aa-4666-b3e7-cee1614094fa",
+          "b96db5a9-925b-4782-8dce-9d0e46fb815d",
+          "faf86529-3ac1-4d2a-8ebc-1bde4d89d1a5",
+          "d41dbdf1-b18b-4977-aa89-9994a6c4c618"
+        ],
+        "settings": {
+          "show_preloader": false,
+          "preloader_color": "#151515",
+          "preloader_logo_type": "image",
+          "preloader_text": "The Plain Jane Collection",
+          "preloader_txt_color": "#000000",
+          "preloader_txt_size": 12,
+          "menu_btn_color": "#ffffff",
+          "show_swipe_gesture": true
+        }
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {}
+      },
+      "shop-background": {
+        "type": "shop-background",
+        "settings": {
+          "show_background_image": false,
+          "show_background_image_mobile": false,
+          "video_url": "",
+          "show_background_video": false,
+          "bg_color": "#ffffff",
+          "bg_color_mobile": "#ffffff",
+          "overlay_top_color": "#000000",
+          "overlay_top_opacity": 0,
+          "overlay_bottom_color": "#000000",
+          "overlay_bottom_opacity": 0,
+          "overlay_top_color_mobile": "#000000",
+          "overlay_top_opacity_mobile": 0,
+          "overlay_bottom_color_mobile": "#000000",
+          "overlay_bottom_opacity_mobile": 0
+        }
+      },
+      "collection-products-display-2": {
+        "type": "collection-products-display-2",
+        "settings": {
+          "sidebar_nav_color": "#171717",
+          "sidebar_nav_opacity": 1,
+          "flip_side_navbar": false,
+          "make_side_navbar_fixed": true,
+          "enable_sidebar_box_shadow": true,
+          "show_date_time": true,
+          "index_date_color": "#ffffff",
+          "index_time_color": "#ffffff",
+          "mobile_index_date_color": "#000000",
+          "mobile_index_time_color": "#000000",
+          "cart_text_color": "#ffffff",
+          "cart_number_color": "#000000",
+          "cart_number_bg_color": "#ffffff",
+          "mobile_cart_text_color": "#000000",
+          "mobile_cart_number_color": "#ffffff",
+          "mobile_cart_number_bg_color": "#000000",
+          "font-size": 12,
+          "menu-spacing": 16,
+          "menu-link-color": "#ffffff",
+          "navlink_hover_color": "#ffffff",
+          "navlink_background_color": "#ff0100",
+          "whitespace": "nowrap",
+          "mobile-font-size": 16,
+          "mobile-menu-spacing": 0,
+          "bg-color": "#000000",
+          "mobile-menu-link-color": "#000000",
+          "bg_color": "#ffffff",
+          "mobile-navlink_background_color": "#fe0000",
+          "mobile-navlink_hover_color": "#ffffff",
+          "close_button_color": "#000000",
+          "mobile-text-alignment": "left",
+          "show-title": true,
+          "product_title_size": 12,
+          "product_title_color": "#000000",
+          "mobile_product_title_color": "#000000",
+          "show_price": true,
+          "product_price_size": 12,
+          "product_price_color": "#000000",
+          "mobile_product_price_color": "#000000",
+          "currency_format": "without_currency",
+          "show_on_sale": true,
+          "show_oos": true,
+          "on_sale_bg_color": "#000000",
+          "on_sale_text_color": "#ffffff",
+          "oos_bg_color": "#ff0100",
+          "oos_text_color": "#ffffff",
+          "on_sale_text_size": 12,
+          "on_sale_size": 62,
+          "on_sale_size_mobile": 55,
+          "product_border_color": "#000000",
+          "product_border_thickness": 0,
+          "product_bg_transparent": true,
+          "product_bg_color": "#ffffff",
+          "product_bg_radius": 0
+        }
+      },
+      "contact-background": {
+        "type": "contact-background",
+        "settings": {
+          "show_background_image": true,
+          "show_background_image_mobile": true,
+          "video_url": "",
+          "show_background_video": false,
+          "bg_color": "#ffffff",
+          "bg_color_mobile": "#ffffff",
+          "overlay_top_color": "#000000",
+          "overlay_top_opacity": 0,
+          "overlay_bottom_color": "#000000",
+          "overlay_bottom_opacity": 0,
+          "overlay_top_color_mobile": "#000000",
+          "overlay_top_opacity_mobile": 0.9,
+          "overlay_bottom_color_mobile": "#000000",
+          "overlay_bottom_opacity_mobile": 0.9
+        }
+      },
+      "contact-timezone": {
+        "type": "contact-timezone",
+        "settings": {
+          "show_date_time": true,
+          "index_date_color": "#000000",
+          "index_time_color": "#000000"
+        }
+      },
+      "contact-content": {
+        "type": "contact-content",
+        "settings": {
+          "contact-message": "Allow 3-5 business days for a response to your inquiry.",
+          "contact_text_color": "#000000"
+        }
+      },
+      "contact-form": {
+        "type": "contact-form",
+        "settings": {
+          "field-bg-color": "#ffffff",
+          "field-text-color": "#000000",
+          "submit-bg-color": "#000000",
+          "submit-text-color": "#ffffff",
+          "back-home-color": "#000000",
+          "back-home-text-color": "#ffffff"
+        }
+      },
+      "blog-background": {
+        "type": "blog-background",
+        "settings": {
+          "show_background_image": true,
+          "show_background_image_mobile": true,
+          "video_url": "",
+          "show_background_video": false,
+          "bg_color": "#ffffff",
+          "bg_color_mobile": "#ffffff",
+          "overlay_top_color": "#000000",
+          "overlay_top_opacity": 0,
+          "overlay_bottom_color": "#000000",
+          "overlay_bottom_opacity": 0,
+          "overlay_top_color_mobile": "#000000",
+          "overlay_top_opacity_mobile": 0,
+          "overlay_bottom_color_mobile": "#000000",
+          "overlay_bottom_opacity_mobile": 0
+        }
+      },
+      "blog-timezone": {
+        "type": "blog-timezone",
+        "settings": {
+          "show_date_time": true,
+          "index_date_color": "#000000",
+          "index_time_color": "#000000"
+        }
+      },
+      "blog-articles": {
+        "type": "blog-articles",
+        "settings": {
+          "column_amount": "3",
+          "header_alignment": "left",
+          "card_color": "#ffffff",
+          "header_color": "#000000",
+          "date_color": "#000000",
+          "show_article_date": true,
+          "card_radius": 0,
+          "fade_duration": 2
+        }
+      },
+      "article-background": {
+        "type": "article-background",
+        "settings": {
+          "show_background_image": true,
+          "show_background_image_mobile": true,
+          "video_url": "",
+          "show_background_video": false,
+          "bg_color": "#ffffff",
+          "bg_color_mobile": "#ffffff",
+          "overlay_top_color": "#000000",
+          "overlay_top_opacity": 0,
+          "overlay_bottom_color": "#000000",
+          "overlay_bottom_opacity": 0,
+          "overlay_top_color_mobile": "#000000",
+          "overlay_top_opacity_mobile": 0,
+          "overlay_bottom_color_mobile": "#000000",
+          "overlay_bottom_opacity_mobile": 0
+        }
+      },
+      "article-timezone": {
+        "type": "article-timezone",
+        "settings": {
+          "show_date_time": true,
+          "index_date_color": "#000000",
+          "index_time_color": "#000000"
+        }
+      },
+      "article-header": {
+        "type": "article-header",
+        "settings": {
+          "article_title_alignment": "center",
+          "article_title_txt_color": "#000000",
+          "article_divider_color": "#000000",
+          "article_author_txt_color": "#000000",
+          "article_date_txt_color": "#000000",
+          "article_next_txt_color": "#000000",
+          "article_next_highlight_color": "#fe0000",
+          "article_next_highlight_txt_color": "#ffffff",
+          "show_divider": true,
+          "show_next_btn": true,
+          "show_create_date": true,
+          "show_author": true,
+          "article_metadata_alignment": "row"
+        }
+      },
+      "article-tags": {
+        "type": "article-tags",
+        "settings": {
+          "article_title_txt_color": "#fe0000",
+          "article_tag_txt_color": "#ffffff",
+          "article_tags_alignment": "left",
+          "show_article_tags": true
+        }
+      },
+      "article-side-bar": {
+        "type": "article-side-bar",
+        "settings": {
+          "show_article_side_bar": true,
+          "side_article_txt_color": "#000000",
+          "side_article_highlight_color": "#fe0000",
+          "side_article_highlight_txt_color": "#ffffff",
+          "fade_duration": 2,
+          "img_radius": 0
+        }
+      },
+      "article-bottom-buttons": {
+        "type": "article-bottom-buttons",
+        "settings": {
+          "article_btn_bg_color": "#fe0000",
+          "article_btn_txt_color": "#ffffff"
+        }
+      },
+      "interactive-environments-1": {
+        "type": "interactive-environments-1",
+        "blocks": {
+          "874224a9-bc6f-4fd1-b33a-5ce11708ff94": {
+            "type": "main_menu_link",
+            "settings": {
+              "nav_link_color": "#ffffff",
+              "navlink_hover_color": "#ffffff",
+              "navlink_background_color": "#fe0100",
+              "main_link_size": 20,
+              "disable_highlight_effect": false
+            }
+          },
+          "d8298225-48fe-44d7-9ad7-93f21b4b674c": {
+            "type": "interactive_menu_link",
+            "settings": {
+              "nav_link_color": "#ffffff",
+              "navlink_hover_color": "#ffffff",
+              "navlink_background_color": "#fe0100",
+              "main_link_size": 20,
+              "disable_highlight_effect": false
+            }
+          },
+          "aecd9f3b-54f6-4c0c-8fba-dce0850dff2c": {
+            "type": "index_timezone",
+            "settings": {
+              "index_date_color": "#ffffff",
+              "index_time_color": "#ffffff"
+            }
+          },
+          "7dbe5741-d13c-4217-9e10-967d8c156de8": {
+            "type": "environment_background",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "874224a9-bc6f-4fd1-b33a-5ce11708ff94",
+          "d8298225-48fe-44d7-9ad7-93f21b4b674c",
+          "aecd9f3b-54f6-4c0c-8fba-dce0850dff2c",
+          "7dbe5741-d13c-4217-9e10-967d8c156de8"
+        ],
+        "settings": {
+          "show_preloader": false,
+          "preloader_color": "#ffffff",
+          "preloader_logo_type": "text",
+          "preloader_text": "The Plain Jane Collection",
+          "preloader_txt_color": "#000000",
+          "preloader_txt_size": 12,
+          "menu_btn_color": "#ffffff",
+          "show_swipe_gesture": true
+        }
+      },
+      "interactive-environments-2": {
+        "type": "interactive-environments-2",
+        "blocks": {
+          "a5f91715-36d9-43e7-bd26-18ec4d9d09d6": {
+            "type": "main_menu_link",
+            "settings": {
+              "nav_link_color": "#fff",
+              "navlink_hover_color": "#FFF",
+              "navlink_background_color": "#FE0100",
+              "main_link_size": 20,
+              "disable_highlight_effect": false
+            }
+          },
+          "da13e5a0-ee2b-47e9-8679-ec6c5edc5621": {
+            "type": "interactive_menu_link",
+            "settings": {
+              "nav_link_color": "#fff",
+              "navlink_hover_color": "#FFF",
+              "navlink_background_color": "#FE0100",
+              "main_link_size": 20,
+              "disable_highlight_effect": false
+            }
+          },
+          "6252b0ba-0336-472b-96a0-23ecf7846a17": {
+            "type": "index_timezone",
+            "settings": {
+              "index_date_color": "#ffffff",
+              "index_time_color": "#ffffff"
+            }
+          },
+          "86b7a0ae-da56-4b82-944c-35144e809815": {
+            "type": "environment_background",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "a5f91715-36d9-43e7-bd26-18ec4d9d09d6",
+          "da13e5a0-ee2b-47e9-8679-ec6c5edc5621",
+          "6252b0ba-0336-472b-96a0-23ecf7846a17",
+          "86b7a0ae-da56-4b82-944c-35144e809815"
+        ],
+        "settings": {
+          "show_preloader": false,
+          "preloader_color": "#fff",
+          "preloader_logo_type": "text",
+          "preloader_text": "The Plain Jane Collection",
+          "preloader_txt_color": "#000",
+          "preloader_txt_size": 12,
+          "menu_btn_color": "#fff",
+          "show_swipe_gesture": true
+        }
+      },
+      "interactive-environments-3": {
+        "type": "interactive-environments-3",
+        "blocks": {
+          "5057300c-e3e8-4275-8c23-fd5852190f3a": {
+            "type": "main_menu_link",
+            "settings": {
+              "nav_link_color": "#fff",
+              "navlink_hover_color": "#FFF",
+              "navlink_background_color": "#FE0100",
+              "main_link_size": 20,
+              "disable_highlight_effect": false
+            }
+          },
+          "6bad7250-b3db-42b7-bc7b-7f567993be83": {
+            "type": "interactive_menu_link",
+            "settings": {
+              "nav_link_color": "#fff",
+              "navlink_hover_color": "#FFF",
+              "navlink_background_color": "#FE0100",
+              "main_link_size": 20,
+              "disable_highlight_effect": false
+            }
+          },
+          "9cbe5a29-851e-48e9-bce6-d838a8dafb0e": {
+            "type": "index_timezone",
+            "settings": {
+              "index_date_color": "#ffffff",
+              "index_time_color": "#ffffff"
+            }
+          },
+          "1dd6d973-871a-42be-89ed-b3a5383df2d1": {
+            "type": "environment_background",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "5057300c-e3e8-4275-8c23-fd5852190f3a",
+          "6bad7250-b3db-42b7-bc7b-7f567993be83",
+          "9cbe5a29-851e-48e9-bce6-d838a8dafb0e",
+          "1dd6d973-871a-42be-89ed-b3a5383df2d1"
+        ],
+        "settings": {
+          "show_preloader": false,
+          "preloader_color": "#fff",
+          "preloader_logo_type": "text",
+          "preloader_text": "The Plain Jane Collection",
+          "preloader_txt_color": "#000",
+          "preloader_txt_size": 12,
+          "menu_btn_color": "#fff",
+          "show_swipe_gesture": true
+        }
+      },
+      "interactive-environments-4": {
+        "type": "interactive-environments-4",
+        "blocks": {
+          "d8770565-33f2-4f98-b0f5-0bbfb3313bcf": {
+            "type": "main_menu_link",
+            "settings": {
+              "nav_link_color": "#fff",
+              "navlink_hover_color": "#FFF",
+              "navlink_background_color": "#FE0100",
+              "main_link_size": 20,
+              "disable_highlight_effect": false
+            }
+          },
+          "e2a0b975-c556-4234-b2ee-ab1a1c3f3641": {
+            "type": "interactive_menu_link",
+            "settings": {
+              "nav_link_color": "#fff",
+              "navlink_hover_color": "#FFF",
+              "navlink_background_color": "#FE0100",
+              "main_link_size": 20,
+              "disable_highlight_effect": false
+            }
+          },
+          "8ed73b53-b8c4-4835-8aab-96b9f3ea19f6": {
+            "type": "index_timezone",
+            "settings": {
+              "index_date_color": "#ffffff",
+              "index_time_color": "#ffffff"
+            }
+          },
+          "01c8e6ae-ed6e-4bde-8f24-46803ccf8462": {
+            "type": "environment_background",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "d8770565-33f2-4f98-b0f5-0bbfb3313bcf",
+          "e2a0b975-c556-4234-b2ee-ab1a1c3f3641",
+          "8ed73b53-b8c4-4835-8aab-96b9f3ea19f6",
+          "01c8e6ae-ed6e-4bde-8f24-46803ccf8462"
+        ],
+        "settings": {
+          "show_preloader": false,
+          "preloader_color": "#fff",
+          "preloader_logo_type": "text",
+          "preloader_text": "The Plain Jane Collection",
+          "preloader_txt_color": "#000",
+          "preloader_txt_size": 12,
+          "menu_btn_color": "#fff",
+          "show_swipe_gesture": true
+        }
+      },
+      "interactive-environments-5": {
+        "type": "interactive-environments-5",
+        "blocks": {
+          "47d74919-bbe5-4912-94fe-348009a32ba8": {
+            "type": "main_menu_link",
+            "settings": {
+              "nav_link_color": "#fff",
+              "navlink_hover_color": "#FFF",
+              "navlink_background_color": "#FE0100",
+              "main_link_size": 20,
+              "disable_highlight_effect": false
+            }
+          },
+          "2dbfde58-177f-4ead-9ddb-b423fc0c7906": {
+            "type": "interactive_menu_link",
+            "settings": {
+              "nav_link_color": "#fff",
+              "navlink_hover_color": "#FFF",
+              "navlink_background_color": "#FE0100",
+              "main_link_size": 20,
+              "disable_highlight_effect": false
+            }
+          },
+          "0f18cd85-4001-4f3d-8682-923bad1f2e11": {
+            "type": "index_timezone",
+            "settings": {
+              "index_date_color": "#ffffff",
+              "index_time_color": "#ffffff"
+            }
+          },
+          "d68279e0-1ca5-4e73-a289-9a2da7530a44": {
+            "type": "environment_background",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "47d74919-bbe5-4912-94fe-348009a32ba8",
+          "2dbfde58-177f-4ead-9ddb-b423fc0c7906",
+          "0f18cd85-4001-4f3d-8682-923bad1f2e11",
+          "d68279e0-1ca5-4e73-a289-9a2da7530a44"
+        ],
+        "settings": {
+          "show_preloader": false,
+          "preloader_color": "#fff",
+          "preloader_logo_type": "text",
+          "preloader_text": "The Plain Jane Collection",
+          "preloader_txt_color": "#000",
+          "preloader_txt_size": 12,
+          "menu_btn_color": "#fff",
+          "show_swipe_gesture": true
+        }
+      },
+      "interactive-environments-6": {
+        "type": "interactive-environments-6",
+        "blocks": {
+          "ae4c66e7-6d17-4772-9a0a-2f761b902c63": {
+            "type": "main_menu_link",
+            "settings": {
+              "nav_link_color": "#fff",
+              "navlink_hover_color": "#FFF",
+              "navlink_background_color": "#FE0100",
+              "main_link_size": 20,
+              "disable_highlight_effect": false
+            }
+          },
+          "f86bec57-d4d5-4da1-a1e7-7f9d4e3a39e4": {
+            "type": "interactive_menu_link",
+            "settings": {
+              "nav_link_color": "#fff",
+              "navlink_hover_color": "#FFF",
+              "navlink_background_color": "#FE0100",
+              "main_link_size": 20,
+              "disable_highlight_effect": false
+            }
+          },
+          "9e9e057f-cc5a-4c6d-833f-4d1104fa82b8": {
+            "type": "index_timezone",
+            "settings": {
+              "index_date_color": "#ffffff",
+              "index_time_color": "#ffffff"
+            }
+          },
+          "11473435-1cc3-4e4e-ade8-bef48bdf98be": {
+            "type": "environment_background",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "ae4c66e7-6d17-4772-9a0a-2f761b902c63",
+          "f86bec57-d4d5-4da1-a1e7-7f9d4e3a39e4",
+          "9e9e057f-cc5a-4c6d-833f-4d1104fa82b8",
+          "11473435-1cc3-4e4e-ade8-bef48bdf98be"
+        ],
+        "settings": {
+          "show_preloader": false,
+          "preloader_color": "#fff",
+          "preloader_logo_type": "text",
+          "preloader_text": "The Plain Jane Collection",
+          "preloader_txt_color": "#000",
+          "preloader_txt_size": 12,
+          "menu_btn_color": "#fff",
+          "show_swipe_gesture": true
+        }
+      },
+      "collection-list-background": {
+        "type": "collection-list-background",
+        "settings": {
+          "show_background_image": true,
+          "show_background_image_mobile": true,
+          "video_url": "",
+          "show_background_video": false,
+          "bg_color": "#ffffff",
+          "bg_color_mobile": "#ffffff",
+          "overlay_top_color": "#000000",
+          "overlay_top_opacity": 0,
+          "overlay_bottom_color": "#000000",
+          "overlay_bottom_opacity": 0,
+          "overlay_top_color_mobile": "#000000",
+          "overlay_top_opacity_mobile": 0,
+          "overlay_bottom_color_mobile": "#000000",
+          "overlay_bottom_opacity_mobile": 0
+        }
+      },
+      "collection-list-timezone": {
+        "type": "collection-list-timezone",
+        "settings": {
+          "show_date_time": true,
+          "index_date_color": "#000000",
+          "index_time_color": "#000000"
+        }
+      },
+      "collection-card": {
+        "type": "collection-card",
+        "settings": {}
+      },
+      "password-section-1": {
+        "type": "password-section-1",
+        "settings": {
+          "show_background_image": true,
+          "show_background_image_mobile": true,
+          "video_url": "",
+          "show_background_video": false,
+          "bg_color": "#ffffff",
+          "bg_color_mobile": "#ffffff",
+          "overlay_top_color": "#000000",
+          "overlay_top_opacity": 0,
+          "overlay_bottom_color": "#000000",
+          "overlay_bottom_opacity": 0,
+          "overlay_top_color_mobile": "#000000",
+          "overlay_top_opacity_mobile": 0,
+          "overlay_bottom_color_mobile": "#000000",
+          "overlay_bottom_opacity_mobile": 0,
+          "index_date_color": "#000",
+          "index_time_color": "#000",
+          "store_owner_text_color": "#000",
+          "password_input_color": "#FFFFFF",
+          "password_input_text_color": "#000",
+          "password_submit_bg": "#FE060A",
+          "password_submit_text_color": "#FFFFFF",
+          "email_form_h_txt": "Store is closed rn man...",
+          "email_form_p_txt": "Some example text of what you could possibly write so you can collect emails for your site while it is closed.",
+          "email_form_input_label_txt": "Email",
+          "email_form_input_placeholder_txt": "example@gmail.com",
+          "email_form_btn_txt": "Subscribe",
+          "email_form_success_msg": "Thank you!",
+          "email_form_h_color": "#000",
+          "email_form_bg_color": "#FFFFFF",
+          "email_form_p_color": "#000",
+          "email_form_input_label_color": "#000",
+          "email_form_input_placeholder_color": "#000",
+          "email_form_input_color": "#FFF",
+          "email_form_success_msg_color": "#000",
+          "email_form_btn_color": "#FE060A",
+          "email_form_btn_txt_color": "#FFF",
+          "email_form_bg_color_opacity": 1,
+          "enable_box_shadow": true
+        }
+      },
+      "password-countdown-section": {
+        "type": "password-countdown-section",
+        "settings": {
+          "show_store_logo": true,
+          "show_timer": true,
+          "countdown_month": "Sep",
+          "countdown_day": 7,
+          "countdown_year": 2024,
+          "countdown_hour": 9,
+          "countdown_min": 0,
+          "countdown_ampm": "pm",
+          "show_countdown_metrics": true,
+          "switch_timer_info": true,
+          "enable_countdown_glow": false,
+          "show_countdown_boxes": false,
+          "enable_box_radius": true,
+          "countdown_box_opacity": 0.5,
+          "countdown_box_color": "#fe0000",
+          "days_value_color": "#fe0000",
+          "hours_value_color": "#fe0000",
+          "minutes_value_color": "#fe0000",
+          "seconds_value_color": "#fe0000",
+          "days_color": "#171717",
+          "hours_color": "#171717",
+          "minutes_color": "#171717",
+          "seconds_color": "#171717",
+          "customer_info_store_header_txt": "We'll Be Back",
+          "customer_info_txt": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex pariatur, eius ab ipsa voluptatibus fugit numquam maxime obcaecati magni quos.",
+          "show_customer_info_title": true,
+          "show_customer_info": true,
+          "show_customer_info_box": true,
+          "show_customer_info_txt": true,
+          "show_customer_email_form": true,
+          "customer_info_box_opacity": 1,
+          "customer_info_box_color": "#171717",
+          "customer_info_store_header_txt_color": "#ffffff",
+          "customer_info_txt_color": "#ffffff",
+          "customer_email_form_color": "#ffffff",
+          "customer_email_form_txt_color": "#000000",
+          "customer_email_submit_btn_color": "#fe0000",
+          "customer_email_submit_btn_txt_color": "#ffffff",
+          "password_bg_style": "video",
+          "password_video_url": "https://cdn.shopify.com/videos/c/o/v/4e7bf2d0f7d94bbf890cc19c8d806e19.mp4",
+          "password_bg_color": "#ffffff",
+          "password_bg_overlay_color": "#000000",
+          "password_bg_overlay_opacity": 0,
+          "countdown_music": "<place url here></place>",
+          "entrance_screen_txt": "ENTER",
+          "entrance_screen_bg_color": "#000000",
+          "entrance_screen_txt_color": "#ffffff",
+          "enable_entrance_text_glow": true,
+          "store_owner_txt": "Store Owner?",
+          "pass_form_txt": "ENTER STORE PASSWORD",
+          "show_store_ownwer_txt": true,
+          "bold_store_ownwer_txt": false,
+          "enable_owner_highlight_txt": true,
+          "store_owner_txt_color": "#000000",
+          "store_owner_txt_color_mobile": "#ffffff",
+          "store_owner_highlight_color": "#fe0000",
+          "store_owner_highlight_txt_color": "#ffffff",
+          "pass_form_bg_color": "#ffffff",
+          "pass_form_txt_color": "#000000",
+          "pass_form_cancel_color": "#000000",
+          "pass_form_submit_btn_color": "#fe0000",
+          "pass_form_submit_btn_txt_color": "#ffffff",
+          "pass_input_form_color": "#eeeeee",
+          "pass_form_input_txt_color": "#000000",
+          "pass_form_opacity": 1
+        }
+      },
+      "lookbook-background": {
+        "type": "lookbook-background",
+        "settings": {
+          "show_background_image": true,
+          "show_background_image_mobile": true,
+          "video_url": "",
+          "show_background_video": false,
+          "bg_color": "#ffffff",
+          "bg_color_mobile": "#ffffff",
+          "overlay_top_color": "#000000",
+          "overlay_top_opacity": 0,
+          "overlay_bottom_color": "#000000",
+          "overlay_bottom_opacity": 0,
+          "overlay_top_color_mobile": "#000000",
+          "overlay_top_opacity_mobile": 0.9,
+          "overlay_bottom_color_mobile": "#000000",
+          "overlay_bottom_opacity_mobile": 0.9
+        }
+      },
+      "lookbook-header": {
+        "type": "lookbook-header",
+        "settings": {
+          "lookbook_logo_size": 120,
+          "lookbook_title": "Lookbook Title",
+          "title_color": "#000000",
+          "lookbook_description": "Write a description of your collection here",
+          "description_color": "#000000",
+          "shop_now_link": "",
+          "shop_now_link_text": "Shop Now",
+          "shop_now_button_color": "#F71500",
+          "shop_now_text_color": "#ffffff",
+          "back_home_button_color": "#000000",
+          "back_home_text_color": "#ffffff",
+          "show_date_time": true,
+          "date_color": "#000000",
+          "time_color": "#000000"
+        }
+      },
+      "lookbook-content": {
+        "type": "lookbook-content",
+        "blocks": {
+          "dcae845c-879a-4500-ad5c-4cf8e19e16f2": {
+            "type": "lookbook_photos",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "dcae845c-879a-4500-ad5c-4cf8e19e16f2"
+        ],
+        "settings": {
+          "lookbook-columns": "1fr 1fr 1fr",
+          "lookbook-columns-mobile": "1fr 1fr"
+        }
+      }
+    },
+    "content_for_index": []
+  }
+}
