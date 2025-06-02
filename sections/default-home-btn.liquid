@@ -1,10 +1,12 @@
-<a
-  href="{{ routes.root_url }}"
-  style="color: {{ section.settings.text-color }}; background-color: {{ section.settings.bg-color }};"
-  class="btn small center w-button"
->
-  {{- 'tnc0d2788' | t -}}
-</a>
+{% if template == 'index' %}
+  <a
+    href="{{ routes.root_url }}"
+    style="color: {{ section.settings.text-color }}; background-color: {{ section.settings.bg-color }};"
+    class="btn small center w-button"
+  >
+    {{ 'tnc0d2788' | t }}
+  </a>
+{% endif %}
 
 {% schema %}
 {
