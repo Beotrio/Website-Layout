@@ -10,7 +10,7 @@
 {
   "current": {
     "enter_screen_logo": "shopify://shop_images/Asset_40.png",
-    "enter_screen_logo_size": 60,
+    "enter_screen_logo_size": 90,
     "shop_screen_logo": "shopify://shop_images/Asset_40.png",
     "shop_screen_logo_size": 70,
     "collection_screen_logo": "shopify://shop_images/Asset_40.png",
@@ -30,6 +30,7 @@
     "collection_style": "classic_collection",
     "desktop-layout": "1fr 1fr 1fr 1fr 1fr",
     "mobile-layout": "1fr 1fr",
+    "make_product_box_responsive": true,
     "password_page_style": "modern",
     "show_music": false,
     "show_music_mobile": false,
@@ -155,7 +156,7 @@
             "settings": {
               "nav_link_color": "#ffffff",
               "navlink_hover_color": "#ffffff",
-              "navlink_background_color": "#fe0100",
+              "navlink_background_color": "{{ shop.brand.colors.primary[0].background }}",
               "main_link_size": 25,
               "disable_highlight_effect": false
             }
@@ -165,7 +166,7 @@
             "settings": {
               "nav_link_color": "#ffffff",
               "navlink_hover_color": "#ffffff",
-              "navlink_background_color": "#fe0100",
+              "navlink_background_color": "{{ shop.brand.colors.primary[0].background }}",
               "main_link_size": 25,
               "disable_highlight_effect": false
             }
@@ -274,9 +275,9 @@
           "bg_color": "#ffffff",
           "bg_color_mobile": "#ffffff",
           "overlay_top_color": "{{ shop.brand.colors.secondary[0].background }}",
-          "overlay_top_opacity": 0.7,
+          "overlay_top_opacity": 0.9,
           "overlay_bottom_color": "#f6f3ee",
-          "overlay_bottom_opacity": 0.1,
+          "overlay_bottom_opacity": 0.5,
           "overlay_top_color_mobile": "{{ shop.brand.colors.secondary[0].background }}",
           "overlay_top_opacity_mobile": 0.7,
           "overlay_bottom_color_mobile": "#dad2cb",
@@ -959,33 +960,34 @@
           "show_background_video": false,
           "bg_color": "#ffffff",
           "bg_color_mobile": "#ffffff",
-          "overlay_top_color": "#000000",
-          "overlay_top_opacity": 0,
-          "overlay_bottom_color": "#000000",
-          "overlay_bottom_opacity": 0,
-          "overlay_top_color_mobile": "#000000",
-          "overlay_top_opacity_mobile": 0.9,
+          "overlay_top_color": "{{ shop.brand.colors.secondary[0].background }}",
+          "overlay_top_opacity": 1,
+          "overlay_bottom_color": "{{ shop.brand.colors.primary[0].foreground }}",
+          "overlay_bottom_opacity": 0.3,
+          "overlay_top_color_mobile": "{{ shop.brand.colors.secondary[0].background }}",
+          "overlay_top_opacity_mobile": 1,
           "overlay_bottom_color_mobile": "#000000",
-          "overlay_bottom_opacity_mobile": 0.9
+          "overlay_bottom_opacity_mobile": 0
         }
       },
       "lookbook-header": {
         "type": "lookbook-header",
         "settings": {
-          "lookbook_logo_size": 120,
-          "lookbook_title": "Lookbook Title",
-          "title_color": "#000000",
+          "lookbook_logo": "shopify://shop_images/Asset_40.png",
+          "lookbook_logo_size": 94,
+          "lookbook_title": "Garden of Gethsemane",
+          "title_color": "{{ shop.brand.colors.primary[0].foreground }}",
           "lookbook_description": "Write a description of your collection here",
-          "description_color": "#000000",
-          "shop_now_link": "",
+          "description_color": "{{ shop.brand.colors.primary[0].foreground }}",
+          "shop_now_link": "shopify://collections/all",
           "shop_now_link_text": "Shop Now",
           "shop_now_button_color": "#f71500",
           "shop_now_text_color": "#ffffff",
-          "back_home_button_color": "#000000",
+          "back_home_button_color": "{{ shop.brand.colors.primary[0].background }}",
           "back_home_text_color": "#ffffff",
           "show_date_time": true,
-          "date_color": "#000000",
-          "time_color": "#000000"
+          "date_color": "#ffffff",
+          "time_color": "#ffffff"
         }
       },
       "lookbook-content": {
@@ -1047,11 +1049,11 @@
           "cart_number_color": "#000",
           "cart_number_bg_color": "{{ shop.brand.colors.primary[0].foreground }}",
           "reverse_desktop_menu": true,
-          "fix_desktop_menu": true,
+          "fix_desktop_menu": false,
           "menu-link-color": "#5a4b44",
-          "navlink_background_color": "#5a4b44",
-          "navlink_hover_color": "#ffffff",
-          "font-size": 23,
+          "navlink_background_color": "#f6f3ee",
+          "navlink_hover_color": "#5a4b44",
+          "font-size": 17,
           "menu-spacing": 0,
           "text-alignment": "right",
           "bg-color": "{{ shop.brand.colors.primary[0].foreground }}",
