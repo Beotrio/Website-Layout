@@ -1,34 +1,19 @@
 {%- if settings.show_announcement_bar -%}
   <div
+    id="announcementBar"
     class="text-block"
     style="
-      {% if settings.enable_announcement_shadow %}
-      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-      {% endif %}
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      border-radius: 24px;
+      transition: all 0.3s ease;
       {% if settings.enable_large_announcement_bar %}
       height: 52px;
       {% endif %}
       display: flex;
       align-items: center;
       justify-content: center;
-      {% if settings.enable_announcement_floater %}
-        {% if template == 'index' %}
-        position: absolute !important;
-        left: 50%;
-        transform: translateX(-50%);
-        {% endif %}
-        {% if template != 'collection' or settings.collection_style != "sidebar_collection" %}
-        width: 92%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        {% endif %}
-      {% endif %}
-      position: relative;
-      {% if settings.enable_moving_announcement == false %}
-      text-align: center;
-      {% endif %}
       font-size: {{ settings.announcement_text_size }}px;
       background-color:
         {% if template == 'index' %}
@@ -50,7 +35,8 @@
         {% else %}
           {{ settings.announement-text-color }};
         {% endif %}
-      border-radius: 24px;
+      position: absolute;
+      top: 30px;
     "
   >
     <p
