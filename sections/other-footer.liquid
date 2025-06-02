@@ -63,7 +63,7 @@
                 padding-left: 5px;
                 background-color: {{ settings.footer_input_color }};
                 --footer-placeholder-color: {{ settings.footer_input_placeholder_color }};
-                border-radius: 12px;
+                border-radius: 24px;
               "
               placeholder="Enter Email"
               type="email"
@@ -72,7 +72,15 @@
           </div>
           <div class="footer-email-submit">
             <input
-              style="color: {{ settings.footer_email_btn_txt_color }}; height:23px; padding: 0 8px; cursor: pointer; background-color: {{ settings.footer_email_btn_color }}; border: none;"
+              style="
+                color: {{ settings.footer_email_btn_txt_color }};
+                height: 26px;
+                padding: 0 12px;
+                cursor: pointer;
+                background-color: {{ settings.footer_email_btn_color }};
+                border: none;
+                border-radius: 24px;
+              "
               type="submit"
               value="{{ settings.footer_email_button_txt }}"
             >
