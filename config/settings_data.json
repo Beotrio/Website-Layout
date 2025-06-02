@@ -1019,7 +1019,7 @@
       "default-home-btn": {
         "type": "default-home-btn",
         "settings": {
-          "bg-color": "#000000",
+          "bg-color": "#5a4b44",
           "text-color": "#ffffff"
         }
       },
