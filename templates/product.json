@@ -59,7 +59,7 @@
           "type": "product_header",
           "settings": {
             "product_title": "#ffffff",
-            "product_title_font_size": 28,
+            "product_title_font_size": 41,
             "product_title_font_size_mobile": 32,
             "product_header_margin": 0,
             "product_header_margin_mobile": 0
