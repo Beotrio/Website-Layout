@@ -12,42 +12,45 @@
       align-items: center;
       justify-content: center;
       {% if settings.enable_announcement_floater %}
-      {% if template == 'index' %}
-      position: absolute !important;
-      left: 50%;
-      transform: translateX(-50%);
-      {% endif %}
-      {% if settings.enable_announcement_floater_radius %}
-      {% if template != 'collection' or settings.collection_style != "sidebar_collection" %}
-      border-radius: 4px;
-      {% endif %}
-      {% endif %}
-      {% if template != 'collection' or settings.collection_style != "sidebar_collection" %}
-      width: 92%;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      {% endif %}
+        {% if template == 'index' %}
+        position: absolute !important;
+        left: 50%;
+        transform: translateX(-50%);
+        {% endif %}
+        {% if template != 'collection' or settings.collection_style != "sidebar_collection" %}
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        {% endif %}
       {% endif %}
       position: relative;
       {% if settings.enable_moving_announcement == false %}
       text-align: center;
       {% endif %}
       font-size: {{ settings.announcement_text_size }}px;
-      {% if template == 'index' %}
-      background-color: {{ settings.announcement_background_color_home_page }};
-      color: {{ settings.announement-text-color-home-page }};
-      {% elsif template == 'collection' %}
-      background-color: {{ settings.announcement_background_color_collection_page }};
-      color: {{ settings.announement-text-color-collection-page }};
-      {% elsif template == 'product' %}
-      background-color: {{ settings.announcement_background_color_product_page }};
-      color: {{ settings.announement-text-color-product-page }}
-      {% else %}
-      background-color: {{ settings.announcement_background_color }};
-      color: {{ settings.announement-text-color }};
-      {% endif %}
+      background-color:
+        {% if template == 'index' %}
+          {{ settings.announcement_background_color_home_page }};
+        {% elsif template == 'collection' %}
+          {{ settings.announcement_background_color_collection_page }};
+        {% elsif template == 'product' %}
+          {{ settings.announcement_background_color_product_page }};
+        {% else %}
+          {{ settings.announcement_background_color }};
+        {% endif %}
+      color:
+        {% if template == 'index' %}
+          {{ settings.announement-text-color-home-page }};
+        {% elsif template == 'collection' %}
+          {{ settings.announement-text-color-collection-page }};
+        {% elsif template == 'product' %}
+          {{ settings.announement-text-color-product-page }};
+        {% else %}
+          {{ settings.announement-text-color }};
+        {% endif %}
+      border-radius: 8px;
     "
   >
     <p

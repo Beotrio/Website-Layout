@@ -1011,8 +1011,8 @@
       "default-timezone": {
         "type": "default-timezone",
         "settings": {
-          "index_date_color": "#000000",
-          "index_time_color": "#000000"
+          "index_date_color": "#ffffff",
+          "index_time_color": "#ffffff"
         }
       },
       "default-home-btn": {
