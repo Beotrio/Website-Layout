@@ -972,10 +972,7 @@
       },
       "lookbook-header": {
         "type": "lookbook-header",
-        "custom_css": [
-          "/* For desktop buttons */.lookbook-details-container.desktop .btn.small {border-radius: 20px !important;}",
-          "/* For mobile buttons */.lookbook-details-container.mobile .btn.small {border-radius: 20px !important;}"
-        ],
+        "custom_css": [],
         "settings": {
           "lookbook_logo_size": 120,
           "lookbook_title": "Lookbook Title",
