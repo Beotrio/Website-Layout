@@ -16,6 +16,8 @@
     "product_screen_logo_size": 65,
     "hide_announcemenet_bar_on_home": true,
     "enable_announcement_shadow": true,
+    "enable_announcement_floater": true,
+    "enable_announcement_floater_radius": true,
     "enter_page_style": "interactive_environments",
     "show_home_logo": true,
     "show_home_time": true,
