@@ -116,10 +116,12 @@
             class="product-title"
             style="
               --product-header-margin-mobile: {{ block.settings.product_header_margin_mobile }}px;
-              margin-top: {{ block.settings.product_header_margin }}px; margin-bottom: {{ block.settings.product_header_margin }}px; color: {{ block.settings.product_title }};
-                {% if section.settings.product_info_alignment == 'center' %} text-align: center; {% endif %}
-                {% if section.settings.product_info_alignment == 'right' %} text-align: right; {% endif %}
-                {% if section.settings.product_info_alignment == 'left' %} text-align: left; {% endif %}
+              margin-top: {{ block.settings.product_header_margin }}px; margin-bottom: {{ block.settings.product_header_margin }}px;
+              color: {{ block.settings.product_title }};
+              font-size: {{ block.settings.product_title_font_size }}px; /* ADD THIS LINE */
+              {% if section.settings.product_info_alignment == 'center' %} text-align: center; {% endif %}
+              {% if section.settings.product_info_alignment == 'right' %} text-align: right; {% endif %}
+              {% if section.settings.product_info_alignment == 'left' %} text-align: left; {% endif %}
             "
           >
             {{ product.title }}

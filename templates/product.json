@@ -58,15 +58,15 @@
         "template--20852784955674__f24fee3c-963f-499e-a65c-378b790abca9-product_header-1": {
           "type": "product_header",
           "settings": {
-            "product_title": "#000000",
-            "product_header_margin": 3,
+            "product_title": "#FFF",
+            "product_header_margin": 0,
             "product_header_margin_mobile": 0
           }
         },
         "template--20852784955674__f24fee3c-963f-499e-a65c-378b790abca9-product_description-1": {
           "type": "product_description",
           "settings": {
-            "product_description": "#000000",
+            "product_description": "#ffffff",
             "description_margin": 0,
             "description_margin_mobile": 4
           }
@@ -78,10 +78,10 @@
         "template--20852784955674__f24fee3c-963f-499e-a65c-378b790abca9-product_price-1": {
           "type": "product_price",
           "settings": {
-            "product_price": "#000000",
-            "price_font_size": 18,
-            "currency_format": "without_currency",
-            "product_was_text": "#000000",
+            "product_price": "#ffffff",
+            "price_font_size": 30,
+            "currency_format": "with_currency",
+            "product_was_text": "#ffffff",
             "product_before_price": "#ff0000",
             "sales_price_font_size": 16,
             "price_margin": 20,
@@ -93,14 +93,14 @@
           "settings": {
             "add_to_cart_bg": "#000000",
             "add_to_cart_text": "#ffffff",
-            "keep_shopping_bg": "#000000",
+            "keep_shopping_bg": "{{ shop.brand.colors.primary[0].background }}",
             "keep_shopping_text": "#ffffff",
-            "next_item_text_color": "#000000",
-            "next_item_highlight_color": "#fe0000",
+            "next_item_text_color": "#ffffff",
+            "next_item_highlight_color": "{{ shop.brand.colors.primary[0].background }}",
             "next_item_highlight_txt_color": "#ffffff",
             "out_of_stock_bg": "#fe0000",
             "out_of_stock_text": "#ffffff",
-            "variation_margin": 1,
+            "variation_margin": 2,
             "variation_margin_mobile": 7
           }
         },
@@ -110,9 +110,9 @@
             "accordion_title": "Care Instructions",
             "accordion_color": "#ffffff",
             "accordion_title_color": "#000000",
-            "accordion_drop_title_color": "#fe0000",
-            "accordion_drop_content_color": "#000000",
-            "accordion_arrow_color": "#000000",
+            "accordion_drop_title_color": "{{ shop.brand.colors.primary[0].background }}",
+            "accordion_drop_content_color": "{{ shop.brand.colors.secondary[0].background }}",
+            "accordion_arrow_color": "{{ shop.brand.colors.secondary[0].background }}",
             "accordion_description": "<p>{{ product.metafields.custom.care_instructions | metafield_tag }}</p>",
             "accordion_page": "",
             "accordion_margin": 20,
@@ -125,9 +125,9 @@
             "accordion_title": "Sizing Guide",
             "accordion_color": "#ffffff",
             "accordion_title_color": "#000000",
-            "accordion_drop_title_color": "#fe0000",
-            "accordion_drop_content_color": "#000000",
-            "accordion_arrow_color": "#000000",
+            "accordion_drop_title_color": "{{ shop.brand.colors.primary[0].background }}",
+            "accordion_drop_content_color": "{{ shop.brand.colors.secondary[0].background }}",
+            "accordion_arrow_color": "{{ shop.brand.colors.secondary[0].background }}",
             "accordion_description": "",
             "accordion_page": "{{ product.metafields.custom.sizing_guide.value }}",
             "accordion_margin": 0,
