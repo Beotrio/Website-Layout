@@ -151,7 +151,7 @@
         "reverse_additional_photos_and_main": false,
         "product_info_alignment": "left",
         "magnifier_frame_color": "#000000",
-        "fade_duration": 7,
+        "fade_duration": 2,
         "gallery_column_amount": 2,
         "gallery_desktop_image_size": 50,
         "gallery_mobile_image_size": 40,
