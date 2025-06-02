@@ -180,7 +180,7 @@
               "soundcloud_link": "",
               "telegram_link": "",
               "threads_link": "",
-              "tiktok_link": "https://l.instagram.com/?u=https%3A%2F%2Fwww.tiktok.com%2F%40viadeusclub%3F_t%3DZS-8wVZoI5okJl%26_r%3D1%26fbclid%3DPAZXh0bgNhZW0CMTEAAac0OHRV6WRhZwozlmBLEQLy8AgEBBpJVpMjWYDkRUu0Nw8KdMjptdddMbR4zQ_aem_OZ_nLakon4oef7z7etO3MQ&e=AT3hyLIj4-cutq2fKeQZg8uABGx3F8SOqlNctQenF1V-i-ixsj3u-9ZQoKMZFHaR1CFfiX64xWAQ9FOoP1JCciKHVMqDxoWJVOArHFlsk5M1g033UkFO-1Y\\",
+              "tiktok_link": "https://www.tiktok.com/@viadeusclub?_t=ZS-8wVZoI5okJl&_r=1&fbclid=PAZXh0bgNhZW0CMTEAAac0OHRV6WRhZwozlmBLEQLy8AgEBBpJVpMjWYDkRUu0Nw8KdMjptdddMbR4zQ_aem_OZ_nLakon4oef7z7etO3MQ",
               "tumblr_link": "",
               "twitter_link": "",
               "twitch_link": "",
@@ -211,62 +211,6 @@
               "index_time_color": "#ffffff"
             }
           },
-          "e65c402d-923b-4158-b248-6e75340cdf7f": {
-            "type": "interactive_point",
-            "settings": {
-              "dialog_box_title": "Tops",
-              "ip_color": "#ffffff",
-              "dialog_box_color": "#ffffff",
-              "dialog_word_color": "#000000",
-              "ring_pulse_color": "#ffffff",
-              "ip_x_coordinate": 47,
-              "ip_y_coordinate": 35,
-              "ip_link": ""
-            }
-          },
-          "28196fe6-b7aa-4666-b3e7-cee1614094fa": {
-            "type": "interactive_point",
-            "settings": {
-              "dialog_box_title": "Bottoms",
-              "ip_color": "#ffffff",
-              "dialog_box_color": "#ffffff",
-              "dialog_word_color": "#000000",
-              "ring_pulse_color": "#ffffff",
-              "ip_x_coordinate": 52,
-              "ip_y_coordinate": 61,
-              "ip_link": ""
-            }
-          },
-          "b96db5a9-925b-4782-8dce-9d0e46fb815d": {
-            "type": "interactive_point",
-            "settings": {
-              "dialog_box_title": "Kicks",
-              "ip_color": "#ffffff",
-              "dialog_box_color": "#ffffff",
-              "dialog_word_color": "#000000",
-              "ring_pulse_color": "#ffffff",
-              "ip_x_coordinate": 43,
-              "ip_y_coordinate": 83,
-              "ip_link": ""
-            }
-          },
-          "faf86529-3ac1-4d2a-8ebc-1bde4d89d1a5": {
-            "type": "transition_mark",
-            "settings": {
-              "direction": "right",
-              "transition_title": "Shop All",
-              "background_color": "#000000",
-              "border_color": "#ffffff",
-              "transition_word_color": "#ffffff",
-              "arrow_color": "#ffffff",
-              "ip_x_coordinate": 63,
-              "ip_y_coordinate": 50,
-              "transition_width": 135,
-              "ip_link": "shopify://collections/all",
-              "enable_transparent_bg": false,
-              "enable_transparent_border": false
-            }
-          },
           "d41dbdf1-b18b-4977-aa89-9994a6c4c618": {
             "type": "environment_background",
             "settings": {}
@@ -277,17 +221,13 @@
           "46520e61-c126-47d0-b4c7-c1d698b40871",
           "89477101-faba-46d4-8cbe-00bc4391cefe",
           "70e257e1-322b-464a-91ac-d4094b278bf0",
-          "e65c402d-923b-4158-b248-6e75340cdf7f",
-          "28196fe6-b7aa-4666-b3e7-cee1614094fa",
-          "b96db5a9-925b-4782-8dce-9d0e46fb815d",
-          "faf86529-3ac1-4d2a-8ebc-1bde4d89d1a5",
           "d41dbdf1-b18b-4977-aa89-9994a6c4c618"
         ],
         "settings": {
           "show_preloader": false,
           "preloader_color": "#151515",
           "preloader_logo_type": "image",
-          "preloader_text": "The Plain Jane Collection",
+          "preloader_text": "",
           "preloader_txt_color": "#000000",
           "preloader_txt_size": 12,
           "menu_btn_color": "#ffffff",
