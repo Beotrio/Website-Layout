@@ -425,9 +425,17 @@
   {% endfor %}
   <div class="menu-image-box">
     {% if section.settings.menu_image %}
-      <img src="{{ section.settings.menu_image | img_url: '400x400', crop: 'center' }}" alt="Menu decoration">
+      <img
+        src="{{ section.settings.menu_image | img_url: '300x300', crop: 'center' }}"
+        alt="Menu decoration"
+        loading="lazy"
+      >
     {% else %}
-      <img src="{{ 'default-menu-image.jpg' | asset_url }}" alt="Default menu image">
+      <img
+        src="{{ 'default-menu-image.jpg' | asset_url }}"
+        alt="Default menu image"
+        loading="lazy"
+      >
     {% endif %}
   </div>
 </div>
