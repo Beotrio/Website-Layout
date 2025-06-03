@@ -605,24 +605,7 @@
       "label": "Preloader Text Size",
       "default": 12
     },
-   {
-  "type": "image_picker",
-  "id": "menu_image",
-  "label": "Menu Image",
-  "info": "Recommended: 300x300px square image"
-},
-{
-  "type": "color",
-  "id": "menu_bg_color",
-  "label": "Box Background Color",
-  "default": "#f5f5f5"
-},
-{
-  "type": "color",
-  "id": "menu_border_color",
-  "label": "Box Border Color",
-  "default": "#ffffff"
-},
+
       {
       "type": "header",
       "content":"General Settings"
@@ -1241,35 +1224,6 @@
 {% endschema %}
 
 {% stylesheet %}
-    /* Floating Box INSIDE Side Menu - Bottom Left */
-  .side-menu-image-box {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    width: 120px;
-    height: 120px;
-    border-radius: 15px; /* Changed from 50% for square with rounded corners */
-    overflow: hidden;
-    border: 2px solid {{ section.settings.menu_border_color | default: '#ffffff' }};
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    background: {{ section.settings.menu_bg_color | default: '#f5f5f5' }};
-  }
-
-  .side-menu-image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* Mobile adjustment */
-  @media (max-width: 767px) {
-    .side-menu-image-box {
-      width: 100px;
-      height: 100px;
-      bottom: 15px;
-      left: 15px;
-    }
-  }
 {% endstylesheet %}
 
 {% javascript %}
