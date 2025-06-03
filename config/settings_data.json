@@ -65,9 +65,9 @@
     "footer_text_color_highlighed_bg": "{{ shop.brand.colors.secondary[0].background }}",
     "footer_email_btn_color": "{{ shop.brand.colors.secondary[0].background }}",
     "footer_logo_size": 60,
-    "footer_text_size": 21,
-    "footer_text_size_mobile": 15,
-    "footer_header_text_size_desktop": 21,
+    "footer_text_size": 13,
+    "footer_text_size_mobile": 12,
+    "footer_header_text_size_desktop": 14,
     "show_footer_logo": true,
     "disable_email_modal": false,
     "search_button_color": "#5a4b44",
@@ -271,7 +271,8 @@
       "shop-background": {
         "type": "shop-background",
         "settings": {
-          "show_background_image": false,
+          "desktop_bg_image": "shopify://shop_images/IMG_2192.heic",
+          "show_background_image": true,
           "show_background_image_mobile": false,
           "video_url": "",
           "show_background_video": false,
