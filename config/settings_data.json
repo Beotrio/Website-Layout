@@ -25,6 +25,7 @@
     "enable_announcement_shadow": true,
     "enable_announcement_floater": true,
     "enable_announcement_floater_radius": true,
+    "enable_large_announcement_bar": true,
     "enter_page_style": "interactive_environments",
     "show_home_logo": true,
     "show_home_time": true,
