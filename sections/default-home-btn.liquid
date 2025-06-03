@@ -1,10 +1,21 @@
 <a
   href="{{ routes.root_url }}"
-  style="color: {{ section.settings.text-color }}; background-color: {{ section.settings.bg-color }}; border-radius: 20px; padding: 10px 16px; text-decoration: none;"
-  class="btn small center w-button"
+  class="back-home-btn w-button"
 >
   {{- 'tnc0d2788' | t -}}
 </a>
+
+<style>
+  .back-home-btn {
+    color: {{ section.settings.text-color }};
+    background-color: {{ section.settings.bg-color }};
+    border-radius: 20px;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+</style>
 
 {% schema %}
 {
