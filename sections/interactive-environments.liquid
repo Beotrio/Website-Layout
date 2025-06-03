@@ -423,6 +423,13 @@
         </div>
     {% endcase %}
   {% endfor %}
+  <div class="menu-image-box">
+    {% if section.settings.menu_image %}
+      <img src="{{ section.settings.menu_image | img_url: '400x400', crop: 'center' }}" alt="Menu decoration">
+    {% else %}
+      <img src="{{ 'default-menu-image.jpg' | asset_url }}" alt="Default menu image">
+    {% endif %}
+  </div>
 </div>
 
 {%- for block in section.blocks -%}
