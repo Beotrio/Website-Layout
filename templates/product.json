@@ -25,11 +25,11 @@
         "overlay_top_color": "{{ shop.brand.colors.secondary[0].background }}",
         "overlay_top_opacity": 1,
         "overlay_bottom_color": "#ffffff",
-        "overlay_bottom_opacity": 0.1,
+        "overlay_bottom_opacity": 0,
         "overlay_top_color_mobile": "{{ shop.brand.colors.secondary[0].background }}",
         "overlay_top_opacity_mobile": 1,
         "overlay_bottom_color_mobile": "#000000",
-        "overlay_bottom_opacity_mobile": 0.1
+        "overlay_bottom_opacity_mobile": 0
       }
     },
     "header": {
