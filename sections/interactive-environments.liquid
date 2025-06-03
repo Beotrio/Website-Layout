@@ -423,19 +423,6 @@
         </div>
     {% endcase %}
   {% endfor %}
-  <div class="side-menu-image-box">
-    {% if section.settings.menu_image %}
-      <img
-        src="{{ section.settings.menu_image | img_url: '300x300', crop: 'center' }}"
-        alt="Menu decoration"
-        loading="lazy"
-      >
-    {% else %}
-      <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666;">
-        Add Image
-      </div>
-    {% endif %}
-  </div>
 </div>
 
 {%- for block in section.blocks -%}

@@ -258,9 +258,6 @@
           "preloader_text": "",
           "preloader_txt_color": "#000000",
           "preloader_txt_size": 12,
-          "menu_image": "shopify://shop_images/IMG_2192.heic",
-          "menu_bg_color": "#f5f5f5",
-          "menu_border_color": "#ffffff",
           "menu_btn_color": "#ffffff",
           "show_swipe_gesture": true
         }
